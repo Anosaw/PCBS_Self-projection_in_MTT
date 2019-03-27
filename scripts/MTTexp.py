@@ -162,14 +162,6 @@ fixcross.preload()
 
 #Instructions
 
-trial_proj9past = expyriment.design.Trial()
-trial_proj6past = expyriment.design.Trial()
-trial_proj3past = expyriment.design.Trial()
-trial_projnow = expyriment.design.Trial()
-trial_proj3future = expyriment.design.Trial()
-trial_proj6future = expyriment.design.Trial()
-trial_proj9future = expyriment.design.Trial()
-
 stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = 40)
 stim_proj9past.preload()
 
@@ -411,18 +403,28 @@ for blocks in MTTexp.blocks :
     MTTexp.clock.wait(500)
     if expyriment.design.Block.name == "9 years past block" :
         stim_proj9past.present()
-    if expyriment.design.Block.name == "6 years past block" :
-        stim_proj6past.present()
-    if expyriment.design.Block.name == "3 years past block" :
-        stim_proj3past.present()
-    if expyriment.design.Block.name == "present block" :
-        stim_projnow.present()
-    if expyriment.design.Block.name == "3 years future block" :
-        stim_proj3future.present()
-    if expyriment.design.Block.name == "6 years future block" :
-        stim_proj6future.present()
-    if expyriment.design.Block.name == "9 years future block" :
-        stim_proj9future.present()
+    else:
+        if expyriment.design.Block.name == "6 years past block" :
+            stim_proj6past.present()
+        else:
+            if expyriment.design.Block.name == "3 years past block" :
+                stim_proj3past.present()
+            else:
+                if expyriment.design.Block.name == "present block" :
+                    stim_projnow.present()
+                else:
+                    if expyriment.design.Block.name == "3 years future block" :
+                        stim_proj3future.present()
+                    else:
+                        if expyriment.design.Block.name == "6 years future block" :
+                            stim_proj6future.present()
+                        else:
+                            if expyriment.design.Block.name == "9 years future block" :
+                                stim_proj9future.present()
+                            else:
+                                expyriment.stimuli.TextLine(text = "ERROR", text_size = 40).present()
+
+
     MTTexp.clock.wait(2000)
     for trial in blocks.trials :
             trial.stimuli[0].present() #Present event
