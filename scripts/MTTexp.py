@@ -9,8 +9,8 @@
 import expyriment
 
 #Create and initialize exp
-exp_MTT = expyriment.design.Experiment(name = "MTT Experiment")
-expyriment.control.initialize(exp_MTT)
+MTTexp = expyriment.design.Experiment(name = "MTT Experiment")
+expyriment.control.initialize(MTTexp)
 
 #Define left and right arrow keys for responses
 response_keys = [expyriment.misc.constants.K_LEFT, expyriment.misc.constants.K_RIGHT]
@@ -20,7 +20,13 @@ response_keys = [expyriment.misc.constants.K_LEFT, expyriment.misc.constants.K_R
 #There is 1 trial per stimulus
 
 #Design block
+block_9past = expyriment.design.Block(name = "9 years past block")
+block_6past = expyriment.design.Block(name = "6 years past block")
 block_3past = expyriment.design.Block(name = "3 years past block")
+block_now = expyriment.design.Block(name = "present block")
+block_3future = expyriment.design.Block(name = "3 years future block")
+block_6future = expyriment.design.Block(name = "6 years future block")
+block_9future = expyriment.design.Block(name = "9 years future block")
 
 #Design trials
 trial1985 = expyriment.design.Trial()
@@ -67,6 +73,9 @@ event1997.preload()
 
 event2000 = expyriment.stimuli.TextLine(text = "Lettonie Eurovision", text_size = 40)
 event2000.preload()
+
+event2003 = expyriment.stimuli.TextLine( text = "Génome humain", text_size = 40)
+event2003.preload()
 
 event2006 = expyriment.stimuli.TextLine(text = "Tramway Paris", text_size = 40)
 event2006.preload()
@@ -147,16 +156,203 @@ trial2044.add_stimulus(event2044)
 trial2050.add_stimulus(event2050)
 trial2053.add_stimulus(event2053)
 
-block_3past.add_trial(trial2012)
-block_3past.add_trial(trial2012)
-block_3past.add_trial(trial2041)
 
-#Randomize trial order
-expyriment.design.Block.shuffle_trials(self = block_3past)
+block_9past.add_trial(trial1985)
+block_9past.add_trial(trial1988)
+block_9past.add_trial(trial1991)
+block_9past.add_trial(trial1994)
+block_9past.add_trial(trial1997)
+block_9past.add_trial(trial2000)
+block_9past.add_trial(trial2003)
+block_9past.add_trial(trial2006)
+block_9past.add_trial(trial2009)
+block_9past.add_trial(trial2012)
+block_9past.add_trial(trial2015)
+block_9past.add_trial(trial2018)
+block_9past.add_trial(trial2019)
+block_9past.add_trial(trial2020)
+block_9past.add_trial(trial2023)
+block_9past.add_trial(trial2026)
+block_9past.add_trial(trial2029)
+block_9past.add_trial(trial2032)
+block_9past.add_trial(trial2035)
+block_9past.add_trial(trial2038)
+block_9past.add_trial(trial2041)
+block_9past.add_trial(trial2044)
+block_9past.add_trial(trial2050)
+block_9past.add_trial(trial2053)
+
+block_6past.add_trial(trial1985)
+block_6past.add_trial(trial1988)
+block_6past.add_trial(trial1991)
+block_6past.add_trial(trial1994)
+block_6past.add_trial(trial1997)
+block_6past.add_trial(trial2000)
+block_6past.add_trial(trial2003)
+block_6past.add_trial(trial2006)
+block_6past.add_trial(trial2009)
+block_6past.add_trial(trial2012)
+block_6past.add_trial(trial2015)
+block_6past.add_trial(trial2018)
+block_6past.add_trial(trial2019)
+block_6past.add_trial(trial2020)
+block_6past.add_trial(trial2023)
+block_6past.add_trial(trial2026)
+block_6past.add_trial(trial2029)
+block_6past.add_trial(trial2032)
+block_6past.add_trial(trial2035)
+block_6past.add_trial(trial2038)
+block_6past.add_trial(trial2041)
+block_6past.add_trial(trial2044)
+block_6past.add_trial(trial2050)
+block_6past.add_trial(trial2053)
+
+block_3past.add_trial(trial1985)
+block_3past.add_trial(trial1988)
+block_3past.add_trial(trial1991)
+block_3past.add_trial(trial1994)
+block_3past.add_trial(trial1997)
+block_3past.add_trial(trial2000)
+block_3past.add_trial(trial2003)
+block_3past.add_trial(trial2006)
+block_3past.add_trial(trial2009)
+block_3past.add_trial(trial2012)
+block_3past.add_trial(trial2015)
+block_3past.add_trial(trial2018)
+block_3past.add_trial(trial2019)
+block_3past.add_trial(trial2020)
+block_3past.add_trial(trial2023)
+block_3past.add_trial(trial2026)
+block_3past.add_trial(trial2029)
+block_3past.add_trial(trial2032)
+block_3past.add_trial(trial2035)
+block_3past.add_trial(trial2038)
+block_3past.add_trial(trial2041)
+block_3past.add_trial(trial2044)
+block_3past.add_trial(trial2050)
+block_3past.add_trial(trial2053)
+
+block_now.add_trial(trial1985)
+block_now.add_trial(trial1988)
+block_now.add_trial(trial1994)
+block_now.add_trial(trial1997)
+block_now.add_trial(trial2000)
+block_now.add_trial(trial2003)
+block_now.add_trial(trial2006)
+block_now.add_trial(trial2009)
+block_now.add_trial(trial2012)
+block_now.add_trial(trial2015)
+block_now.add_trial(trial2018)
+block_now.add_trial(trial2019)
+block_now.add_trial(trial2020)
+block_now.add_trial(trial2023)
+block_now.add_trial(trial2026)
+block_now.add_trial(trial2029)
+block_now.add_trial(trial2032)
+block_now.add_trial(trial2035)
+block_now.add_trial(trial2038)
+block_now.add_trial(trial2041)
+block_now.add_trial(trial2044)
+block_now.add_trial(trial2050)
+block_now.add_trial(trial2053)
+
+block_3future.add_trial(trial1985)
+block_3future.add_trial(trial1988)
+block_3future.add_trial(trial1991)
+block_3future.add_trial(trial1994)
+block_3future.add_trial(trial1997)
+block_3future.add_trial(trial2000)
+block_3future.add_trial(trial2003)
+block_3future.add_trial(trial2006)
+block_3future.add_trial(trial2009)
+block_3future.add_trial(trial2012)
+block_3future.add_trial(trial2015)
+block_3future.add_trial(trial2018)
+block_3future.add_trial(trial2019)
+block_3future.add_trial(trial2020)
+block_3future.add_trial(trial2023)
+block_3future.add_trial(trial2026)
+block_3future.add_trial(trial2029)
+block_3future.add_trial(trial2032)
+block_3future.add_trial(trial2035)
+block_3future.add_trial(trial2038)
+block_3future.add_trial(trial2041)
+block_3future.add_trial(trial2044)
+block_3future.add_trial(trial2050)
+block_3future.add_trial(trial2053)
+
+block_6future.add_trial(trial1985)
+block_6future.add_trial(trial1988)
+block_6future.add_trial(trial1991)
+block_6future.add_trial(trial1994)
+block_6future.add_trial(trial1997)
+block_6future.add_trial(trial2000)
+block_6future.add_trial(trial2003)
+block_6future.add_trial(trial2006)
+block_6future.add_trial(trial2009)
+block_6future.add_trial(trial2012)
+block_6future.add_trial(trial2015)
+block_6future.add_trial(trial2018)
+block_6future.add_trial(trial2019)
+block_6future.add_trial(trial2020)
+block_6future.add_trial(trial2023)
+block_6future.add_trial(trial2026)
+block_6future.add_trial(trial2029)
+block_6future.add_trial(trial2032)
+block_6future.add_trial(trial2035)
+block_6future.add_trial(trial2038)
+block_6future.add_trial(trial2041)
+block_6future.add_trial(trial2044)
+block_6future.add_trial(trial2050)
+block_6future.add_trial(trial2053)
+
+block_9future.add_trial(trial1985)
+block_9future.add_trial(trial1988)
+block_9future.add_trial(trial1991)
+block_9future.add_trial(trial1994)
+block_9future.add_trial(trial1997)
+block_9future.add_trial(trial2000)
+block_9future.add_trial(trial2003)
+block_9future.add_trial(trial2006)
+block_9future.add_trial(trial2009)
+block_9future.add_trial(trial2012)
+block_9future.add_trial(trial2015)
+block_9future.add_trial(trial2018)
+block_9future.add_trial(trial2019)
+block_9future.add_trial(trial2020)
+block_9future.add_trial(trial2023)
+block_9future.add_trial(trial2026)
+block_9future.add_trial(trial2029)
+block_9future.add_trial(trial2032)
+block_9future.add_trial(trial2035)
+block_9future.add_trial(trial2038)
+block_9future.add_trial(trial2041)
+block_9future.add_trial(trial2044)
+block_9future.add_trial(trial2050)
+block_9future.add_trial(trial2053)
+
 
 #Add block to exp
-exp_MTT.add_block(block_3past)
+MTTexp.add_block(block_9past)
+MTTexp.add_block(block_6past)
+MTTexp.add_block(block_3past)
+MTTexp.add_block(block_now)
+MTTexp.add_block(block_3future)
+MTTexp.add_block(block_6future)
+MTTexp.add_block(block_9future)
 
+
+#Randomize trial order
+for blocks in MTTexp.blocks:
+    expyriment.design.Block.shuffle_trials(self = blocks)
+
+#Randomize block order
+expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
+
+#There are actually at least two ways to randomize trial/block position
+#Either shuffle after adding them
+#Or, when adding them, use argument random_position = TRUE
+#The second one means less lines, but how random is it?
 
 #Create other needed stimuli
 
@@ -165,28 +361,49 @@ fixcross = expyriment.stimuli.FixCross()
 fixcross.preload()
 
 #Instructions
+proj_9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = 40)
+proj_9past.preload()
+proj_6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = 40)
+proj_6past.preload()
 proj_3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = 40)
 proj_3past.preload()
+proj_now = expyriment.stimuli.TextLine(text = "présent", text_size = 40)
+proj_now.preload()
+proj_3future = expyriment.stimuli.TextLine(text = "3 ans dans le future", text_size = 40)
+proj_3future.preload()
+proj_6future = expyriment.stimuli.TextLine(text = "6 ans dans le future", text_size = 40)
+proj_6future.preload()
+proj_9future = expyriment.stimuli.TextLine(text = "9 ans dans le future", text_size = 40)
+proj_9future.preload()
+
+#Several solutions to have the projection stimuli appear first
+#Either add it first to the block, then add all other trials with random_position = TRUE
+#Or add it last (after shuffling trials), then swap position with the first one
+#Or add it last and simply refer to the last trial in the block to call it
+#Note that with the two last ones, you must know the exact number of trials in the block
+#Which may change if some are to be excluded!
 
 question = expyriment.stimuli.TextLine(text = "avant ou après?", text_size = 40)
 question.preload()
 
 
+#Must add a time limit for answer
+
 #Start exp
 expyriment.control.start()
 
-for blocks in exp_MTT.blocks :
+for blocks in MTTexp.blocks :
     fixcross.present() #Present fixation cross
-    exp_MTT.clock.wait(500)
+    MTTexp.clock.wait(500)
     proj_3past.present() #Present instruction point of projection
-    exp_MTT.clock.wait(2000)
-    for trial in block_3past.trials :
+    MTTexp.clock.wait(2000)
+    for trial in blocks.trials :
             trial.stimuli[0].present() #Present event
-            exp_MTT.clock.wait(1000)
+            MTTexp.clock.wait(1000)
             question.present() #Present question
-            key, rt = exp_MTT.keyboard.wait(keys = response_keys) #Mesure RT
-            exp_MTT.data.add([block_3past.name, trial.id, key, rt]) #Add data
-            exp_MTT.clock.wait(500) #Wait before going to the next event
+            key, rt = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
+            MTTexp.data.add([block.name, trial.id, key, rt]) #Add data
+            MTTexp.clock.wait(500) #Wait before going to the next event
 
 
 expyriment.control.end()
