@@ -401,28 +401,28 @@ expyriment.control.start()
 for blocks in MTTexp.blocks :
     fixcross.present() #Present fixation cross
     MTTexp.clock.wait(500)
-    if expyriment.design.Block.name == "9 years past block" :
+    if str(expyriment.design.Block.name) == "9 years past block":
         stim_proj9past.present()
     else:
-        if expyriment.design.Block.name == "6 years past block" :
+        if str(expyriment.design.Block.name) == "6 years past block" :
             stim_proj6past.present()
         else:
-            if expyriment.design.Block.name == "3 years past block" :
+            if str(expyriment.design.Block.name) == "3 years past block" :
                 stim_proj3past.present()
             else:
-                if expyriment.design.Block.name == "present block" :
+                if str(expyriment.design.Block.name) == "present block" :
                     stim_projnow.present()
                 else:
-                    if expyriment.design.Block.name == "3 years future block" :
+                    if str(expyriment.design.Block.name) == "3 years future block" :
                         stim_proj3future.present()
                     else:
-                        if expyriment.design.Block.name == "6 years future block" :
+                        if str(expyriment.design.Block.name) == "6 years future block" :
                             stim_proj6future.present()
                         else:
-                            if expyriment.design.Block.name == "9 years future block" :
+                            if str(expyriment.design.Block.name) == "9 years future block" :
                                 stim_proj9future.present()
                             else:
-                                expyriment.stimuli.TextLine(text = "ERROR", text_size = 40).present()
+                                expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
 
 
     MTTexp.clock.wait(2000)
