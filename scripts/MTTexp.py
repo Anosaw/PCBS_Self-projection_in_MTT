@@ -12,9 +12,6 @@ import expyriment
 MTTexp = expyriment.design.Experiment(name = "MTT Experiment")
 expyriment.control.initialize(MTTexp)
 
-#Define left and right arrow keys for responses
-response_keys = [expyriment.misc.constants.K_LEFT, expyriment.misc.constants.K_RIGHT]
-
 
 #Define blocks, trials and stimuli
 #There is 1 trial per stimulus
@@ -161,7 +158,7 @@ fixcross = expyriment.stimuli.FixCross()
 fixcross.preload()
 
 #Instructions
-
+#Projection instructions
 stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = 40)
 stim_proj9past.preload()
 
@@ -190,6 +187,14 @@ stim_proj9future.preload()
 #Note that with the two last ones, you must know the exact number of trials in the block
 #Which may change if some are to be excluded!
 
+#Key instructions
+stim_pastKey = expyriment.stimuli.TextLine(text = "Entrer la touche pour le passé", text_size = 40)
+stim_pastKey.preload()
+
+stim_futureKey = expyriment.stimuli.TextLine(text = "Entrer la touche pour le futur", text_size = 40)
+stim_futureKey.present()
+
+#Question
 question = expyriment.stimuli.TextLine(text = "avant ou après?", text_size = 40)
 question.preload()
 
@@ -393,36 +398,39 @@ expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 #The second one means less lines, but how random is it?
 
 
-#Must add a time limit for answer
 
 #Start exp
 expyriment.control.start()
+
+#Ask participant to define keys
+stim_pastKey.present()
+MTTexp.clock.wait(1000)
+pastKey = MTTexp.Keyboard.wait_char()
+stim_futureKey.present()
+MTTexp.clock.wait(1000)
+futureKey = MTTexp.keyboard.wait_char()
+response_keys = [pastKey, futureKey]
+
 
 for blocks in MTTexp.blocks :
     fixcross.present() #Present fixation cross
     MTTexp.clock.wait(500)
     if str(expyriment.design.Block.name) == "9 years past block":
         stim_proj9past.present()
+    elif str(expyriment.design.Block.name) == "6 years past block" :
+        stim_proj6past.present()
+    elif str(expyriment.design.Block.name) == "3 years past block" :
+        stim_proj3past.present()
+    elif str(expyriment.design.Block.name) == "present block" :
+        stim_projnow.present()
+    elif str(expyriment.design.Block.name) == "3 years future block" :
+        stim_proj3future.present()
+    elif str(expyriment.design.Block.name) == "6 years future block" :
+        stim_proj6future.present()
+    elif str(expyriment.design.Block.name) == "9 years future block" :
+        stim_proj9future.present()
     else:
-        if str(expyriment.design.Block.name) == "6 years past block" :
-            stim_proj6past.present()
-        else:
-            if str(expyriment.design.Block.name) == "3 years past block" :
-                stim_proj3past.present()
-            else:
-                if str(expyriment.design.Block.name) == "present block" :
-                    stim_projnow.present()
-                else:
-                    if str(expyriment.design.Block.name) == "3 years future block" :
-                        stim_proj3future.present()
-                    else:
-                        if str(expyriment.design.Block.name) == "6 years future block" :
-                            stim_proj6future.present()
-                        else:
-                            if str(expyriment.design.Block.name) == "9 years future block" :
-                                stim_proj9future.present()
-                            else:
-                                expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
+        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
 
 
     MTTexp.clock.wait(2000)
@@ -430,7 +438,7 @@ for blocks in MTTexp.blocks :
             trial.stimuli[0].present() #Present event
             MTTexp.clock.wait(1000)
             question.present() #Present question
-            key, rt = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
+            key, rt = MTTexp.keyboard.wait(keys = response_keys, duration = 3000) #Mesure RT
             MTTexp.data.add([expyriment.design.Block.name, expyriment.design.Trial.id, key, rt]) #Add data
             MTTexp.clock.wait(500) #Wait before going to the next event
 
@@ -440,3 +448,10 @@ expyriment.control.end()
 #Note: to do this experiment properly
 #We should weed out beforehand the events the participant does not remember
 #For this we will need to code a questionnaire
+
+#We need to mesure errors too!
+#Must put the answer in the trial somehow
+#Key inputs must be predefined (left for past, right for future)
+#Or input from user?
+#input pastKey and futureKey
+#wait_char, with found as key input?

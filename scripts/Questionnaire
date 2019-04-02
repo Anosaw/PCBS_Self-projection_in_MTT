@@ -171,9 +171,6 @@ block_questionnaire.add_trial(trial2053)
 fixcross = expyriment.stimuli.FixCross()
 fixcross.preload()
 
-#Instructions
-questionDate = expyriment.stimuli.TextLine(text = "Date?", text_size = 40)
-questionTrust = expyriment.stimuli.TextLine(text = "Confiance?", text_size = 40)
 
 #Start experiment
 expyriment.control.start()
@@ -183,10 +180,48 @@ for trials in block_questionnaire.trial:
     questionnaire.clock.wait(500)
     trial.stimuli[0].present()
     questionnaire.clock.wait(2000)
+
+#Here put answer (check if valid input)
+    questionDate = expyriment.io.TextInput(message = "date?", length = 4
+     message_text_size = 40, user_text_size = 40)
+    answerDate = questionDate.get()
+
+    #OR
+    questionDate = expyriment.stimuli.TextLine(text = "date?", text_size = 40)
+    questionDate.preload()
     questionDate.present()
+    answerDate, rt = questionnaire.Keyboard.wait_char()
 
-#Here put answer
+    if answerDate == trueDate:
+        goodAnswer = True
+    else:
+        goodAnswer = False
 
-    questionTrust.present()
+    #OR
+    if trial == trial1985:
+        if answerDate == 1985:
+            goodAnswer = True
+        else:
+            goodAnswer = False
+    elif trial == trial1988:
+        #and so on
+
+    questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1
+     message_text_size = 40, user_text_size = 40)
+    answerTrust = int(questionTrust.get())
+
+    if answerTrust < 3:
+        goodAnswer = False
+
+    questionnaire.data.add([expyriment.design.Block.name, expyriment.design.Trial.id, goodAnswer]) #Add data
+    questionnaire.clock.wait(500) #Wait before going to the next event
+
+
+expyriment.control.end()
+
 
 #Answer
+
+#Feedback?
+#Must put answer in data in a way that can be read by exp
+#So we can exclude wrong answers
