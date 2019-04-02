@@ -1,0 +1,193 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpe-file, coding: cp1252
+#date: Tue Apr 02 2019 17:29:54
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+3873,Stimulus,presented,33
+11113,design,log,
+#design: #exp: MTT Experiment
+#design: block_cnt,block_id,block_projection,trial_cnt,trial_id
+#design: 0,3,0,0,7
+#design: 0,3,0,1,22
+#design: 0,3,0,2,3
+#design: 0,3,0,3,5
+#design: 0,3,0,4,2
+#design: 0,3,0,5,14
+#design: 0,3,0,6,17
+#design: 0,3,0,7,15
+#design: 0,3,0,8,1
+#design: 0,3,0,9,9
+#design: 0,3,0,10,20
+#design: 0,3,0,11,13
+#design: 0,3,0,12,16
+#design: 0,3,0,13,0
+#design: 0,3,0,14,4
+#design: 0,3,0,15,19
+#design: 0,3,0,16,10
+#design: 0,3,0,17,8
+#design: 0,3,0,18,21
+#design: 0,3,0,19,12
+#design: 0,3,0,20,18
+#design: 0,3,0,21,6
+#design: 0,3,0,22,11
+#design: 1,1,-6,0,19
+#design: 1,1,-6,1,23
+#design: 1,1,-6,2,12
+#design: 1,1,-6,3,7
+#design: 1,1,-6,4,10
+#design: 1,1,-6,5,4
+#design: 1,1,-6,6,8
+#design: 1,1,-6,7,22
+#design: 1,1,-6,8,11
+#design: 1,1,-6,9,17
+#design: 1,1,-6,10,18
+#design: 1,1,-6,11,13
+#design: 1,1,-6,12,6
+#design: 1,1,-6,13,9
+#design: 1,1,-6,14,16
+#design: 1,1,-6,15,3
+#design: 1,1,-6,16,20
+#design: 1,1,-6,17,5
+#design: 1,1,-6,18,2
+#design: 1,1,-6,19,15
+#design: 1,1,-6,20,0
+#design: 1,1,-6,21,14
+#design: 1,1,-6,22,1
+#design: 1,1,-6,23,21
+#design: 2,0,-9,0,1
+#design: 2,0,-9,1,10
+#design: 2,0,-9,2,13
+#design: 2,0,-9,3,15
+#design: 2,0,-9,4,20
+#design: 2,0,-9,5,2
+#design: 2,0,-9,6,0
+#design: 2,0,-9,7,6
+#design: 2,0,-9,8,9
+#design: 2,0,-9,9,16
+#design: 2,0,-9,10,3
+#design: 2,0,-9,11,17
+#design: 2,0,-9,12,19
+#design: 2,0,-9,13,23
+#design: 2,0,-9,14,11
+#design: 2,0,-9,15,8
+#design: 2,0,-9,16,4
+#design: 2,0,-9,17,18
+#design: 2,0,-9,18,12
+#design: 2,0,-9,19,22
+#design: 2,0,-9,20,7
+#design: 2,0,-9,21,5
+#design: 2,0,-9,22,21
+#design: 2,0,-9,23,14
+#design: 3,6,9,0,23
+#design: 3,6,9,1,4
+#design: 3,6,9,2,22
+#design: 3,6,9,3,6
+#design: 3,6,9,4,12
+#design: 3,6,9,5,17
+#design: 3,6,9,6,8
+#design: 3,6,9,7,1
+#design: 3,6,9,8,5
+#design: 3,6,9,9,3
+#design: 3,6,9,10,9
+#design: 3,6,9,11,14
+#design: 3,6,9,12,2
+#design: 3,6,9,13,16
+#design: 3,6,9,14,21
+#design: 3,6,9,15,0
+#design: 3,6,9,16,7
+#design: 3,6,9,17,11
+#design: 3,6,9,18,20
+#design: 3,6,9,19,13
+#design: 3,6,9,20,15
+#design: 3,6,9,21,10
+#design: 3,6,9,22,18
+#design: 3,6,9,23,19
+#design: 4,2,-3,0,6
+#design: 4,2,-3,1,11
+#design: 4,2,-3,2,8
+#design: 4,2,-3,3,13
+#design: 4,2,-3,4,9
+#design: 4,2,-3,5,5
+#design: 4,2,-3,6,14
+#design: 4,2,-3,7,20
+#design: 4,2,-3,8,0
+#design: 4,2,-3,9,1
+#design: 4,2,-3,10,23
+#design: 4,2,-3,11,22
+#design: 4,2,-3,12,10
+#design: 4,2,-3,13,18
+#design: 4,2,-3,14,7
+#design: 4,2,-3,15,12
+#design: 4,2,-3,16,2
+#design: 4,2,-3,17,17
+#design: 4,2,-3,18,15
+#design: 4,2,-3,19,19
+#design: 4,2,-3,20,21
+#design: 4,2,-3,21,3
+#design: 4,2,-3,22,16
+#design: 4,2,-3,23,4
+#design: 5,4,3,0,3
+#design: 5,4,3,1,10
+#design: 5,4,3,2,5
+#design: 5,4,3,3,23
+#design: 5,4,3,4,6
+#design: 5,4,3,5,19
+#design: 5,4,3,6,12
+#design: 5,4,3,7,21
+#design: 5,4,3,8,20
+#design: 5,4,3,9,15
+#design: 5,4,3,10,11
+#design: 5,4,3,11,17
+#design: 5,4,3,12,0
+#design: 5,4,3,13,4
+#design: 5,4,3,14,14
+#design: 5,4,3,15,8
+#design: 5,4,3,16,2
+#design: 5,4,3,17,9
+#design: 5,4,3,18,1
+#design: 5,4,3,19,22
+#design: 5,4,3,20,18
+#design: 5,4,3,21,7
+#design: 5,4,3,22,16
+#design: 5,4,3,23,13
+#design: 6,5,6,0,19
+#design: 6,5,6,1,15
+#design: 6,5,6,2,9
+#design: 6,5,6,3,0
+#design: 6,5,6,4,2
+#design: 6,5,6,5,14
+#design: 6,5,6,6,20
+#design: 6,5,6,7,16
+#design: 6,5,6,8,21
+#design: 6,5,6,9,13
+#design: 6,5,6,10,23
+#design: 6,5,6,11,6
+#design: 6,5,6,12,3
+#design: 6,5,6,13,10
+#design: 6,5,6,14,17
+#design: 6,5,6,15,1
+#design: 6,5,6,16,8
+#design: 6,5,6,17,11
+#design: 6,5,6,18,4
+#design: 6,5,6,19,7
+#design: 6,5,6,20,22
+#design: 6,5,6,21,5
+#design: 6,5,6,22,12
+#design: 6,5,6,23,18
+11114,design,logged,
+11114,Experiment,started
+11115,Stimulus,presented,32
+12521,Keyboard,received,276,wait
+12523,Stimulus,presented,33
+13607,Keyboard,received,275,wait
+13608,Stimulus,presented,24
+14112,Stimulus,presented,28
+16116,Stimulus,presented,23
+17119,Stimulus,presented,34
+18960,Experiment,paused
+18962,Stimulus,presented,36
+19711,Keyboard,received,b'y',wait_char
+19711,Experiment,ended
+19732,Stimulus,presented,36

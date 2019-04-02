@@ -17,13 +17,13 @@ expyriment.control.initialize(MTTexp)
 #There is 1 trial per stimulus
 
 #Design block
-block_9past = expyriment.design.Block(name = "9_years_past_block")
-block_6past = expyriment.design.Block(name = "6_years_past_block")
-block_3past = expyriment.design.Block(name = "3_years_past_block")
-block_now = expyriment.design.Block(name = "present_block")
-block_3future = expyriment.design.Block(name = "3_years_future_block")
-block_6future = expyriment.design.Block(name = "6_years_future_block")
-block_9future = expyriment.design.Block(name = "9_years_future_block")
+block_9past = expyriment.design.Block(name = "9 years past block")
+block_6past = expyriment.design.Block(name = "6 years past block")
+block_3past = expyriment.design.Block(name = "3 years past block")
+block_now = expyriment.design.Block(name = "present block")
+block_3future = expyriment.design.Block(name = "3 years future block")
+block_6future = expyriment.design.Block(name = "6 years future block")
+block_9future = expyriment.design.Block(name = "9 years future block")
 
 #Design trials
 trial1985 = expyriment.design.Trial()
@@ -375,6 +375,14 @@ block_9future.add_trial(trial2044)
 block_9future.add_trial(trial2050)
 block_9future.add_trial(trial2053)
 
+#Add projection point as factor
+block_9past.set_factor("projection", -9)
+block_6past.set_factor("projection", -6)
+block_3past.set_factor("projection", -3)
+block_now.set_factor("projection", 0)
+block_3future.set_factor("projection", 3)
+block_6future.set_factor("projection", 6)
+block_9future.set_factor("projection", 9)
 
 #Add block to exp
 MTTexp.add_block(block_9past)
@@ -412,22 +420,22 @@ futureKey, rt = MTTexp.keyboard.wait()
 response_keys = [pastKey, futureKey]
 
 
-for blocks in MTTexp.blocks :
+for block in MTTexp.blocks :
     fixcross.present() #Present fixation cross
     MTTexp.clock.wait(500)
-    if str(expyriment.design.Block.name) == "9_years_past_block":
+    if block.get_factor("projection") == -9 :
         stim_proj9past.present()
-    elif str(expyriment.design.Block.name) == "6_years_past_block" :
+    elif block.get_factor("projection") == -6 :
         stim_proj6past.present()
-    elif str(expyriment.design.Block.name) == "3_years_past_block" :
+    elif block.get_factor("projection") == -3 :
         stim_proj3past.present()
-    elif str(expyriment.design.Block.name) == "present_block" :
+    elif block.get_factor("projection") == 0 :
         stim_projnow.present()
-    elif str(expyriment.design.Block.name) == "3_years_future_block" :
+    elif block.get_factor("projection") == 3 :
         stim_proj3future.present()
-    elif str(expyriment.design.Block.name) == "6_years_future_block" :
+    elif block.get_factor("projection") == 6 :
         stim_proj6future.present()
-    elif str(expyriment.design.Block.name) == "9_years_future_block" :
+    elif block.get_factor("projection") == 9 :
         stim_proj9future.present()
     else:
         expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()

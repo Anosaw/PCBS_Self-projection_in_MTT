@@ -1,0 +1,39 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpd-file, coding: cp1252
+#date: Tue Apr 02 2019 17:20:41
+#--EXPERIMENT INFO
+#e mainfile: mttexp.py
+#e sha1: None
+#e modules: 
+#e Experiment: MTT Experiment
+#e no between subject factors
+#e Block 1: 6_years_past_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 2: 3_years_past_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 4: 3_years_future_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 6: 9_years_future_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 3: present_block
+#e     block factors: 
+#e     n trials: 23
+#e     trial factors: 
+#e Block 0: 9_years_past_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 5: 6_years_future_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#--SUBJECT INFO
+#s id: 2
+subject_id,

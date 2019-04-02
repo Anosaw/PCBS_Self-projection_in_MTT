@@ -115,76 +115,76 @@ event2053.preload()
 
 #Add events to trials and set date as factor
 trial1985.add_stimulus(event1985)
-trial1985.set_factor(trueDate, 1985)
+trial1985.set_factor("trueDate", 1985)
 
 trial1988.add_stimulus(event1988)
-trial1988.set_factor(trueDate, 1988)
+trial1988.set_factor("trueDate", 1988)
 
 trial1991.add_stimulus(event1991)
-trial1991.set_factor(trueDate, 1991)
+trial1991.set_factor("trueDate", 1991)
 
 trial1994.add_stimulus(event1994)
-trial1994.set_factor(trueDate, 1994)
+trial1994.set_factor("trueDate", 1994)
 
 trial1997.add_stimulus(event1997)
-trial1997.set_factor(trueDate, 1997)
+trial1997.set_factor("trueDate", 1997)
 
 trial2000.add_stimulus(event2000)
-trial2000.set_factor(trueDate, 2000)
+trial2000.set_factor("trueDate", 2000)
 
 trial2003.add_stimulus(event2003)
-trial2003.set_factor(trueDate, 2003)
+trial2003.set_factor("trueDate", 2003)
 
 trial2006.add_stimulus(event2006)
-trial2006.set_factor(trueDate, 2006)
+trial2006.set_factor("trueDate", 2006)
 
 trial2009.add_stimulus(event2009)
-trial2009.set_factor(trueDate, 2009)
+trial2009.set_factor("trueDate", 2009)
 
 trial2012.add_stimulus(event2012)
-trial2012.set_factor(trueDate, 2012)
+trial2012.set_factor("trueDate", 2012)
 
 trial2015.add_stimulus(event2015)
-trial2015.set_factor(trueDate, 2015)
+trial2015.set_factor("trueDate", 2015)
 
 trial2018.add_stimulus(event2018)
-trial2018.set_factor(trueDate, 2018)
+trial2018.set_factor("trueDate", 2018)
 
 trial2019.add_stimulus(event2019)
-trial2019.set_factor(trueDate, 2019)
+trial2019.set_factor("trueDate", 2019)
 
 trial2020.add_stimulus(event2020)
-trial2020.set_factor(trueDate, 2020)
+trial2020.set_factor("trueDate", 2020)
 
 trial2023.add_stimulus(event2023)
-trial2023.set_factor(trueDate, 2023)
+trial2023.set_factor("trueDate", 2023)
 
 trial2026.add_stimulus(event2026)
-trial2026.set_factor(trueDate, 2026)
+trial2026.set_factor("trueDate", 2026)
 
 trial2029.add_stimulus(event2029)
-trial2029.set_factor(trueDate, 2029)
+trial2029.set_factor("trueDate", 2029)
 
 trial2032.add_stimulus(event2032)
-trial2032.set_factor(trueDate, 2032)
+trial2032.set_factor("trueDate", 2032)
 
 trial2035.add_stimulus(event2035)
-trial2035.set_factor(trueDate, 2035)
+trial2035.set_factor("trueDate", 2035)
 
 trial2038.add_stimulus(event2038)
-trial2038.set_factor(trueDate, 2038)
+trial2038.set_factor("trueDate", 2038)
 
 trial2041.add_stimulus(event2041)
-trial2041.set_factor(trueDate, 2041)
+trial2041.set_factor("trueDate", 2041)
 
 trial2044.add_stimulus(event2044)
-trial2044.set_factor(trueDate, 2044)
+trial2044.set_factor("trueDate", 2044)
 
 trial2050.add_stimulus(event2050)
-trial2050.set_factor(trueDate, 2050)
+trial2050.set_factor("trueDate", 2050)
 
 trial2053.add_stimulus(event2053)
-trial2053.set_factor(trueDate, 2053)
+trial2053.set_factor("trueDate", 2053)
 
 #Add trials to block
 block_questionnaire.add_trial(trial1985)
@@ -213,6 +213,11 @@ block_questionnaire.add_trial(trial2050)
 block_questionnaire.add_trial(trial2053)
 
 #Create other needed stimuli and trials
+errorDate = expyriment.stimuli.TextLine(text = "Entrer une date", text_size = 40)
+errorDate.preload()
+
+errorTrust = expyriment.stimuli.TextLine(text = "Entrer un nombre", text_size = 40)
+errorTrust.preload()
 
 #Let's put a fixation cross
 fixcross = expyriment.stimuli.FixCross()
@@ -222,25 +227,35 @@ fixcross.preload()
 #Start experiment
 expyriment.control.start()
 
-for trials in block_questionnaire.trial:
+for trial in block_questionnaire.trials:
     fixcross.present()
     questionnaire.clock.wait(500)
     trial.stimuli[0].present()
     questionnaire.clock.wait(2000)
 
 #Here put answer (check if valid input)
-    questionDate = expyriment.io.TextInput(message = "date?", length = 4
+    questionDate = expyriment.io.TextInput(message = "date?", length = 4,
      message_text_size = 40, user_text_size = 40)
-    answerDate = int(questionDate.get())
+    try:
+        answerDate = int(questionDate.get())
+    except ValueError:
+        errorDate.present()
+        questionDate = expyriment.io.TextInput(message = "date?", length = 4,
+         message_text_size = 40, user_text_size = 40)
 
-    if answerDate == get_factor(trueDate):
+    if answerDate == trial.get_factor("trueDate"):
         goodAnswer = True
     else:
         goodAnswer = False
 
-    questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1
+    questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
      message_text_size = 40, user_text_size = 40)
-    answerTrust = int(questionTrust.get())
+    try:
+        answerTrust = int(questionTrust.get())
+    except ValueError:
+        errorTrust.present()
+        questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
+         message_text_size = 40, user_text_size = 40)
 
     if answerTrust < 3:
         goodAnswer = False

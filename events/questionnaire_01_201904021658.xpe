@@ -1,0 +1,16 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpe-file, coding: cp1252
+#date: Tue Apr 02 2019 16:58:37
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+11299,design,log,
+#design: #exp: Questionnaire
+#design: block_cnt,block_id,trial_cnt,trial_id
+11299,design,logged,
+11299,Experiment,started
+11301,stderr,received,'Traceback (most recent call last):'
+11303,stderr,received,'  File "scripts\\questionnaire.py", line 225, in <module>'
+11305,stderr,received,'    for trials in block_questionnaire.trial:'
+11306,stderr,received,"AttributeError: 'Block' object has no attribute 'trial'"

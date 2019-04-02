@@ -1,0 +1,118 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpe-file, coding: cp1252
+#date: Tue Apr 02 2019 17:01:03
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+10918,design,log,
+#design: #exp: Questionnaire
+#design: block_cnt,block_id,trial_cnt,trial_id
+10918,design,logged,
+10918,Experiment,started
+10920,Stimulus,presented,24
+11425,Stimulus,presented,0
+13463,Stimulus,presented,26
+13487,Stimulus,presented,26
+13512,Stimulus,presented,26
+13520,Stimulus,presented,27
+16364,Stimulus,presented,27
+16701,Stimulus,presented,27
+16881,Stimulus,presented,27
+17133,Stimulus,presented,27
+17717,TextInput,entered,b'1998'
+17754,Stimulus,presented,27
+17778,Stimulus,presented,27
+17802,Stimulus,presented,27
+17811,Stimulus,presented,28
+21417,Stimulus,presented,28
+21714,TextInput,entered,b'2'
+22214,Stimulus,presented,24
+22718,Stimulus,presented,1
+24756,Stimulus,presented,28
+24783,Stimulus,presented,28
+24807,Stimulus,presented,28
+24815,Stimulus,presented,29
+27535,Stimulus,presented,29
+27834,Stimulus,presented,29
+28049,Stimulus,presented,29
+28206,Stimulus,presented,29
+28611,TextInput,entered,b'1988'
+28647,Stimulus,presented,29
+28671,Stimulus,presented,29
+28698,Stimulus,presented,29
+28705,Stimulus,presented,30
+30100,Stimulus,presented,30
+30409,TextInput,entered,b'1'
+30909,Stimulus,presented,24
+31413,Stimulus,presented,2
+33452,Stimulus,presented,30
+33476,Stimulus,presented,30
+33501,Stimulus,presented,30
+33509,Stimulus,presented,31
+34383,Stimulus,presented,31
+34800,Stimulus,presented,31
+34978,Stimulus,presented,31
+35272,Stimulus,presented,31
+35694,TextInput,entered,b'1991'
+35731,Stimulus,presented,31
+35756,Stimulus,presented,31
+35780,Stimulus,presented,31
+35788,Stimulus,presented,32
+36933,Stimulus,presented,32
+39033,TextInput,entered,b'5'
+39533,Stimulus,presented,24
+40037,Stimulus,presented,3
+42075,Stimulus,presented,32
+42101,Stimulus,presented,32
+42126,Stimulus,presented,32
+42134,Stimulus,presented,33
+43931,Stimulus,presented,33
+44812,Stimulus,presented,33
+45001,Stimulus,presented,33
+45247,Stimulus,presented,33
+45795,TextInput,entered,b'1996'
+45831,Stimulus,presented,33
+45856,Stimulus,presented,33
+45882,Stimulus,presented,33
+45890,Stimulus,presented,34
+46676,Stimulus,presented,34
+47097,TextInput,entered,b'2'
+47597,Stimulus,presented,24
+48100,Stimulus,presented,4
+50138,Stimulus,presented,34
+50162,Stimulus,presented,34
+50187,Stimulus,presented,34
+50196,Stimulus,presented,35
+50755,Stimulus,presented,35
+52964,Stimulus,presented,35
+53339,Stimulus,presented,35
+58065,Stimulus,presented,35
+58535,TextInput,entered,b'1996'
+58572,Stimulus,presented,35
+58597,Stimulus,presented,35
+58622,Stimulus,presented,35
+58629,Stimulus,presented,36
+60531,Stimulus,presented,36
+60819,TextInput,entered,b'2'
+61319,Stimulus,presented,24
+61822,Stimulus,presented,5
+63859,Stimulus,presented,36
+63884,Stimulus,presented,36
+63908,Stimulus,presented,36
+63916,Stimulus,presented,37
+64644,Stimulus,presented,37
+64961,Stimulus,presented,37
+65266,Stimulus,presented,37
+65444,Stimulus,presented,37
+65789,TextInput,entered,b'1988'
+65825,Stimulus,presented,37
+65849,Stimulus,presented,37
+65874,Stimulus,presented,37
+65882,Stimulus,presented,38
+66110,TextInput,entered,b''
+66110,stderr,received,'Traceback (most recent call last):'
+66113,stderr,received,'  File "scripts\\questionnaire.py", line 243, in <module>'
+66115,stderr,received,'    answerTrust = int(questionTrust.get())'
+66116,stderr,received,"ValueError: invalid literal for int() with base 10: ''"
+66137,Data,saved
