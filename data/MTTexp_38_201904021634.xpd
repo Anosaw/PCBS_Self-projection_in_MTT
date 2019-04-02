@@ -1,0 +1,63 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpd-file, coding: cp1252
+#date: Tue Apr 02 2019 16:34:09
+#--EXPERIMENT INFO
+#e mainfile: MTTexp.py
+#e sha1: None
+#e modules: 
+#e Experiment: MTT Experiment
+#e no between subject factors
+#e Block 5: 6_years_future_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 4: 3_years_future_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 3: present_block
+#e     block factors: 
+#e     n trials: 23
+#e     trial factors: 
+#e Block 1: 6_years_past_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 6: 9_years_future_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 0: 9_years_past_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#e Block 2: 3_years_past_block
+#e     block factors: 
+#e     n trials: 24
+#e     trial factors: 
+#--SUBJECT INFO
+#s id: 38
+subject_id,
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,734
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,452
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,338
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,233
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,159
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,None,None
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,973
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,396
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,293
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,238
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,289
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,1200
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,136
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,899
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,275
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,248
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,710
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,201
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,247
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,319
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,1336
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,276,190
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,846
+38,<property object at 0x000002BA533FE278>,<property object at 0x000002BA533FE688>,275,182

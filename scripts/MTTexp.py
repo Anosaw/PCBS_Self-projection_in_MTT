@@ -17,13 +17,13 @@ expyriment.control.initialize(MTTexp)
 #There is 1 trial per stimulus
 
 #Design block
-block_9past = expyriment.design.Block(name = "9 years past block")
-block_6past = expyriment.design.Block(name = "6 years past block")
-block_3past = expyriment.design.Block(name = "3 years past block")
-block_now = expyriment.design.Block(name = "present block")
-block_3future = expyriment.design.Block(name = "3 years future block")
-block_6future = expyriment.design.Block(name = "6 years future block")
-block_9future = expyriment.design.Block(name = "9 years future block")
+block_9past = expyriment.design.Block(name = "9_years_past_block")
+block_6past = expyriment.design.Block(name = "6_years_past_block")
+block_3past = expyriment.design.Block(name = "3_years_past_block")
+block_now = expyriment.design.Block(name = "present_block")
+block_3future = expyriment.design.Block(name = "3_years_future_block")
+block_6future = expyriment.design.Block(name = "6_years_future_block")
+block_9future = expyriment.design.Block(name = "9_years_future_block")
 
 #Design trials
 trial1985 = expyriment.design.Trial()
@@ -405,29 +405,29 @@ expyriment.control.start()
 #Ask participant to define keys
 stim_pastKey.present()
 MTTexp.clock.wait(1000)
-pastKey = MTTexp.Keyboard.wait_char()
+pastKey, rt = MTTexp.keyboard.wait()
 stim_futureKey.present()
 MTTexp.clock.wait(1000)
-futureKey = MTTexp.keyboard.wait_char()
+futureKey, rt = MTTexp.keyboard.wait()
 response_keys = [pastKey, futureKey]
 
 
 for blocks in MTTexp.blocks :
     fixcross.present() #Present fixation cross
     MTTexp.clock.wait(500)
-    if str(expyriment.design.Block.name) == "9 years past block":
+    if str(expyriment.design.Block.name) == "9_years_past_block":
         stim_proj9past.present()
-    elif str(expyriment.design.Block.name) == "6 years past block" :
+    elif str(expyriment.design.Block.name) == "6_years_past_block" :
         stim_proj6past.present()
-    elif str(expyriment.design.Block.name) == "3 years past block" :
+    elif str(expyriment.design.Block.name) == "3_years_past_block" :
         stim_proj3past.present()
-    elif str(expyriment.design.Block.name) == "present block" :
+    elif str(expyriment.design.Block.name) == "present_block" :
         stim_projnow.present()
-    elif str(expyriment.design.Block.name) == "3 years future block" :
+    elif str(expyriment.design.Block.name) == "3_years_future_block" :
         stim_proj3future.present()
-    elif str(expyriment.design.Block.name) == "6 years future block" :
+    elif str(expyriment.design.Block.name) == "6_years_future_block" :
         stim_proj6future.present()
-    elif str(expyriment.design.Block.name) == "9 years future block" :
+    elif str(expyriment.design.Block.name) == "9_years_future_block" :
         stim_proj9future.present()
     else:
         expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
@@ -451,7 +451,3 @@ expyriment.control.end()
 
 #We need to mesure errors too!
 #Must put the answer in the trial somehow
-#Key inputs must be predefined (left for past, right for future)
-#Or input from user?
-#input pastKey and futureKey
-#wait_char, with found as key input?
