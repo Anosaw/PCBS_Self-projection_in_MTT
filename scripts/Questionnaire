@@ -113,31 +113,78 @@ event2050.preload()
 event2053 = expyriment.stimuli.TextLine(text = "Gaz renouvelable", text_size = 40)
 event2053.preload()
 
-#Add events to trials
+#Add events to trials and set date as factor
 trial1985.add_stimulus(event1985)
+trial1985.set_factor(trueDate, 1985)
+
 trial1988.add_stimulus(event1988)
+trial1988.set_factor(trueDate, 1988)
+
 trial1991.add_stimulus(event1991)
+trial1991.set_factor(trueDate, 1991)
+
 trial1994.add_stimulus(event1994)
+trial1994.set_factor(trueDate, 1994)
+
 trial1997.add_stimulus(event1997)
+trial1997.set_factor(trueDate, 1997)
+
 trial2000.add_stimulus(event2000)
+trial2000.set_factor(trueDate, 2000)
+
 trial2003.add_stimulus(event2003)
+trial2003.set_factor(trueDate, 2003)
+
 trial2006.add_stimulus(event2006)
+trial2006.set_factor(trueDate, 2006)
+
 trial2009.add_stimulus(event2009)
+trial2009.set_factor(trueDate, 2009)
+
 trial2012.add_stimulus(event2012)
+trial2012.set_factor(trueDate, 2012)
+
 trial2015.add_stimulus(event2015)
+trial2015.set_factor(trueDate, 2015)
+
 trial2018.add_stimulus(event2018)
+trial2018.set_factor(trueDate, 2018)
+
 trial2019.add_stimulus(event2019)
+trial2019.set_factor(trueDate, 2019)
+
 trial2020.add_stimulus(event2020)
+trial2020.set_factor(trueDate, 2020)
+
 trial2023.add_stimulus(event2023)
+trial2023.set_factor(trueDate, 2023)
+
 trial2026.add_stimulus(event2026)
+trial2026.set_factor(trueDate, 2026)
+
 trial2029.add_stimulus(event2029)
+trial2029.set_factor(trueDate, 2029)
+
 trial2032.add_stimulus(event2032)
+trial2032.set_factor(trueDate, 2032)
+
 trial2035.add_stimulus(event2035)
+trial2035.set_factor(trueDate, 2035)
+
 trial2038.add_stimulus(event2038)
+trial2038.set_factor(trueDate, 2038)
+
 trial2041.add_stimulus(event2041)
+trial2041.set_factor(trueDate, 2041)
+
 trial2044.add_stimulus(event2044)
+trial2044.set_factor(trueDate, 2044)
+
 trial2050.add_stimulus(event2050)
+trial2050.set_factor(trueDate, 2050)
+
 trial2053.add_stimulus(event2053)
+trial2053.set_factor(trueDate, 2053)
 
 #Add trials to block
 block_questionnaire.add_trial(trial1985)
@@ -186,25 +233,10 @@ for trials in block_questionnaire.trial:
      message_text_size = 40, user_text_size = 40)
     answerDate = questionDate.get()
 
-    #OR
-    questionDate = expyriment.stimuli.TextLine(text = "date?", text_size = 40)
-    questionDate.preload()
-    questionDate.present()
-    answerDate, rt = questionnaire.Keyboard.wait_char()
-
-    if answerDate == trueDate:
+    if answerDate == get_factor(trueDate):
         goodAnswer = True
     else:
         goodAnswer = False
-
-    #OR
-    if trial == trial1985:
-        if answerDate == 1985:
-            goodAnswer = True
-        else:
-            goodAnswer = False
-    elif trial == trial1988:
-        #and so on
 
     questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1
      message_text_size = 40, user_text_size = 40)
