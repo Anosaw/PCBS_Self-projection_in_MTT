@@ -229,9 +229,9 @@ expyriment.control.start()
 
 for trial in block_questionnaire.trials:
     fixcross.present()
-    questionnaire.clock.wait(500)
+    questionnaire.clock.wait(1000)
     trial.stimuli[0].present()
-    questionnaire.clock.wait(2000)
+    questionnaire.keybord.wait(keys = expyriment.misc.constants.K_KP_ENTER)
 
 #Here put answer (check if valid input)
     questionDate = expyriment.io.TextInput(message = "date?", length = 4,

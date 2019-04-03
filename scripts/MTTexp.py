@@ -4,7 +4,6 @@
 #Then, we must present the events
 #The participants will be instructed to make a temporal judgment based on these events
 #This means they will be told to press left if event is past and right if future
-#Only RT matter in the data (not the actual judgment)
 
 import expyriment
 
@@ -125,31 +124,78 @@ event2050.preload()
 event2053 = expyriment.stimuli.TextLine(text = "Gaz renouvelable", text_size = 40)
 event2053.preload()
 
-#Add events to trials
+#Add events to trials and set date as factor
 trial1985.add_stimulus(event1985)
+trial1985.set_factor("trueDate", 1985)
+
 trial1988.add_stimulus(event1988)
+trial1988.set_factor("trueDate", 1988)
+
 trial1991.add_stimulus(event1991)
+trial1991.set_factor("trueDate", 1991)
+
 trial1994.add_stimulus(event1994)
+trial1994.set_factor("trueDate", 1994)
+
 trial1997.add_stimulus(event1997)
+trial1997.set_factor("trueDate", 1997)
+
 trial2000.add_stimulus(event2000)
+trial2000.set_factor("trueDate", 2000)
+
 trial2003.add_stimulus(event2003)
+trial2003.set_factor("trueDate", 2003)
+
 trial2006.add_stimulus(event2006)
+trial2006.set_factor("trueDate", 2006)
+
 trial2009.add_stimulus(event2009)
+trial2009.set_factor("trueDate", 2009)
+
 trial2012.add_stimulus(event2012)
+trial2012.set_factor("trueDate", 2012)
+
 trial2015.add_stimulus(event2015)
+trial2015.set_factor("trueDate", 2015)
+
 trial2018.add_stimulus(event2018)
+trial2018.set_factor("trueDate", 2018)
+
 trial2019.add_stimulus(event2019)
+trial2019.set_factor("trueDate", 2019)
+
 trial2020.add_stimulus(event2020)
+trial2020.set_factor("trueDate", 2020)
+
 trial2023.add_stimulus(event2023)
+trial2023.set_factor("trueDate", 2023)
+
 trial2026.add_stimulus(event2026)
+trial2026.set_factor("trueDate", 2026)
+
 trial2029.add_stimulus(event2029)
+trial2029.set_factor("trueDate", 2029)
+
 trial2032.add_stimulus(event2032)
+trial2032.set_factor("trueDate", 2032)
+
 trial2035.add_stimulus(event2035)
+trial2035.set_factor("trueDate", 2035)
+
 trial2038.add_stimulus(event2038)
+trial2038.set_factor("trueDate", 2038)
+
 trial2041.add_stimulus(event2041)
+trial2041.set_factor("trueDate", 2041)
+
 trial2044.add_stimulus(event2044)
+trial2044.set_factor("trueDate", 2044)
+
 trial2050.add_stimulus(event2050)
+trial2050.set_factor("trueDate", 2050)
+
 trial2053.add_stimulus(event2053)
+trial2053.set_factor("trueDate", 2053)
 
 #Create other needed stimuli and trials
 
@@ -180,19 +226,6 @@ stim_proj6future.preload()
 stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = 40)
 stim_proj9future.preload()
 
-#Several solutions to have the projection stimuli appear first
-#Either add it first to the block, then add all other trials with random_position = bool(1)
-#Or add it last (after shuffling trials), then swap position with the first one
-#Or add it last and simply refer to the last trial in the block to call it
-#Note that with the two last ones, you must know the exact number of trials in the block
-#Which may change if some are to be excluded!
-
-#Key instructions
-stim_pastKey = expyriment.stimuli.TextLine(text = "Entrer la touche pour le passé", text_size = 40)
-stim_pastKey.preload()
-
-stim_futureKey = expyriment.stimuli.TextLine(text = "Entrer la touche pour le futur", text_size = 40)
-stim_futureKey.present()
 
 #Question
 question = expyriment.stimuli.TextLine(text = "avant ou après?", text_size = 40)
@@ -410,19 +443,23 @@ expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 #Start exp
 expyriment.control.start()
 
-#Ask participant to define keys
-stim_pastKey.present()
-MTTexp.clock.wait(1000)
-pastKey, rt = MTTexp.keyboard.wait()
-stim_futureKey.present()
-MTTexp.clock.wait(1000)
-futureKey, rt = MTTexp.keyboard.wait()
-response_keys = [pastKey, futureKey]
-
 
 for block in MTTexp.blocks :
+    #Randomize keys
+    random_keys = expyriment.design.ransomize.coin_flip()
+        if random_keys == True:
+            pastKey = expyriment.misc.constants.K_LEFT
+            futureKey = expyriment.misc.constants.K_RIGHT
+        else:
+            pastKey = expyriment.misc.constants.K_RIGHT
+            futureKey = expyriment.misc.constants.K_LEFT
+
+    response_keys = [pastKey, futureKey]
+
     fixcross.present() #Present fixation cross
-    MTTexp.clock.wait(500)
+    MTTexp.clock.wait(1000)
+
+    #Present projection according to block
     if block.get_factor("projection") == -9 :
         stim_proj9past.present()
     elif block.get_factor("projection") == -6 :
@@ -440,22 +477,41 @@ for block in MTTexp.blocks :
     else:
         expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
 
+#Could work using block names?
 
-    MTTexp.clock.wait(2000)
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_KP_ENTER) #Wait until participants press enter
+    #Should we have a screen like "press enter when ready"?
+
     for trial in blocks.trials :
-            trial.stimuli[0].present() #Present event
+            fixcross.present()
             MTTexp.clock.wait(1000)
-            question.present() #Present question
-            key, rt = MTTexp.keyboard.wait(keys = response_keys, duration = 3000) #Mesure RT
+            trial.stimuli[0].present() #Present event
+            pressedKey, rt = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
             MTTexp.data.add([expyriment.design.Block.name, expyriment.design.Trial.id, key, rt]) #Add data
-            MTTexp.clock.wait(500) #Wait before going to the next event
+
+            #randomize ITI
+            random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
+            MTTexp.clock.wait(random_ITI) #Wait before going to the next event
 
 
 expyriment.control.end()
 
-#Note: to do this experiment properly
-#We should weed out beforehand the events the participant does not remember
-#For this we will need to code a questionnaire
 
 #We need to mesure errors too!
 #Must put the answer in the trial somehow
+
+#Put event in table
+
+#Have screen with event and avant/après unedernath, with the keys
+#randomize keys across blocks
+
+#slow down a bit
+
+#check if pycho booth have anaconda
+#voir sur cea groom pour réserver box
+#faire fiche projet
+
+#finir code fin semaine pro
+
+#Faire une synthèse des matériels et méthodes, mettre sur osf
+#Titre??? parametric effect of Self projection in time on chronometry???
