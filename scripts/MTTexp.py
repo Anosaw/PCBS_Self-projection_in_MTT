@@ -11,6 +11,7 @@ import expyriment
 MTTexp = expyriment.design.Experiment(name = "MTT Experiment")
 expyriment.control.initialize(MTTexp)
 
+
 good_answer = True
 
 
@@ -216,8 +217,12 @@ trial2053.set_factor("Date", 2053)
 #Create other needed stimuli and trials
 
 #Let's put a fixation cross
-fixcross = expyriment.stimuli.FixCross()
+fixcross = expyriment.stimuli.FixCross(line_width = 4)
 fixcross.preload()
+
+#Create the picture with the arrows
+after_to_the_left = expyriment.stimuli.Picture("documents/arrows.png", position = (0, 700))
+after_to_the_left.preload()
 
 #Instructions
 #Projection instructions
@@ -241,12 +246,6 @@ stim_proj6future.preload()
 
 stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = 40)
 stim_proj9future.preload()
-
-
-#Question
-question = expyriment.stimuli.TextLine(text = "avant ou après?", text_size = 40)
-question.preload()
-
 
 #Add trials to blocks
 
@@ -471,7 +470,7 @@ expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 #The second one means less lines, but how random is it?
 
 #Set experimental data variable names
-MTTexp.add_data_variable_names(["projection", "date", "pressed_key", "good_answer", "RT"])
+MTTexp.add_data_variable_names(["projection", "date", "projection_to_event_distance", "pressed_key", "good_answer", "RT"])
 
 #Start exp
 expyriment.control.start()
@@ -519,13 +518,14 @@ for block in MTTexp.blocks :
 
 #Could work using block names?
 
-    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_KP_ENTER) #Wait until participants press enter
-    #Should we have a screen like "press enter when ready"?
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE) #Wait until participants press enter
+    #Should we have a screen like "press space when ready"?
 
     for trial in blocks.trials :
             fixcross.present()
             MTTexp.clock.wait(1000)
             trial.stimuli[0].present() #Present event
+            after_to_the_left.present()
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
             MTTexp.screen.clear()
             if trial.get_factor("Date") < (2019 + projection):
@@ -538,7 +538,8 @@ for block in MTTexp.blocks :
                     good_answer = True
                 else:
                     good_answer = False
-            MTTexp.data.add([projection, trial.get_factor("Date"), pressed_key, good_answer, RT]) #Add data
+            projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
+            MTTexp.data.add([projection, trial.get_factor("Date"), projection_to_event_distance, pressed_key, good_answer, RT]) #Add data
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
             MTTexp.clock.wait(random_ITI) #Wait before going to the next event
@@ -546,6 +547,10 @@ for block in MTTexp.blocks :
 
 expyriment.control.end()
 
+#ajouter distance proj/ev
+#ajouter fictionnalité
+
+#dire tout de suite que fictif
 
 #We need to mesure errors too!
 #Must put the answer in the trial somehow

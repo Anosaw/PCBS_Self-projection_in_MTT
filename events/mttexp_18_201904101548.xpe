@@ -1,0 +1,205 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpe-file, coding: cp1252
+#date: Wed Apr 10 2019 15:48:32
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+12239,design,log,
+#design: #exp: MTT Experiment
+#design: #dvn: projection,date,projection_to_event_distance,pressed_key,good_answer,RT
+#design: block_cnt,block_id,block_projection,trial_cnt,trial_id,Date
+#design: 0,5,6,0,14,2020
+#design: 0,5,6,1,13,2019
+#design: 0,5,6,2,8,2009
+#design: 0,5,6,3,5,2000
+#design: 0,5,6,4,21,2041
+#design: 0,5,6,5,23,2047
+#design: 0,5,6,6,9,2012
+#design: 0,5,6,7,3,1994
+#design: 0,5,6,8,1,1988
+#design: 0,5,6,9,22,2044
+#design: 0,5,6,10,17,2029
+#design: 0,5,6,11,6,2003
+#design: 0,5,6,12,11,2018
+#design: 0,5,6,13,20,2038
+#design: 0,5,6,14,18,2032
+#design: 0,5,6,15,16,2026
+#design: 0,5,6,16,7,2006
+#design: 0,5,6,17,4,1997
+#design: 0,5,6,18,12,2019
+#design: 0,5,6,19,19,2035
+#design: 0,5,6,20,15,2023
+#design: 0,5,6,21,10,2015
+#design: 0,5,6,22,2,1991
+#design: 0,5,6,23,0,1985
+#design: 0,5,6,24,24,2050
+#design: 0,5,6,25,25,2053
+#design: 1,2,-3,0,4,1997
+#design: 1,2,-3,1,10,2015
+#design: 1,2,-3,2,16,2026
+#design: 1,2,-3,3,12,2019
+#design: 1,2,-3,4,6,2003
+#design: 1,2,-3,5,11,2018
+#design: 1,2,-3,6,5,2000
+#design: 1,2,-3,7,1,1988
+#design: 1,2,-3,8,15,2023
+#design: 1,2,-3,9,2,1991
+#design: 1,2,-3,10,24,2050
+#design: 1,2,-3,11,25,2053
+#design: 1,2,-3,12,0,1985
+#design: 1,2,-3,13,23,2047
+#design: 1,2,-3,14,19,2035
+#design: 1,2,-3,15,21,2041
+#design: 1,2,-3,16,13,2019
+#design: 1,2,-3,17,9,2012
+#design: 1,2,-3,18,8,2009
+#design: 1,2,-3,19,20,2038
+#design: 1,2,-3,20,7,2006
+#design: 1,2,-3,21,22,2044
+#design: 1,2,-3,22,17,2029
+#design: 1,2,-3,23,14,2020
+#design: 1,2,-3,24,18,2032
+#design: 1,2,-3,25,3,1994
+#design: 2,4,3,0,0,1985
+#design: 2,4,3,1,5,2000
+#design: 2,4,3,2,15,2023
+#design: 2,4,3,3,6,2003
+#design: 2,4,3,4,19,2035
+#design: 2,4,3,5,16,2026
+#design: 2,4,3,6,20,2038
+#design: 2,4,3,7,24,2050
+#design: 2,4,3,8,23,2047
+#design: 2,4,3,9,17,2029
+#design: 2,4,3,10,10,2015
+#design: 2,4,3,11,11,2018
+#design: 2,4,3,12,9,2012
+#design: 2,4,3,13,1,1988
+#design: 2,4,3,14,25,2053
+#design: 2,4,3,15,21,2041
+#design: 2,4,3,16,13,2019
+#design: 2,4,3,17,4,1997
+#design: 2,4,3,18,18,2032
+#design: 2,4,3,19,7,2006
+#design: 2,4,3,20,12,2019
+#design: 2,4,3,21,3,1994
+#design: 2,4,3,22,8,2009
+#design: 2,4,3,23,14,2020
+#design: 2,4,3,24,22,2044
+#design: 2,4,3,25,2,1991
+#design: 3,0,-9,0,2,1991
+#design: 3,0,-9,1,17,2029
+#design: 3,0,-9,2,14,2020
+#design: 3,0,-9,3,1,1988
+#design: 3,0,-9,4,19,2035
+#design: 3,0,-9,5,6,2003
+#design: 3,0,-9,6,24,2050
+#design: 3,0,-9,7,13,2019
+#design: 3,0,-9,8,4,1997
+#design: 3,0,-9,9,11,2018
+#design: 3,0,-9,10,18,2032
+#design: 3,0,-9,11,22,2044
+#design: 3,0,-9,12,3,1994
+#design: 3,0,-9,13,25,2053
+#design: 3,0,-9,14,8,2009
+#design: 3,0,-9,15,12,2019
+#design: 3,0,-9,16,15,2023
+#design: 3,0,-9,17,20,2038
+#design: 3,0,-9,18,0,1985
+#design: 3,0,-9,19,10,2015
+#design: 3,0,-9,20,7,2006
+#design: 3,0,-9,21,5,2000
+#design: 3,0,-9,22,21,2041
+#design: 3,0,-9,23,23,2047
+#design: 3,0,-9,24,16,2026
+#design: 3,0,-9,25,9,2012
+#design: 4,1,-6,0,13,2019
+#design: 4,1,-6,1,25,2053
+#design: 4,1,-6,2,0,1985
+#design: 4,1,-6,3,11,2018
+#design: 4,1,-6,4,15,2023
+#design: 4,1,-6,5,20,2038
+#design: 4,1,-6,6,22,2044
+#design: 4,1,-6,7,1,1988
+#design: 4,1,-6,8,21,2041
+#design: 4,1,-6,9,3,1994
+#design: 4,1,-6,10,18,2032
+#design: 4,1,-6,11,5,2000
+#design: 4,1,-6,12,8,2009
+#design: 4,1,-6,13,23,2047
+#design: 4,1,-6,14,24,2050
+#design: 4,1,-6,15,17,2029
+#design: 4,1,-6,16,7,2006
+#design: 4,1,-6,17,9,2012
+#design: 4,1,-6,18,19,2035
+#design: 4,1,-6,19,14,2020
+#design: 4,1,-6,20,2,1991
+#design: 4,1,-6,21,6,2003
+#design: 4,1,-6,22,10,2015
+#design: 4,1,-6,23,16,2026
+#design: 4,1,-6,24,4,1997
+#design: 4,1,-6,25,12,2019
+#design: 5,3,0,0,1,1988
+#design: 5,3,0,1,8,2012
+#design: 5,3,0,2,2,1994
+#design: 5,3,0,3,16,2029
+#design: 5,3,0,4,18,2035
+#design: 5,3,0,5,0,1985
+#design: 5,3,0,6,4,2000
+#design: 5,3,0,7,15,2026
+#design: 5,3,0,8,7,2009
+#design: 5,3,0,9,12,2019
+#design: 5,3,0,10,14,2023
+#design: 5,3,0,11,19,2038
+#design: 5,3,0,12,3,1997
+#design: 5,3,0,13,21,2044
+#design: 5,3,0,14,24,2053
+#design: 5,3,0,15,13,2020
+#design: 5,3,0,16,10,2018
+#design: 5,3,0,17,23,2050
+#design: 5,3,0,18,17,2032
+#design: 5,3,0,19,5,2003
+#design: 5,3,0,20,22,2047
+#design: 5,3,0,21,11,2019
+#design: 5,3,0,22,9,2015
+#design: 5,3,0,23,6,2006
+#design: 5,3,0,24,20,2041
+#design: 6,6,9,0,12,2019
+#design: 6,6,9,1,21,2041
+#design: 6,6,9,2,10,2015
+#design: 6,6,9,3,3,1994
+#design: 6,6,9,4,11,2018
+#design: 6,6,9,5,19,2035
+#design: 6,6,9,6,8,2009
+#design: 6,6,9,7,14,2020
+#design: 6,6,9,8,20,2038
+#design: 6,6,9,9,1,1988
+#design: 6,6,9,10,6,2003
+#design: 6,6,9,11,4,1997
+#design: 6,6,9,12,5,2000
+#design: 6,6,9,13,2,1991
+#design: 6,6,9,14,16,2026
+#design: 6,6,9,15,24,2050
+#design: 6,6,9,16,15,2023
+#design: 6,6,9,17,0,1985
+#design: 6,6,9,18,9,2012
+#design: 6,6,9,19,23,2047
+#design: 6,6,9,20,17,2029
+#design: 6,6,9,21,22,2044
+#design: 6,6,9,22,18,2032
+#design: 6,6,9,23,7,2006
+#design: 6,6,9,24,13,2019
+#design: 6,6,9,25,25,2053
+12240,design,logged,
+12240,Experiment,started
+12241,Stimulus,presented,26
+13244,Stimulus,presented,32
+14171,Keyboard,received,32,wait
+14171,Stimulus,presented,26
+15175,Stimulus,presented,12
+15179,stderr,received,'Traceback (most recent call last):'
+15184,stderr,received,'  File "scripts\\mttexp.py", line 534, in <module>'
+15186,stderr,received,'    stim_after.plot(trial.stimuli[0])'
+15187,stderr,received,'  File "C:\\Users\\annaw\\Anaconda3\\lib\\site-packages\\expyriment\\stimuli\\_visual.py", line 772, in plot'
+15188,stderr,received,'    "plot()"))'
+15190,stderr,received,'RuntimeError: Cannot call plot() on compressed stimuli!'
