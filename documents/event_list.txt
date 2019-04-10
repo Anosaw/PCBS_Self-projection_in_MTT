@@ -1,0 +1,39 @@
+"""
+List of events
+
+date = the date of the event
+event = short description of the event (in french)
+fictional = True if the event is fictional, False if not
+name_presented = name as it appears on the screen during the experiment (in french)
+
+Note that the time of the experiment (present) is set in 2019.
+Therefore, there are two events in 2019, one past and one future.
+
+"""
+date,event,fictional,name_presented
+1985,"découverte du trou dans la couche d'ozone",False,"trou ozone"
+1988,"jeux olympiques à Nagoya",True,"JO Nagoya"
+1991,"dislocation de l'URSS",False,"dislocation URSS"
+1994,"mise en service du métro de Bordeaux",True,"métro Bordeaux"
+1997,"publication du premier tome d'Harry Potter",False,"Harry Potter"
+2000,"victoire de la Lettonie à l'Eurovision",True,"Lettonie Eurovision"
+2003,"séquençage complet du génome humain",False,"génome humain"
+2006,"mise en service du tramway de Paris",False,"tramway Paris"
+2009,"création du Bitcoin",False,"création Bitcoin"
+2012,"Curiosity atterit sur Mars",False,"Curiosity Mars"
+2015,"inauguration du musée Metallica",True,"musée Metallica"
+2018,"Panthéonisation de Simone Veil",False,"Simone Veil"
+2019,"Netflix annonce une nouvelle saison de Friends",True,"Netflix Friends"
+2019,"coupe du monde de football féminin",False,"coupe football"
+2020,"commercialisation de viandes artificielles",False,"viandes artificielles"
+2023,"réintroduction du loup au Japon",True,"loup Japon"
+2026,"inauguration de Dubailand",False,"Inauguration Dubailand"
+2029,"première usine de photosynthèse artificielle",True,"usine photosynthèse"
+2032,"fin de construction du Grand Paris Express",False,"Grand Paris"
+2035,"premiers bateaux automatiques",False,"bateaux automatiques"
+2038,"ligne d'avions solaires Los Angeles-Rio de Janeiro",True,"avions solaires"
+2041,"ouverture du tunnel sous Béring",False,"tunnel Béring"
+2044,"thérapie génique contre le Sida",True,"thérapie Sida"
+2047,"la population mondiale atteint 9.5 milliards",False,"9.5 milliards"
+2050,"premier être humain à marcher sur Mars",True,"humain Mars"
+2053,"réseau de gaz français 100% renouvelable",False,"gaz renouvelable"

@@ -11,6 +11,8 @@ import expyriment
 MTTexp = expyriment.design.Experiment(name = "MTT Experiment")
 expyriment.control.initialize(MTTexp)
 
+good_answer = True
+
 
 #Define blocks, trials and stimuli
 #There is 1 trial per stimulus
@@ -37,7 +39,8 @@ trial2009 = expyriment.design.Trial()
 trial2012 = expyriment.design.Trial()
 trial2015 = expyriment.design.Trial()
 trial2018 = expyriment.design.Trial()
-trial2019 = expyriment.design.Trial()
+trial2019Past = expyriment.design.Trial()
+trial2019Future = expyriment.design.Trial()
 trial2020 = expyriment.design.Trial()
 trial2020 = expyriment.design.Trial()
 trial2023 = expyriment.design.Trial()
@@ -48,20 +51,21 @@ trial2035 = expyriment.design.Trial()
 trial2038 = expyriment.design.Trial()
 trial2041 = expyriment.design.Trial()
 trial2044 = expyriment.design.Trial()
+trial2047 = expyriment.design.Trial()
 trial2050 = expyriment.design.Trial()
 trial2053 = expyriment.design.Trial()
 
 #Create stimuli and preload them
-event1985 = expyriment.stimuli.TextLine(text = "Trou ozone", text_size = 40)
+event1985 = expyriment.stimuli.TextLine(text = "trou ozone", text_size = 40)
 event1985.preload()
 
 event1988 = expyriment.stimuli.TextLine(text = "JO Nagoya", text_size = 40)
 event1988.preload()
 
-event1991 = expyriment.stimuli.TextLine(text = "Dislocation URSS", text_size = 40)
+event1991 = expyriment.stimuli.TextLine(text = "dislocation URSS", text_size = 40)
 event1991.preload()
 
-event1994 = expyriment.stimuli.TextLine(text = "Métro Bordeaux", text_size = 40)
+event1994 = expyriment.stimuli.TextLine(text = "métro Bordeaux", text_size = 40)
 event1994.preload()
 
 event1997 = expyriment.stimuli.TextLine(text = "Harry Potter", text_size = 40)
@@ -70,132 +74,144 @@ event1997.preload()
 event2000 = expyriment.stimuli.TextLine(text = "Lettonie Eurovision", text_size = 40)
 event2000.preload()
 
-event2003 = expyriment.stimuli.TextLine( text = "Génome humain", text_size = 40)
+event2003 = expyriment.stimuli.TextLine( text = "génome humain", text_size = 40)
 event2003.preload()
 
-event2006 = expyriment.stimuli.TextLine(text = "Tramway Paris", text_size = 40)
+event2006 = expyriment.stimuli.TextLine(text = "tramway Paris", text_size = 40)
 event2006.preload()
 
-event2009 = expyriment.stimuli.TextLine(text = "Création Bitcoin", text_size = 40)
+event2009 = expyriment.stimuli.TextLine(text = "création Bitcoin", text_size = 40)
 event2009.preload()
 
-event2012 = expyriment.stimuli.TextLine(text = "Curiosity sur Mars", text_size = 40)
+event2012 = expyriment.stimuli.TextLine(text = "Curiosity Mars", text_size = 40)
 event2012.preload()
 
-event2015 = expyriment.stimuli.TextLine(text = "Musée Metallica", text_size = 40)
+event2015 = expyriment.stimuli.TextLine(text = "musée Metallica", text_size = 40)
 event2015.preload()
 
 event2018 = expyriment.stimuli.TextLine(text = "Simone Veil", text_size = 40)
 event2018.preload()
 
-event2019 = expyriment.stimuli.TextLine(text = "Coupe football", text_size = 40)
-event2019.preload()
+event2019Past = expyriment.stimuli.TextLine(text = "Netflix Friends", text_size = 40)
+event2019Past.preload()
 
-event2020 = expyriment.stimuli.TextLine(text = "Viandes artificielles", text_size = 40)
+event2019Future = expyriment.stimuli.TextLine(text = "coupe football", text_size = 40)
+event2019Future.preload()
+
+event2020 = expyriment.stimuli.TextLine(text = "viandes artificielles", text_size = 40)
 event2020.preload()
 
-event2023 = expyriment.stimuli.TextLine(text = "tour Montparnasse", text_size = 40)
+event2023 = expyriment.stimuli.TextLine(text = "loup Japon", text_size = 40)
 event2023.preload()
 
-event2026 = expyriment.stimuli.TextLine(text = "JO d'hiver", text_size = 40)
+event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubailand", text_size = 40)
 event2026.preload()
 
-event2029 = expyriment.stimuli.TextLine(text = "Arrêt centimes", text_size = 40)
+event2029 = expyriment.stimuli.TextLine(text = "usine photosynthèse", text_size = 40)
 event2029.preload()
 
 event2032 = expyriment.stimuli.TextLine(text = "Grand Paris", text_size = 40)
 event2032.preload()
 
-event2035 = expyriment.stimuli.TextLine(text = "port Alexandrie", text_size = 40)
+event2035 = expyriment.stimuli.TextLine(text = "bateaux automatiques", text_size = 40)
 event2035.preload()
 
-event2038 = expyriment.stimuli.TextLine(text = "Avions solaires", text_size = 40)
+event2038 = expyriment.stimuli.TextLine(text = "avions solaires", text_size = 40)
 event2038.preload()
 
-event2041 = expyriment.stimuli.TextLine(text = "Tunnel sous Bering", text_size = 40)
+event2041 = expyriment.stimuli.TextLine(text = "tunnel Bering", text_size = 40)
 event2041.preload()
 
-event2044 = expyriment.stimuli.TextLine(text = "Thérapie Sida", text_size = 40)
+event2044 = expyriment.stimuli.TextLine(text = "thérapie Sida", text_size = 40)
 event2044.preload()
 
-event2050 = expyriment.stimuli.TextLine(text = "Humain sur Mars", text_size = 40)
+event2050 = expyriment.stimuli.TextLine(text = "humain Mars", text_size = 40)
 event2050.preload()
 
-event2053 = expyriment.stimuli.TextLine(text = "Gaz renouvelable", text_size = 40)
+event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards")
+event2047.preload()
+
+event2053 = expyriment.stimuli.TextLine(text = "gaz renouvelable", text_size = 40)
 event2053.preload()
 
 #Add events to trials and set date as factor
 trial1985.add_stimulus(event1985)
-trial1985.set_factor("trueDate", 1985)
+trial1985.set_factor("Date", 1985)
 
 trial1988.add_stimulus(event1988)
-trial1988.set_factor("trueDate", 1988)
+trial1988.set_factor("Date", 1988)
 
 trial1991.add_stimulus(event1991)
-trial1991.set_factor("trueDate", 1991)
+trial1991.set_factor("Date", 1991)
 
 trial1994.add_stimulus(event1994)
-trial1994.set_factor("trueDate", 1994)
+trial1994.set_factor("Date", 1994)
 
 trial1997.add_stimulus(event1997)
-trial1997.set_factor("trueDate", 1997)
+trial1997.set_factor("Date", 1997)
 
 trial2000.add_stimulus(event2000)
-trial2000.set_factor("trueDate", 2000)
+trial2000.set_factor("Date", 2000)
 
 trial2003.add_stimulus(event2003)
-trial2003.set_factor("trueDate", 2003)
+trial2003.set_factor("Date", 2003)
 
 trial2006.add_stimulus(event2006)
-trial2006.set_factor("trueDate", 2006)
+trial2006.set_factor("Date", 2006)
 
 trial2009.add_stimulus(event2009)
-trial2009.set_factor("trueDate", 2009)
+trial2009.set_factor("Date", 2009)
 
 trial2012.add_stimulus(event2012)
-trial2012.set_factor("trueDate", 2012)
+trial2012.set_factor("Date", 2012)
 
 trial2015.add_stimulus(event2015)
-trial2015.set_factor("trueDate", 2015)
+trial2015.set_factor("Date", 2015)
 
 trial2018.add_stimulus(event2018)
-trial2018.set_factor("trueDate", 2018)
+trial2018.set_factor("Date", 2018)
 
-trial2019.add_stimulus(event2019)
-trial2019.set_factor("trueDate", 2019)
+trial2019Past.add_stimulus(event2019Past)
+trial2019Past.set_factor("Date", 2019)
+
+trial2019Future.add_stimulus(event2019Future)
+trial2019Future.set_factor("Date", 2019)
 
 trial2020.add_stimulus(event2020)
-trial2020.set_factor("trueDate", 2020)
+trial2020.set_factor("Date", 2020)
 
 trial2023.add_stimulus(event2023)
-trial2023.set_factor("trueDate", 2023)
+trial2023.set_factor("Date", 2023)
 
 trial2026.add_stimulus(event2026)
-trial2026.set_factor("trueDate", 2026)
+trial2026.set_factor("Date", 2026)
 
 trial2029.add_stimulus(event2029)
-trial2029.set_factor("trueDate", 2029)
+trial2029.set_factor("Date", 2029)
 
 trial2032.add_stimulus(event2032)
-trial2032.set_factor("trueDate", 2032)
+trial2032.set_factor("Date", 2032)
 
 trial2035.add_stimulus(event2035)
-trial2035.set_factor("trueDate", 2035)
+trial2035.set_factor("Date", 2035)
 
 trial2038.add_stimulus(event2038)
-trial2038.set_factor("trueDate", 2038)
+trial2038.set_factor("Date", 2038)
 
 trial2041.add_stimulus(event2041)
-trial2041.set_factor("trueDate", 2041)
+trial2041.set_factor("Date", 2041)
 
 trial2044.add_stimulus(event2044)
-trial2044.set_factor("trueDate", 2044)
+trial2044.set_factor("Date", 2044)
+
+trial2047.add_stimulus(event2047)
+trial2047.set_factor("Date", 2047)
 
 trial2050.add_stimulus(event2050)
-trial2050.set_factor("trueDate", 2050)
+trial2050.set_factor("Date", 2050)
 
 trial2053.add_stimulus(event2053)
-trial2053.set_factor("trueDate", 2053)
+trial2053.set_factor("Date", 2053)
 
 #Create other needed stimuli and trials
 
@@ -246,7 +262,8 @@ block_9past.add_trial(trial2009)
 block_9past.add_trial(trial2012)
 block_9past.add_trial(trial2015)
 block_9past.add_trial(trial2018)
-block_9past.add_trial(trial2019)
+block_9past.add_trial(trial2019Past)
+block_9past.add_trial(trial2019Future)
 block_9past.add_trial(trial2020)
 block_9past.add_trial(trial2023)
 block_9past.add_trial(trial2026)
@@ -256,6 +273,7 @@ block_9past.add_trial(trial2035)
 block_9past.add_trial(trial2038)
 block_9past.add_trial(trial2041)
 block_9past.add_trial(trial2044)
+block_9past.add_trial(trial2047)
 block_9past.add_trial(trial2050)
 block_9past.add_trial(trial2053)
 
@@ -271,7 +289,8 @@ block_6past.add_trial(trial2009)
 block_6past.add_trial(trial2012)
 block_6past.add_trial(trial2015)
 block_6past.add_trial(trial2018)
-block_6past.add_trial(trial2019)
+block_6past.add_trial(trial2019Past)
+block_6past.add_trial(trial2019Future)
 block_6past.add_trial(trial2020)
 block_6past.add_trial(trial2023)
 block_6past.add_trial(trial2026)
@@ -281,6 +300,7 @@ block_6past.add_trial(trial2035)
 block_6past.add_trial(trial2038)
 block_6past.add_trial(trial2041)
 block_6past.add_trial(trial2044)
+block_6past.add_trial(trial2047)
 block_6past.add_trial(trial2050)
 block_6past.add_trial(trial2053)
 
@@ -296,7 +316,8 @@ block_3past.add_trial(trial2009)
 block_3past.add_trial(trial2012)
 block_3past.add_trial(trial2015)
 block_3past.add_trial(trial2018)
-block_3past.add_trial(trial2019)
+block_3past.add_trial(trial2019Past)
+block_3past.add_trial(trial2019Future)
 block_3past.add_trial(trial2020)
 block_3past.add_trial(trial2023)
 block_3past.add_trial(trial2026)
@@ -306,6 +327,7 @@ block_3past.add_trial(trial2035)
 block_3past.add_trial(trial2038)
 block_3past.add_trial(trial2041)
 block_3past.add_trial(trial2044)
+block_3past.add_trial(trial2047)
 block_3past.add_trial(trial2050)
 block_3past.add_trial(trial2053)
 
@@ -320,7 +342,8 @@ block_now.add_trial(trial2009)
 block_now.add_trial(trial2012)
 block_now.add_trial(trial2015)
 block_now.add_trial(trial2018)
-block_now.add_trial(trial2019)
+block_now.add_trial(trial2019Past)
+block_now.add_trial(trial2019Future)
 block_now.add_trial(trial2020)
 block_now.add_trial(trial2023)
 block_now.add_trial(trial2026)
@@ -330,6 +353,7 @@ block_now.add_trial(trial2035)
 block_now.add_trial(trial2038)
 block_now.add_trial(trial2041)
 block_now.add_trial(trial2044)
+block_now.add_trial(trial2047)
 block_now.add_trial(trial2050)
 block_now.add_trial(trial2053)
 
@@ -345,7 +369,8 @@ block_3future.add_trial(trial2009)
 block_3future.add_trial(trial2012)
 block_3future.add_trial(trial2015)
 block_3future.add_trial(trial2018)
-block_3future.add_trial(trial2019)
+block_3future.add_trial(trial2019Past)
+block_3future.add_trial(trial2019Future)
 block_3future.add_trial(trial2020)
 block_3future.add_trial(trial2023)
 block_3future.add_trial(trial2026)
@@ -355,6 +380,7 @@ block_3future.add_trial(trial2035)
 block_3future.add_trial(trial2038)
 block_3future.add_trial(trial2041)
 block_3future.add_trial(trial2044)
+block_3future.add_trial(trial2047)
 block_3future.add_trial(trial2050)
 block_3future.add_trial(trial2053)
 
@@ -370,7 +396,8 @@ block_6future.add_trial(trial2009)
 block_6future.add_trial(trial2012)
 block_6future.add_trial(trial2015)
 block_6future.add_trial(trial2018)
-block_6future.add_trial(trial2019)
+block_6future.add_trial(trial2019Past)
+block_6future.add_trial(trial2019Future)
 block_6future.add_trial(trial2020)
 block_6future.add_trial(trial2023)
 block_6future.add_trial(trial2026)
@@ -380,6 +407,7 @@ block_6future.add_trial(trial2035)
 block_6future.add_trial(trial2038)
 block_6future.add_trial(trial2041)
 block_6future.add_trial(trial2044)
+block_6future.add_trial(trial2047)
 block_6future.add_trial(trial2050)
 block_6future.add_trial(trial2053)
 
@@ -395,7 +423,8 @@ block_9future.add_trial(trial2009)
 block_9future.add_trial(trial2012)
 block_9future.add_trial(trial2015)
 block_9future.add_trial(trial2018)
-block_9future.add_trial(trial2019)
+block_9future.add_trial(trial2019Past)
+block_9future.add_trial(trial2019Future)
 block_9future.add_trial(trial2020)
 block_9future.add_trial(trial2023)
 block_9future.add_trial(trial2026)
@@ -405,8 +434,11 @@ block_9future.add_trial(trial2035)
 block_9future.add_trial(trial2038)
 block_9future.add_trial(trial2041)
 block_9future.add_trial(trial2044)
+block_9future.add_trial(trial2047)
 block_9future.add_trial(trial2050)
 block_9future.add_trial(trial2053)
+
+#Add good answer as factor
 
 #Add projection point as factor
 block_9past.set_factor("projection", -9)
@@ -438,7 +470,8 @@ expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 #Or, when adding them, use argument random_position = bool(1)
 #The second one means less lines, but how random is it?
 
-
+#Set experimental data variable names
+exp.add_data_variable_names(["block", "trial", "pressed_key", "good_answer", "RT"])
 
 #Start exp
 expyriment.control.start()
@@ -448,13 +481,13 @@ for block in MTTexp.blocks :
     #Randomize keys
     random_keys = expyriment.design.ransomize.coin_flip()
         if random_keys == True:
-            pastKey = expyriment.misc.constants.K_LEFT
-            futureKey = expyriment.misc.constants.K_RIGHT
+            past_key = expyriment.misc.constants.K_LEFT
+            future_key = expyriment.misc.constants.K_RIGHT
         else:
-            pastKey = expyriment.misc.constants.K_RIGHT
-            futureKey = expyriment.misc.constants.K_LEFT
+            past_key = expyriment.misc.constants.K_RIGHT
+            future_key = expyriment.misc.constants.K_LEFT
 
-    response_keys = [pastKey, futureKey]
+    response_keys = [past_key, future_key]
 
     fixcross.present() #Present fixation cross
     MTTexp.clock.wait(1000)
@@ -486,9 +519,18 @@ for block in MTTexp.blocks :
             fixcross.present()
             MTTexp.clock.wait(1000)
             trial.stimuli[0].present() #Present event
-            pressedKey, rt = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
-            MTTexp.data.add([expyriment.design.Block.name, expyriment.design.Trial.id, key, rt]) #Add data
-
+            pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
+            if trial.get_factor("date") < (2019 + block.get_factor("projection")):
+                if pressed_key = past_key:
+                    good_answer = True
+                else:
+                    good_answer = False
+            if trial.get_factor("date") > (2019 + block.get_factor("projection")):
+                if pressed_key = future_key:
+                    good_answer = True
+                else:
+                    good_answer = False
+            MTTexp.data.add([expyriment.design.Block.name, expyriment.design.Trial.id, pressed_key, good_answer, RT]) #Add data
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
             MTTexp.clock.wait(random_ITI) #Wait before going to the next event
@@ -513,5 +555,8 @@ expyriment.control.end()
 
 #finir code fin semaine pro
 
+#pause entre blocs
+
 #Faire une synthèse des matériels et méthodes, mettre sur osf
 #Titre??? parametric effect of Self projection in time on chronometry???
+#self projection in mental time travel : effect of the distance of projection on reaction times
