@@ -1,0 +1,72 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpd-file, coding: cp1252
+#date: Wed Apr 10 2019 10:53:44
+#--EXPERIMENT INFO
+#e mainfile: mttexp.py
+#e sha1: None
+#e modules: 
+#e Experiment: MTT Experiment
+#e no between subject factors
+#e Block 5: 6 years future block
+#e     block factors: projection = 6
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#e Block 4: 3 years future block
+#e     block factors: projection = 3
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#e Block 2: 3 years past block
+#e     block factors: projection = -3
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#e Block 0: 9 years past block
+#e     block factors: projection = -9
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#e Block 1: 6 years past block
+#e     block factors: projection = -6
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#e Block 3: present block
+#e     block factors: projection = 0
+#e     n trials: 25
+#e     trial factors: Date = [1985, 1988, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#e Block 6: 9 years future block
+#e     block factors: projection = 9
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    
+#--SUBJECT INFO
+#s id: 13
+subject_id,projection,date,pressed_key,good_answer,RT
+13,6,2019,276,False,1032
+13,6,2026,275,False,1009
+13,6,2000,276,False,787
+13,6,2050,276,True,1499
+13,6,2044,275,False,1380
+13,6,2038,275,False,1119
+13,6,2003,276,False,1840
+13,6,2019,276,False,1043
+13,6,2023,275,True,726
+13,6,1988,276,False,633
+13,6,2047,275,False,1187
+13,6,2018,276,False,666
+13,6,2053,275,False,711
+13,6,1985,276,False,995
+13,6,1991,276,False,1065
+13,6,2006,275,True,817
+13,6,2020,275,True,763
+13,6,2029,276,True,721
+13,6,2032,275,False,830
+13,6,1997,276,False,878
+13,6,2009,276,False,745
+13,6,2012,276,False,2230
+13,6,2015,276,False,1268
+13,6,2035,275,False,1641
+13,6,2041,275,False,2385
+13,6,1994,276,False,1052

@@ -128,7 +128,7 @@ event2044.preload()
 event2050 = expyriment.stimuli.TextLine(text = "humain Mars", text_size = 40)
 event2050.preload()
 
-event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards")
+event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards", text_size = 40)
 event2047.preload()
 
 event2053 = expyriment.stimuli.TextLine(text = "gaz renouvelable", text_size = 40)
@@ -471,7 +471,7 @@ expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 #The second one means less lines, but how random is it?
 
 #Set experimental data variable names
-exp.add_data_variable_names(["block", "trial", "pressed_key", "good_answer", "RT"])
+MTTexp.add_data_variable_names(["projection", "date", "pressed_key", "good_answer", "RT"])
 
 #Start exp
 expyriment.control.start()
@@ -479,13 +479,13 @@ expyriment.control.start()
 
 for block in MTTexp.blocks :
     #Randomize keys
-    random_keys = expyriment.design.ransomize.coin_flip()
-        if random_keys == True:
-            past_key = expyriment.misc.constants.K_LEFT
-            future_key = expyriment.misc.constants.K_RIGHT
-        else:
-            past_key = expyriment.misc.constants.K_RIGHT
-            future_key = expyriment.misc.constants.K_LEFT
+    random_keys = expyriment.design.randomize.coin_flip()
+    if random_keys == True:
+        past_key = expyriment.misc.constants.K_LEFT
+        future_key = expyriment.misc.constants.K_RIGHT
+    else:
+        past_key = expyriment.misc.constants.K_RIGHT
+        future_key = expyriment.misc.constants.K_LEFT
 
     response_keys = [past_key, future_key]
 
@@ -494,18 +494,25 @@ for block in MTTexp.blocks :
 
     #Present projection according to block
     if block.get_factor("projection") == -9 :
+        projection = -9
         stim_proj9past.present()
     elif block.get_factor("projection") == -6 :
+        projection = -6
         stim_proj6past.present()
     elif block.get_factor("projection") == -3 :
+        projection = -3
         stim_proj3past.present()
     elif block.get_factor("projection") == 0 :
+        projection = 0
         stim_projnow.present()
     elif block.get_factor("projection") == 3 :
+        projection = 3
         stim_proj3future.present()
     elif block.get_factor("projection") == 6 :
+        projection = 6
         stim_proj6future.present()
     elif block.get_factor("projection") == 9 :
+        projection = 9
         stim_proj9future.present()
     else:
         expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
@@ -520,17 +527,18 @@ for block in MTTexp.blocks :
             MTTexp.clock.wait(1000)
             trial.stimuli[0].present() #Present event
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
-            if trial.get_factor("date") < (2019 + block.get_factor("projection")):
-                if pressed_key = past_key:
+            MTTexp.screen.clear()
+            if trial.get_factor("Date") < (2019 + projection):
+                if pressed_key == past_key:
                     good_answer = True
                 else:
                     good_answer = False
-            if trial.get_factor("date") > (2019 + block.get_factor("projection")):
-                if pressed_key = future_key:
+            if trial.get_factor("Date") > (2019 + projection):
+                if pressed_key == future_key:
                     good_answer = True
                 else:
                     good_answer = False
-            MTTexp.data.add([expyriment.design.Block.name, expyriment.design.Trial.id, pressed_key, good_answer, RT]) #Add data
+            MTTexp.data.add([projection, trial.get_factor("Date"), pressed_key, good_answer, RT]) #Add data
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
             MTTexp.clock.wait(random_ITI) #Wait before going to the next event
