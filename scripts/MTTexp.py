@@ -221,8 +221,7 @@ fixcross = expyriment.stimuli.FixCross(line_width = 4)
 fixcross.preload()
 
 #Create the picture with the arrows
-after_to_the_left = expyriment.stimuli.Picture("documents/arrows.png", position = (0, 700))
-after_to_the_left.preload()
+before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
 
 #Instructions
 #Projection instructions
@@ -524,10 +523,9 @@ for block in MTTexp.blocks :
     for trial in blocks.trials :
             fixcross.present()
             MTTexp.clock.wait(1000)
-            trial.stimuli[0].present() #Present event
-            after_to_the_left.present()
+            trial.stimuli[0].plot(before_is_left_arrows) #Present event
+            before_is_left_arrows.present()
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
-            MTTexp.screen.clear()
             if trial.get_factor("Date") < (2019 + projection):
                 if pressed_key == past_key:
                     good_answer = True
@@ -540,6 +538,7 @@ for block in MTTexp.blocks :
                     good_answer = False
             projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
             MTTexp.data.add([projection, trial.get_factor("Date"), projection_to_event_distance, pressed_key, good_answer, RT]) #Add data
+            before_is_left_arrows.clear_surface()
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
             MTTexp.clock.wait(random_ITI) #Wait before going to the next event

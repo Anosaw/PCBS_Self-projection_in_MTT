@@ -1,0 +1,13 @@
+#Expyriment 0.9.0 (Python 3.6.5), .xpe-file, coding: cp1252
+#date: Sun Apr 14 2019 17:43:15
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+4302,stderr,received,'Traceback (most recent call last):'
+4302,stderr,received,'  File "scripts\\mttexp.py", line 224, in <module>'
+4302,stderr,received,'    after_to_the_left = expyriment.stimuli.Picture("documents/arrows.png")'
+4303,stderr,received,'  File "C:\\Users\\annaw\\Anaconda3\\lib\\site-packages\\expyriment\\stimuli\\_picture.py", line 49, in __init__'
+4308,stderr,received,'    unicode2byte(filename)))'
+4308,stderr,received,"OSError: The picture file 'b'documents/arrows.png'' does not exist"

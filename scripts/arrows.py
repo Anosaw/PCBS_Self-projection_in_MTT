@@ -57,7 +57,41 @@ pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + 
 pygame.display.update()
 
 #save image
-pygame.image.save(screen, "arrows.png")
+pygame.image.save(screen, "before_is_left_arrows.png")
+
+#draw second image
+
+screen.fill(black)
+
+#draw words
+font_size = 40
+font = pygame.font.Font(None, font_size)
+
+before = font.render("après", True, white)
+screen.blit(before, (distance_to_border + arrow_length / 2, height / 3))
+
+x, y = font.size("avant") #This is needed to center properly the second word
+
+after = font.render("avant", True, white)
+screen.blit(after, (distance_to_border + inter_arrow_distance + 3*arrow_length / 2 - x, height / 3))
+
+#draw arrows
+#left arrow
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_length, arrow_height)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_head, arrow_height + arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_head, arrow_height - arrow_span / 2)], 5)
+
+#right arrow
+pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + arrow_length + inter_arrow_distance, arrow_height)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height + arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height - arrow_span / 2)], 5)
+
+#display changes
+pygame.display.update()
+
+#save image
+pygame.image.save(screen, "before_is_right_arrows.png")
+
 
 # wait till the window is closed
 done = False
