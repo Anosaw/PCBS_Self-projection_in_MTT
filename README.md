@@ -1,7 +1,7 @@
 ## Self-Projection in Mental Time Travel
 Code of my M1 intership
 
-# dir: scripts  
+#### dir: scripts  
 all scripts used in the experiment  
 contains:
   * MTTexp.py = the script for the behavioural experiment. The experiment consists in asking participants to project themselves in the past or in the future at different distances (3, 6 or 9 years). Then, they must make a temporal judgement, i.e. an event from a given list (see documents) is shown on the screen and the participant must judge whether it has already past or is yet to pass (relative to the point of projection). Reaction times are recorded.
@@ -9,13 +9,13 @@ contains:
   * arrows.py = the script that draws the arrows necessary for MTTexp.py
   * timeline.py = the script that draws the timeline used to present the experiment.
 
-# dir: data  
+#### dir: data  
 all data gathered from the experiment
 
-# dir: events
+#### dir: events
 all events gathered from the experiment
 
-# dir: documents  
+#### dir: documents  
 all documents used in the experiment
 contains:
  * the event list
