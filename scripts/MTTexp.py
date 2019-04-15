@@ -1,9 +1,10 @@
-#This is the code for the Mental Time Travel experiment
+"""
+This is the code for the Mental Time Travel experiment
 
-#First, we must present the point of projection (here, 3 years in the past)
-#Then, we must present the events
-#The participants will be instructed to make a temporal judgment based on these events
-#This means they will be told to press left if event is past and right if future
+First, we must present the point of projection
+Then, we must present the events
+The participants will be instructed to make a temporal judgment based on these events
+"""
 
 import expyriment
 
@@ -13,6 +14,7 @@ expyriment.control.initialize(MTTexp)
 
 
 good_answer = True
+text_size = 80
 
 
 #Define blocks, trials and stimuli
@@ -57,82 +59,82 @@ trial2050 = expyriment.design.Trial()
 trial2053 = expyriment.design.Trial()
 
 #Create stimuli and preload them
-event1985 = expyriment.stimuli.TextLine(text = "trou ozone", text_size = 40)
+event1985 = expyriment.stimuli.TextLine(text = "trou ozone", text_size = text_size)
 event1985.preload()
 
-event1988 = expyriment.stimuli.TextLine(text = "JO Nagoya", text_size = 40)
+event1988 = expyriment.stimuli.TextLine(text = "JO Nagoya", text_size = text_size)
 event1988.preload()
 
-event1991 = expyriment.stimuli.TextLine(text = "dislocation URSS", text_size = 40)
+event1991 = expyriment.stimuli.TextLine(text = "dislocation URSS", text_size = text_size)
 event1991.preload()
 
-event1994 = expyriment.stimuli.TextLine(text = "métro Bordeaux", text_size = 40)
+event1994 = expyriment.stimuli.TextLine(text = "métro Bordeaux", text_size = text_size)
 event1994.preload()
 
-event1997 = expyriment.stimuli.TextLine(text = "Harry Potter", text_size = 40)
+event1997 = expyriment.stimuli.TextLine(text = "Harry Potter", text_size = text_size)
 event1997.preload()
 
-event2000 = expyriment.stimuli.TextLine(text = "Lettonie Eurovision", text_size = 40)
+event2000 = expyriment.stimuli.TextLine(text = "Lettonie Eurovision", text_size = text_size)
 event2000.preload()
 
-event2003 = expyriment.stimuli.TextLine( text = "génome humain", text_size = 40)
+event2003 = expyriment.stimuli.TextLine( text = "génome humain", text_size = text_size)
 event2003.preload()
 
-event2006 = expyriment.stimuli.TextLine(text = "tramway Paris", text_size = 40)
+event2006 = expyriment.stimuli.TextLine(text = "tramway Paris", text_size = text_size)
 event2006.preload()
 
-event2009 = expyriment.stimuli.TextLine(text = "création Bitcoin", text_size = 40)
+event2009 = expyriment.stimuli.TextLine(text = "création Bitcoin", text_size = text_size)
 event2009.preload()
 
-event2012 = expyriment.stimuli.TextLine(text = "Curiosity Mars", text_size = 40)
+event2012 = expyriment.stimuli.TextLine(text = "Curiosity Mars", text_size = text_size)
 event2012.preload()
 
-event2015 = expyriment.stimuli.TextLine(text = "musée Metallica", text_size = 40)
+event2015 = expyriment.stimuli.TextLine(text = "musée Metallica", text_size = text_size)
 event2015.preload()
 
-event2018 = expyriment.stimuli.TextLine(text = "Simone Veil", text_size = 40)
+event2018 = expyriment.stimuli.TextLine(text = "Simone Veil", text_size = text_size)
 event2018.preload()
 
-event2019Past = expyriment.stimuli.TextLine(text = "Netflix Friends", text_size = 40)
+event2019Past = expyriment.stimuli.TextLine(text = "Netflix Friends", text_size = text_size)
 event2019Past.preload()
 
-event2019Future = expyriment.stimuli.TextLine(text = "coupe football", text_size = 40)
+event2019Future = expyriment.stimuli.TextLine(text = "coupe football", text_size = text_size)
 event2019Future.preload()
 
-event2020 = expyriment.stimuli.TextLine(text = "viandes artificielles", text_size = 40)
+event2020 = expyriment.stimuli.TextLine(text = "viandes artificielles", text_size = text_size)
 event2020.preload()
 
-event2023 = expyriment.stimuli.TextLine(text = "loup Japon", text_size = 40)
+event2023 = expyriment.stimuli.TextLine(text = "loup Japon", text_size = text_size)
 event2023.preload()
 
-event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubailand", text_size = 40)
+event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubailand", text_size = text_size)
 event2026.preload()
 
-event2029 = expyriment.stimuli.TextLine(text = "usine photosynthèse", text_size = 40)
+event2029 = expyriment.stimuli.TextLine(text = "usine photosynthèse", text_size = text_size)
 event2029.preload()
 
-event2032 = expyriment.stimuli.TextLine(text = "Grand Paris", text_size = 40)
+event2032 = expyriment.stimuli.TextLine(text = "Grand Paris", text_size = text_size)
 event2032.preload()
 
-event2035 = expyriment.stimuli.TextLine(text = "bateaux automatiques", text_size = 40)
+event2035 = expyriment.stimuli.TextLine(text = "bateaux automatiques", text_size = text_size)
 event2035.preload()
 
-event2038 = expyriment.stimuli.TextLine(text = "avions solaires", text_size = 40)
+event2038 = expyriment.stimuli.TextLine(text = "avions solaires", text_size = text_size)
 event2038.preload()
 
-event2041 = expyriment.stimuli.TextLine(text = "tunnel Bering", text_size = 40)
+event2041 = expyriment.stimuli.TextLine(text = "tunnel Bering", text_size = text_size)
 event2041.preload()
 
-event2044 = expyriment.stimuli.TextLine(text = "thérapie Sida", text_size = 40)
+event2044 = expyriment.stimuli.TextLine(text = "thérapie Sida", text_size = text_size)
 event2044.preload()
 
-event2050 = expyriment.stimuli.TextLine(text = "humain Mars", text_size = 40)
+event2050 = expyriment.stimuli.TextLine(text = "humain Mars", text_size = text_size)
 event2050.preload()
 
-event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards", text_size = 40)
+event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards", text_size = text_size)
 event2047.preload()
 
-event2053 = expyriment.stimuli.TextLine(text = "gaz renouvelable", text_size = 40)
+event2053 = expyriment.stimuli.TextLine(text = "gaz renouvelable", text_size = text_size)
 event2053.preload()
 
 #Add events to trials and set date as factor
@@ -217,33 +219,43 @@ trial2053.set_factor("Date", 2053)
 #Create other needed stimuli and trials
 
 #Let's put a fixation cross
-fixcross = expyriment.stimuli.FixCross(line_width = 4)
+fixcross = expyriment.stimuli.FixCross(size = (100, 100), line_width = 5)
 fixcross.preload()
 
 #Create the picture with the arrows
 before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
+before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
 
 #Instructions
+
+#Key instructions
+before_is_left_instructions = expyriment.stimuli.TextLine(text = "AVANT = GAUCHE / APRÈS = DROITE", text_size = text_size)
+before_is_left_instructions.preload()
+
+before_is_right_instructions = expyriment.stimuli.TextLine(text = "APRÈS = GAUCHE / AVANT = DROITE")
+before_is_left_instructions.preload()
+
+
 #Projection instructions
-stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = 40)
+stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans passé", text_size = text_size)
 stim_proj9past.preload()
 
-stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = 40)
+stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans passé", text_size = text_size)
 stim_proj6past.preload()
 
-stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = 40)
+stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans passé", text_size = text_size)
 stim_proj3past.preload()
 
-stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = 40)
+stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size)
 stim_projnow.preload()
 
-stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = 40)
+stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans futur", text_size = text_size)
 stim_proj3future.preload()
 
-stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = 40)
+stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans futur", text_size = text_size)
 stim_proj6future.preload()
 
-stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = 40)
+stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans futur", text_size = text_size)
 stim_proj9future.preload()
 
 #Add trials to blocks
@@ -463,13 +475,9 @@ for blocks in MTTexp.blocks:
 #Randomize block order
 expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 
-#There are actually at least two ways to randomize trial/block position
-#Either shuffle after adding them
-#Or, when adding them, use argument random_position = bool(1)
-#The second one means less lines, but how random is it?
 
 #Set experimental data variable names
-MTTexp.add_data_variable_names(["projection", "date", "projection_to_event_distance", "pressed_key", "good_answer", "RT"])
+MTTexp.add_data_variable_names(["projection", "date", "projection_to_event_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
 
 #Start exp
 expyriment.control.start()
@@ -477,8 +485,8 @@ expyriment.control.start()
 
 for block in MTTexp.blocks :
     #Randomize keys
-    random_keys = expyriment.design.randomize.coin_flip()
-    if random_keys == True:
+    before_is_left = expyriment.design.randomize.coin_flip()
+    if before_is_left == True:
         past_key = expyriment.misc.constants.K_LEFT
         future_key = expyriment.misc.constants.K_RIGHT
     else:
@@ -513,19 +521,27 @@ for block in MTTexp.blocks :
         projection = 9
         stim_proj9future.present()
     else:
-        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = 40).present()
+        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size).present()
 
-#Could work using block names?
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE) #Wait until participants press space
 
-    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE) #Wait until participants press enter
-    #Should we have a screen like "press space when ready"?
+    if before_is_left == True:
+        before_is_left_instructions.present()
+    else:
+        before_is_right_instructions.present()
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE)
 
     for trial in blocks.trials :
             fixcross.present()
             MTTexp.clock.wait(1000)
-            trial.stimuli[0].plot(before_is_left_arrows) #Present event
-            before_is_left_arrows.present()
-            pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys) #Mesure RT
+            if before_is_left == True :
+                trial.stimuli[0].plot(before_is_left_arrows)
+                before_is_left_arrows.present()
+            else:
+                trial.stimuli[0].plot(before_is_right_arrows)
+                before_is_right_arrows.present()
+
+            pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys)
             if trial.get_factor("Date") < (2019 + projection):
                 if pressed_key == past_key:
                     good_answer = True
@@ -537,7 +553,7 @@ for block in MTTexp.blocks :
                 else:
                     good_answer = False
             projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
-            MTTexp.data.add([projection, trial.get_factor("Date"), projection_to_event_distance, pressed_key, good_answer, RT]) #Add data
+            MTTexp.data.add([projection, trial.get_factor("Date"), projection_to_event_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
             before_is_left_arrows.clear_surface()
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
