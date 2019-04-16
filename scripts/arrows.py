@@ -24,7 +24,7 @@ screen.fill(black)
 
 #define variables for the arrows
 arrow_length = width / 5 #length of the arrow
-distance_to_border = arrow_length / 5 #distance between head of the arrow and edge of the screen
+distance_to_border = arrow_length / 3 #distance between head of the arrow and edge of the screen
 inter_arrow_distance = width - 2*arrow_length - 2*distance_to_border #distance between the tails of the arrows
 arrow_span = height / 6 #width of the arrows
 arrow_head = arrow_span / 2 #length of the head of the arrows
