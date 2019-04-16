@@ -255,14 +255,14 @@ before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_a
 #Instructions
 
 #Pause instructions
-pause = expyriment.stimuli.TextLine(text = "pause = pressez la barre d'espace pour continuer", text_size = text_size)
+pause = expyriment.stimuli.TextLine(text = "pause (barre d'espace pour continuer)", text_size = text_size)
 pause.preload()
 
 #Key instructions
 before_is_left_instructions = expyriment.stimuli.TextLine(text = "AVANT = GAUCHE / APRÈS = DROITE", text_size = text_size)
 before_is_left_instructions.preload()
 
-before_is_right_instructions = expyriment.stimuli.TextLine(text = "APRÈS = GAUCHE / AVANT = DROITE")
+before_is_right_instructions = expyriment.stimuli.TextLine(text = "APRÈS = GAUCHE / AVANT = DROITE", text_size = text_size)
 before_is_left_instructions.preload()
 
 
@@ -585,6 +585,7 @@ for block in MTTexp.blocks :
             projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
             MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), projection_to_event_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
             before_is_left_arrows.clear_surface()
+            before_is_right_arrows.clear_surface()
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
             MTTexp.clock.wait(random_ITI) #Wait before going to the next event
