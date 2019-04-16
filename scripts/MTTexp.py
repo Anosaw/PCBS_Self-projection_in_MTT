@@ -14,7 +14,7 @@ expyriment.control.initialize(MTTexp)
 
 
 good_answer = True
-text_size = 80
+text_size = 60
 
 
 #Define blocks, trials and stimuli
@@ -140,86 +140,112 @@ event2053.preload()
 #Add events to trials and set date as factor
 trial1985.add_stimulus(event1985)
 trial1985.set_factor("Date", 1985)
+trial1985.set_factor("Fictional", False)
 
 trial1988.add_stimulus(event1988)
 trial1988.set_factor("Date", 1988)
+trial1988.set_factor("Fictional", True)
 
 trial1991.add_stimulus(event1991)
 trial1991.set_factor("Date", 1991)
+trial1991.set_factor("Fictional", False)
 
 trial1994.add_stimulus(event1994)
 trial1994.set_factor("Date", 1994)
+trial1994.set_factor("Fictional", True)
 
 trial1997.add_stimulus(event1997)
 trial1997.set_factor("Date", 1997)
+trial1997.set_factor("Fictional", False)
 
 trial2000.add_stimulus(event2000)
 trial2000.set_factor("Date", 2000)
+trial2000.set_factor("Fictional", True)
 
 trial2003.add_stimulus(event2003)
 trial2003.set_factor("Date", 2003)
+trial2003.set_factor("Fictional", False)
 
 trial2006.add_stimulus(event2006)
 trial2006.set_factor("Date", 2006)
+trial2006.set_factor("Fictional", False)
 
 trial2009.add_stimulus(event2009)
 trial2009.set_factor("Date", 2009)
+trial2009.set_factor("Fictional", False)
 
 trial2012.add_stimulus(event2012)
 trial2012.set_factor("Date", 2012)
+trial2012.set_factor("Fictional", False)
 
 trial2015.add_stimulus(event2015)
 trial2015.set_factor("Date", 2015)
+trial2015.set_factor("Fictional", True)
 
 trial2018.add_stimulus(event2018)
 trial2018.set_factor("Date", 2018)
+trial2018.set_factor("Fictional", False)
 
 trial2019Past.add_stimulus(event2019Past)
 trial2019Past.set_factor("Date", 2019)
+trial2019Past.set_factor("Fictional", True)
 
 trial2019Future.add_stimulus(event2019Future)
 trial2019Future.set_factor("Date", 2019)
+trial2019Future.set_factor("Fictional", False)
 
 trial2020.add_stimulus(event2020)
 trial2020.set_factor("Date", 2020)
+trial2020.set_factor("Fictional", False)
 
 trial2023.add_stimulus(event2023)
 trial2023.set_factor("Date", 2023)
+trial2023.set_factor("Fictional", True)
 
 trial2026.add_stimulus(event2026)
 trial2026.set_factor("Date", 2026)
+trial2026.set_factor("Fictional", False)
 
 trial2029.add_stimulus(event2029)
 trial2029.set_factor("Date", 2029)
+trial2029.set_factor("Fictional", True)
 
 trial2032.add_stimulus(event2032)
 trial2032.set_factor("Date", 2032)
+trial2032.set_factor("Fictional", False)
 
 trial2035.add_stimulus(event2035)
 trial2035.set_factor("Date", 2035)
+trial2035.set_factor("Fictional", False)
 
 trial2038.add_stimulus(event2038)
 trial2038.set_factor("Date", 2038)
+trial2038.set_factor("Fictional", True)
 
 trial2041.add_stimulus(event2041)
 trial2041.set_factor("Date", 2041)
+trial2041.set_factor("Fictional", False)
 
 trial2044.add_stimulus(event2044)
 trial2044.set_factor("Date", 2044)
+trial2044.set_factor("Fictional", True)
 
 trial2047.add_stimulus(event2047)
 trial2047.set_factor("Date", 2047)
+trial2047.set_factor("Fictional", False)
 
 trial2050.add_stimulus(event2050)
 trial2050.set_factor("Date", 2050)
+trial2050.set_factor("Fictional", True)
 
 trial2053.add_stimulus(event2053)
 trial2053.set_factor("Date", 2053)
+trial2053.set_factor("Fictional", False)
 
 #Create other needed stimuli and trials
 
 #Let's put a fixation cross
-fixcross = expyriment.stimuli.FixCross(size = (100, 100), line_width = 5)
+fixcross = expyriment.stimuli.FixCross(size = (50, 50), line_width = 4)
 fixcross.preload()
 
 #Create the picture with the arrows
@@ -227,6 +253,10 @@ before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arr
 before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
 
 #Instructions
+
+#Pause instructions
+pause = expyriment.stimuli.TextLine(text = "pause = pressez la barre d'espace pour continuer", text_size = text_size)
+pause.preload()
 
 #Key instructions
 before_is_left_instructions = expyriment.stimuli.TextLine(text = "AVANT = GAUCHE / APRÈS = DROITE", text_size = text_size)
@@ -477,7 +507,7 @@ expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
 
 
 #Set experimental data variable names
-MTTexp.add_data_variable_names(["projection", "date", "projection_to_event_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
+MTTexp.add_data_variable_names(["projection", "date", "fictional", "projection_to_event_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
 
 #Start exp
 expyriment.control.start()
@@ -553,38 +583,13 @@ for block in MTTexp.blocks :
                 else:
                     good_answer = False
             projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
-            MTTexp.data.add([projection, trial.get_factor("Date"), projection_to_event_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
+            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), projection_to_event_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
             before_is_left_arrows.clear_surface()
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
             MTTexp.clock.wait(random_ITI) #Wait before going to the next event
 
+    pause.present()
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE)
 
 expyriment.control.end()
-
-#ajouter distance proj/ev
-#ajouter fictionnalité
-
-#dire tout de suite que fictif
-
-#We need to mesure errors too!
-#Must put the answer in the trial somehow
-
-#Put event in table
-
-#Have screen with event and avant/après unedernath, with the keys
-#randomize keys across blocks
-
-#slow down a bit
-
-#check if pycho booth have anaconda
-#voir sur cea groom pour réserver box
-#faire fiche projet
-
-#finir code fin semaine pro
-
-#pause entre blocs
-
-#Faire une synthèse des matériels et méthodes, mettre sur osf
-#Titre??? parametric effect of Self projection in time on chronometry???
-#self projection in mental time travel : effect of the distance of projection on reaction times
