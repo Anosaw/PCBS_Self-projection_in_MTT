@@ -6,8 +6,10 @@ import pygame
 import sys
 import csv
 
-with open("documents/event_list.csv", "r") as list:
-    events = list.read()
+with open("documents/event_list.csv", "rb") as list:
+    events = csv.reader(list, delimiter = ',')
+
+events.row[1]
 
 
 

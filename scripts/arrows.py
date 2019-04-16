@@ -9,7 +9,7 @@ import sys
 pygame.init()
 
 #define variables for the screen
-width = 1500
+width = 1300
 height = 300
 
 #open a window
@@ -31,7 +31,7 @@ arrow_head = arrow_span / 2 #length of the head of the arrows
 arrow_height = 2*height / 3 #height of the arrows on the screen
 
 #draw words
-font_size = 40
+font_size = 50
 font = pygame.font.Font(None, font_size)
 
 before = font.render("avant", True, white)
