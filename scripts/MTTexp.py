@@ -107,7 +107,7 @@ event2020.preload()
 event2023 = expyriment.stimuli.TextLine(text = "loup Japon", text_size = text_size)
 event2023.preload()
 
-event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubailand", text_size = text_size)
+event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubaïland", text_size = text_size)
 event2026.preload()
 
 event2029 = expyriment.stimuli.TextLine(text = "usine photosynthèse", text_size = text_size)
