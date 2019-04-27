@@ -1,7 +1,7 @@
-text_size = text_size"""
+"""
 This is the questionnaire the participants should fill out before the exp
 We are presenting the events to the participants
-They must enter the date, followed by a trust indicator (from 1 to 5)
+They must enter the date, followed by a trust indicator (from 0 to 5)
 """
 
 import expyriment
@@ -10,7 +10,12 @@ import expyriment
 questionnaire = expyriment.design.Experiment(name = "Questionnaire")
 expyriment.control.initialize(questionnaire)
 
+nb_good_answer = 0
+nb_events = 26
+
 good_answer = True
+all_is_good = False
+
 text_size = 60
 
 #Design block
@@ -258,64 +263,82 @@ block_questionnaire.add_trial(trial2047)
 block_questionnaire.add_trial(trial2050)
 block_questionnaire.add_trial(trial2053)
 
+#Shuffle trials
+block_questionnaire.shuffle_trials()
+
 
 #Create other needed stimuli and trials
-errorDate = expyriment.stimuli.TextLine(text = "Entrer une date", text_size = text_size)
-errorDate.preload()
+error_date = expyriment.stimuli.TextLine(text = "Entrer une date", text_size = text_size)
+error_date.preload()
 
-errorTrust = expyriment.stimuli.TextLine(text = "Entrer un nombre", text_size = text_size)
-errorTrust.preload()
+error_trust = expyriment.stimuli.TextLine(text = "Entrer un nombre entier entre 0 et 5", text_size = text_size)
+error_trust.preload()
 
 #Let's put a fixation cross
 fixcross = expyriment.stimuli.FixCross(size = (50, 50), line_width = 4)
 fixcross.preload()
 
 #Set experimental data variables names
-MTTexp.add_data_variable_names(["date", "fictional", "projection_to_event_distance", "good_answer", "RT"])
+questionnaire.add_data_variable_names(["date", "fictional", "good_answer", "answer_date", "answer_trust"])
 
 #Start experiment
 expyriment.control.start()
 
+fixcross.present()
+questionnaire.clock.wait(1000)
+
 for trial in block_questionnaire.trials:
-    fixcross.present()
-    questionnaire.clock.wait(1000)
-    trial.stimuli[0].present()
-    questionnaire.keybord.wait(keys = expyriment.misc.constants.K_KP_SPACE)
-
-#Here put answer (check if valid input)
-    questionDate = expyriment.io.TextInput(message = "date?", length = 4,
-     message_text_size = text_size, user_text_size = text_size)
-    try:
-        answerDate = int(questionDate.get())
-    except ValueError:
-        errorDate.present()
-        questionDate = expyriment.io.TextInput(message = "date?", length = 4,
+    while all_is_good == False:
+        question_date = expyriment.io.TextInput(message = trial.stimuli[0].text, length = 4,
          message_text_size = text_size, user_text_size = text_size)
+        try:
+            answer_date = int(question_date.get())
+            all_is_good = True
+        except ValueError:
+            error_date.present()
+            questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
-    if answerDate == trial.get_factor("Date"):
+    if answer_date == trial.get_factor("Date"):
         good_answer = True
     else:
         good_answer = False
 
-    questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
-     message_text_size = text_size, user_text_size = text_size)
-    try:
-        answerTrust = int(questionTrust.get())
-    except ValueError:
-        errorTrust.present()
+    all_is_good = False
+
+    while all_is_good == False:
         questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
          message_text_size = text_size, user_text_size = text_size)
+        try:
+            answer_trust = int(questionTrust.get())
+            if 0 <= answer_trust <= 5:
+                all_is_good = True
+            else:
+                all_is_good = False
+                error_trust.present()
+                questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
+        except ValueError:
+            error_trust.present()
+            questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
-    if answerTrust < 3:
+
+    if answer_trust < 3:
         good_answer = False
 
-    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"), good_answer]) #Add data
-    questionnaire.clock.wait(500) #Wait before going to the next event
+    if good_answer == True:
+        nb_good_answer += 1
+
+    all_is_good = False
+
+    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"), good_answer, answer_date, answer_trust]) #Add data
+
+    fixcross.present()
+    random_ITI = expyriment.design.randomize.rand_norm(750, 1250) #Randomize ITI
+    questionnaire.clock.wait(random_ITI) #Wait before next trial
+
+score = nb_good_answer / nb_events * 100
+score = int(score)
+expyriment.stimuli.TextLine(text = "le taux de bonne réponse est de" + str(score) + "%", text_size = text_size).present()
+questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 
 expyriment.control.end()
-
-
-#Answer
-
-#Feedback?

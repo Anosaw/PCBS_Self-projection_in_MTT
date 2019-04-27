@@ -1,0 +1,74 @@
+#Expyriment 0.9.0 (Python 3.6.8), .xpe-file, coding: cp1252
+#date: Thu Apr 25 2019 18:50:37
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+10796,design,log,
+#design: #exp: Questionnaire
+#design: #dvn: date,fictional,projection_to_event_distance,good_answer
+#design: block_cnt,block_id,trial_cnt,trial_id
+10796,design,logged,
+10796,Experiment,started
+10797,Stimulus,presented,28
+11801,Stimulus,presented,0
+15448,Keyboard,received,32,wait
+15484,Stimulus,presented,30
+15508,Stimulus,presented,30
+15533,Stimulus,presented,30
+15541,Stimulus,presented,31
+21773,Stimulus,presented,31
+22089,Stimulus,presented,31
+22313,Stimulus,presented,31
+22539,Stimulus,presented,31
+23928,Stimulus,presented,31
+25561,Stimulus,presented,31
+27348,TextInput,entered,b'1985  '
+27384,Stimulus,presented,31
+27409,Stimulus,presented,31
+27432,Stimulus,presented,31
+27439,Stimulus,presented,32
+29212,Stimulus,presented,32
+30371,TextInput,entered,b'5'
+30371,Stimulus,presented,27
+30414,Stimulus,presented,32
+30439,Stimulus,presented,32
+30464,Stimulus,presented,32
+30471,Stimulus,presented,33
+32300,Stimulus,presented,33
+32717,TextInput,entered,b'5'
+32717,Stimulus,presented,27
+32761,Stimulus,presented,33
+32784,Stimulus,presented,33
+32809,Stimulus,presented,33
+32817,Stimulus,presented,34
+35391,Stimulus,presented,34
+37111,Stimulus,presented,34
+37776,Stimulus,presented,34
+37993,TextInput,entered,b'4'
+39009,Stimulus,presented,28
+40012,Stimulus,presented,1
+43364,Keyboard,received,32,wait
+43401,Stimulus,presented,34
+43425,Stimulus,presented,34
+43449,Stimulus,presented,34
+43459,Stimulus,presented,35
+51461,Stimulus,presented,35
+52733,Stimulus,presented,35
+55046,Stimulus,presented,35
+55497,TextInput,entered,b'7'
+55534,Stimulus,presented,35
+55560,Stimulus,presented,35
+55584,Stimulus,presented,35
+55591,Stimulus,presented,36
+57995,Stimulus,presented,36
+58393,TextInput,entered,b'1'
+59365,Stimulus,presented,28
+60368,Stimulus,presented,2
+62004,Experiment,paused
+62007,Stimulus,presented,36
+63481,Keyboard,received,b'y',wait_char
+63481,Experiment,ended
+63513,Data,saved
+63516,Stimulus,presented,36

@@ -4,6 +4,7 @@ This is the code for the Mental Time Travel experiment
 First, we must present the point of projection
 Then, we must present the events
 The participants will be instructed to make a temporal judgment based on these events
+To do so, they will press randomized left and right arrow keys
 """
 
 import expyriment
@@ -255,7 +256,7 @@ before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_a
 #Instructions
 
 #Pause instructions
-pause = expyriment.stimuli.TextLine(text = "pause (barre d'espace pour continuer)", text_size = text_size)
+pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size)
 pause.preload()
 
 #Key instructions
@@ -478,8 +479,6 @@ block_9future.add_trial(trial2047)
 block_9future.add_trial(trial2050)
 block_9future.add_trial(trial2053)
 
-#Add good answer as factor
-
 #Add projection point as factor
 block_9past.set_factor("projection", -9)
 block_6past.set_factor("projection", -6)
@@ -514,6 +513,7 @@ expyriment.control.start()
 
 
 for block in MTTexp.blocks :
+
     #Randomize keys
     before_is_left = expyriment.design.randomize.coin_flip()
     if before_is_left == True:
@@ -524,6 +524,17 @@ for block in MTTexp.blocks :
         future_key = expyriment.misc.constants.K_LEFT
 
     response_keys = [past_key, future_key]
+
+    fixcross.present() #Present fixation cross
+    MTTexp.clock.wait(1000)
+
+    #Present key instructions
+    if before_is_left == True:
+        before_is_left_instructions.present()
+    else:
+        before_is_right_instructions.present()
+
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
 
     fixcross.present() #Present fixation cross
     MTTexp.clock.wait(1000)
@@ -553,17 +564,12 @@ for block in MTTexp.blocks :
     else:
         expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size).present()
 
-    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE) #Wait until participants press space
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
 
-    if before_is_left == True:
-        before_is_left_instructions.present()
-    else:
-        before_is_right_instructions.present()
-    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE)
+    fixcross.present()
+    MTTexp.clock.wait(1000)
 
     for trial in blocks.trials :
-            fixcross.present()
-            MTTexp.clock.wait(1000)
             if before_is_left == True :
                 trial.stimuli[0].plot(before_is_left_arrows)
                 before_is_left_arrows.present()
@@ -584,13 +590,18 @@ for block in MTTexp.blocks :
                     good_answer = False
             projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
             MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), projection_to_event_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
-            before_is_left_arrows.clear_surface()
-            before_is_right_arrows.clear_surface()
+            if before_is_left == True:
+                before_is_left_arrows.clear_surface()
+            else:
+                before_is_right_arrows.clear_surface()
+
+            fixcross.present()
+
             #randomize ITI
             random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
-            MTTexp.clock.wait(random_ITI) #Wait before going to the next event
+            MTTexp.clock.wait(random_ITI)
 
     pause.present()
-    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_SPACE)
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 expyriment.control.end()
