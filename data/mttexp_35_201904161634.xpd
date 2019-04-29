@@ -1,0 +1,85 @@
+#Expyriment 0.9.0 (Python 3.7.3), .xpd-file, coding: cp1252
+#date: Tue Apr 16 2019 16:34:28
+#--EXPERIMENT INFO
+#e mainfile: mttexp.py
+#e sha1: None
+#e modules: 
+#e Experiment: MTT Experiment
+#e no between subject factors
+#e Block 0: 9 years past block
+#e     block factors: projection = -9
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 5: 6 years future block
+#e     block factors: projection = 6
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 3: present block
+#e     block factors: projection = 0
+#e     n trials: 25
+#e     trial factors: Date = [1985, 1988, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 6: 9 years future block
+#e     block factors: projection = 9
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 4: 3 years future block
+#e     block factors: projection = 3
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 1: 6 years past block
+#e     block factors: projection = -6
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 2: 3 years past block
+#e     block factors: projection = -3
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#--SUBJECT INFO
+#s id: 35
+subject_id,projection,date,fictional,projection_to_event_distance,before_is_left,pressed_key,good_answer,RT
+35,-9,2047,False,19,276,False,True,3422
+35,-9,2032,False,4,276,False,True,1518
+35,-9,1991,False,-37,276,False,False,1607
+35,-9,1985,False,-43,275,False,True,1373
+35,-9,1988,True,-40,276,False,False,1122
+35,-9,2019,True,-9,275,False,False,1485
+35,-9,2012,False,-16,275,False,False,1269
+35,-9,2053,False,25,276,False,True,1511
+35,-9,2038,True,10,276,False,True,1925
+35,-9,2041,False,13,276,False,True,1255
+35,-9,2015,True,-13,275,False,False,1549
+35,-9,2003,False,-25,275,False,True,1034
+35,-9,2020,False,-8,276,False,True,1247
+35,-9,2009,False,-19,275,False,True,489
+35,-9,2035,False,7,275,False,False,200
+35,-9,2018,False,-10,275,False,False,343
+35,-9,2026,False,-2,276,False,True,817
+35,-9,2023,True,-5,275,False,False,947
+35,-9,2044,True,16,276,False,True,1122
+35,-9,2000,True,-28,276,False,False,1113
+35,-9,2050,True,22,275,False,False,628
+35,-9,2019,False,-9,276,False,True,1110
+35,-9,2029,True,1,276,False,True,1169
+35,-9,1994,True,-34,275,False,True,993
+35,-9,2006,False,-22,275,False,True,1261
+35,-9,1997,False,-31,275,False,True,804
+35,6,2047,False,34,275,True,True,2276
+35,6,2032,False,19,275,True,True,1102
+35,6,1991,False,-22,275,True,False,601
+35,6,1985,False,-28,276,True,True,460
+35,6,1988,True,-25,275,True,False,384
+35,6,2019,True,6,276,True,True,273
