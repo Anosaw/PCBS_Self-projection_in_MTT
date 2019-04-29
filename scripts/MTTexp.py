@@ -244,45 +244,6 @@ trial2053.add_stimulus(event2053)
 trial2053.set_factor("Date", 2053)
 trial2053.set_factor("Fictional", False)
 
-#Create other needed stimuli and trials
-
-#Let's put a fixation cross
-fixcross = expyriment.stimuli.FixCross(size = (50, 50), line_width = 4)
-fixcross.preload()
-
-#Create the picture with the arrows
-before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
-before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
-
-#Instructions
-
-#Pause instructions
-pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size)
-pause.preload()
-
-
-#Projection instructions
-stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size)
-stim_proj9past.preload()
-
-stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size)
-stim_proj6past.preload()
-
-stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size)
-stim_proj3past.preload()
-
-stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size)
-stim_projnow.preload()
-
-stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size)
-stim_proj3future.preload()
-
-stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size)
-stim_proj6future.preload()
-
-stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size)
-stim_proj9future.preload()
-
 #Add trials to blocks
 
 block_9past.add_trial(trial1985)
@@ -497,6 +458,45 @@ for block in MTTexp.blocks:
 
 #Randomize block order
 MTTexp.shuffle_blocks()
+
+#Create other needed stimuli and trials
+
+#Let's put a fixation cross
+fixcross = expyriment.stimuli.FixCross(size = (50, 50), line_width = 4)
+fixcross.preload()
+
+#Create the picture with the arrows
+before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
+before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
+
+#Instructions
+
+#Pause instructions
+pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size)
+pause.preload()
+
+
+#Projection instructions
+stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size)
+stim_proj9past.preload()
+
+stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size)
+stim_proj6past.preload()
+
+stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size)
+stim_proj3past.preload()
+
+stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size)
+stim_projnow.preload()
+
+stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size)
+stim_proj3future.preload()
+
+stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size)
+stim_proj6future.preload()
+
+stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size)
+stim_proj9future.preload()
 
 
 #Set experimental data variable names
