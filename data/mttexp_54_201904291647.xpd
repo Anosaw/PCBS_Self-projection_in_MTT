@@ -1,0 +1,9 @@
+#Expyriment 0.9.0 (Python 3.6.8), .xpd-file, coding: cp1252
+#date: Mon Apr 29 2019 16:47:50
+#--EXPERIMENT INFO
+#e mainfile: mttexp.py
+#e sha1: None
+#e modules: 
+#--SUBJECT INFO
+#s id: 54
+subject_id,projection,date,fictional,event_to_projection_distance,before_is_left,pressed_key,good_answer,RT

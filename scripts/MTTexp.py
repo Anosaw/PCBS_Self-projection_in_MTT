@@ -566,7 +566,7 @@ for block in MTTexp.blocks :
     fixcross.present()
     MTTexp.clock.wait(1000)
 
-    for trial in blocks.trials :
+    for trial in block.trials :
             if before_is_left == True :
                 trial.stimuli[0].plot(before_is_left_arrows)
                 before_is_left_arrows.present()
@@ -575,6 +575,7 @@ for block in MTTexp.blocks :
                 before_is_right_arrows.present()
 
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys)
+
             if trial.get_factor("Date") < (present + projection):
                 if pressed_key == past_key:
                     good_answer = True
@@ -585,6 +586,7 @@ for block in MTTexp.blocks :
                     good_answer = True
                 else:
                     good_answer = False
+
             event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
             MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
             if before_is_left == True:

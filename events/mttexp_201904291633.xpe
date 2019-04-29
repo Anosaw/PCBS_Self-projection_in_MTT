@@ -1,0 +1,19 @@
+#Expyriment 0.9.0 (Python 3.6.8), .xpe-file, coding: cp1252
+#date: Mon Apr 29 2019 16:33:47
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+4379,stderr,received,'Traceback (most recent call last):'
+4381,stderr,received,'  File "scripts\\mttexp.py", line 511, in <module>'
+4381,stderr,received,'    expyriment.control.start()'
+4383,stderr,received,'  File "C:\\Users\\annaw\\Anaconda3\\lib\\site-packages\\expyriment\\control\\_experiment_control.py", line 165, in start'
+4384,stderr,received,'    for line in experiment.__str__().splitlines():'
+4385,stderr,received,'  File "C:\\Users\\annaw\\Anaconda3\\lib\\site-packages\\expyriment\\design\\_structure.py", line 226, in __str__'
+4385,stderr,received,'    tmp_str = tmp_str + "{0}\\n".format(block.summary)'
+4386,stderr,received,'  File "C:\\Users\\annaw\\Anaconda3\\lib\\site-packages\\expyriment\\design\\_structure.py", line 1125, in summary'
+4387,stderr,received,'    return self._get_summary(False)'
+4387,stderr,received,'  File "C:\\Users\\annaw\\Anaconda3\\lib\\site-packages\\expyriment\\design\\_structure.py", line 1150, in _get_summary'
+4388,stderr,received,'    val.sort()'
+4389,stderr,received,"TypeError: '<' not supported between instances of 'int' and 'NoneType'"
