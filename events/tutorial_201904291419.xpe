@@ -1,0 +1,16 @@
+#Expyriment 0.9.0 (Python 3.7.3), .xpe-file, coding: cp1252
+#date: Mon Apr 29 2019 14:19:44
+#sha1: None
+#modules: 
+#display: size=(1024, 768), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='IS151627', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 60 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+3774,stderr,received,'Exception ignored in: <function Visual.__del__ at 0x0000000004AE2950>'
+3775,stderr,received,'Traceback (most recent call last):'
+3775,stderr,received,'  File "C:\\Users\\admin-local\\Anaconda3\\lib\\site-packages\\expyriment\\stimuli\\_visual.py", line 244, in __del__'
+3803,stderr,received,'    if self._compression_filename is not None:'
+3804,stderr,received,"AttributeError: 'TextLine' object has no attribute '_compression_filename'"
+3804,stderr,received,'Traceback (most recent call last):'
+3804,stderr,received,'  File "scripts\\tutorial.py", line 54, in <module>'
+3805,stderr,received,'    event1985 = expyriment.stimuli.TextLine(text = "trou ozone", text_size = text_size, colour = white)'
+3805,stderr,received,"TypeError: __init__() got an unexpected keyword argument 'colour'"
