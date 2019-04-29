@@ -9,7 +9,7 @@ import sys
 pygame.init()
 
 #define variables for the screen
-width = 1150
+width = 1200
 height = 300
 
 #open a window
