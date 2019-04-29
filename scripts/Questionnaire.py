@@ -291,7 +291,7 @@ questionnaire.clock.wait(1000)
 for trial in block_questionnaire.trials:
     while all_is_good == False:
         question_date = expyriment.io.TextInput(message = trial.stimuli[0].text, length = 4,
-         message_text_size = text_size, user_text_size = text_size)
+         message_text_size = text_size, message_colour = white, user_text_size = text_size, user_text_colour = white)
         try:
             answer_date = int(question_date.get())
             all_is_good = True
@@ -308,7 +308,7 @@ for trial in block_questionnaire.trials:
 
     while all_is_good == False:
         questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
-         message_text_size = text_size, message_colour = white, user_text_size = text_size)
+         message_text_size = text_size, message_colour = white, user_text_size = text_size, user_text_colour = white)
         try:
             answer_trust = int(questionTrust.get())
             if 0 <= answer_trust <= 5:
