@@ -16,6 +16,7 @@ expyriment.control.initialize(MTTexp)
 
 good_answer = True
 text_size = 60
+present = 2019
 
 
 #Define blocks, trials and stimuli
@@ -259,34 +260,27 @@ before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_a
 pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size)
 pause.preload()
 
-#Key instructions
-before_is_left_instructions = expyriment.stimuli.TextLine(text = "AVANT = GAUCHE / APRÈS = DROITE", text_size = text_size)
-before_is_left_instructions.preload()
-
-before_is_right_instructions = expyriment.stimuli.TextLine(text = "APRÈS = GAUCHE / AVANT = DROITE", text_size = text_size)
-before_is_left_instructions.preload()
-
 
 #Projection instructions
-stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans passé", text_size = text_size)
+stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size)
 stim_proj9past.preload()
 
-stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans passé", text_size = text_size)
+stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size)
 stim_proj6past.preload()
 
-stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans passé", text_size = text_size)
+stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size)
 stim_proj3past.preload()
 
 stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size)
 stim_projnow.preload()
 
-stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans futur", text_size = text_size)
+stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size)
 stim_proj3future.preload()
 
-stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans futur", text_size = text_size)
+stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size)
 stim_proj6future.preload()
 
-stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans futur", text_size = text_size)
+stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size)
 stim_proj9future.preload()
 
 #Add trials to blocks
@@ -498,15 +492,15 @@ MTTexp.add_block(block_6future)
 MTTexp.add_block(block_9future)
 
 #Randomize trial order
-for blocks in MTTexp.blocks:
-    expyriment.design.Block.shuffle_trials(self = blocks)
+for block in MTTexp.blocks:
+    block.shuffle_trials()
 
 #Randomize block order
-expyriment.design.Experiment.shuffle_blocks(self = MTTexp)
+MTTexp.shuffle_blocks()
 
 
 #Set experimental data variable names
-MTTexp.add_data_variable_names(["projection", "date", "fictional", "projection_to_event_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
+MTTexp.add_data_variable_names(["projection", "date", "fictional", "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
 
 #Start exp
 expyriment.control.start()
@@ -530,9 +524,9 @@ for block in MTTexp.blocks :
 
     #Present key instructions
     if before_is_left == True:
-        before_is_left_instructions.present()
+        before_is_left_arrows.present()
     else:
-        before_is_right_instructions.present()
+        before_is_right_arrows.present()
 
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
 
@@ -578,18 +572,18 @@ for block in MTTexp.blocks :
                 before_is_right_arrows.present()
 
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys)
-            if trial.get_factor("Date") < (2019 + projection):
+            if trial.get_factor("Date") < (present + projection):
                 if pressed_key == past_key:
                     good_answer = True
                 else:
                     good_answer = False
-            if trial.get_factor("Date") > (2019 + projection):
+            if trial.get_factor("Date") > (present + projection):
                 if pressed_key == future_key:
                     good_answer = True
                 else:
                     good_answer = False
-            projection_to_event_distance = trial.get_factor("Date") -  2019 + projection
-            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), projection_to_event_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
+            event_to_projection_distance = trial.get_factor("Date") -  present + projection
+            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
             if before_is_left == True:
                 before_is_left_arrows.clear_surface()
             else:

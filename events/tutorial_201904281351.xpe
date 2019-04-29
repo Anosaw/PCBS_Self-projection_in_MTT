@@ -1,0 +1,11 @@
+#Expyriment 0.9.0 (Python 3.6.8), .xpe-file, coding: cp1252
+#date: Sun Apr 28 2019 13:51:54
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+4342,stderr,received,'Traceback (most recent call last):'
+4343,stderr,received,'  File "scripts\\tutorial.py", line 251, in <module>'
+4343,stderr,received,'    block_tuto.add_trial(trial2019past)'
+4343,stderr,received,"NameError: name 'trial2019past' is not defined"

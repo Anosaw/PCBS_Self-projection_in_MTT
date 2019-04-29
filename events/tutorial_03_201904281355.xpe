@@ -1,0 +1,63 @@
+#Expyriment 0.9.0 (Python 3.6.8), .xpe-file, coding: cp1252
+#date: Sun Apr 28 2019 13:55:59
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='DESKTOP-OVOASGR', release='10', version='10.0.17134', machine='AMD64', processor='Intel64 Family 6 Model 94 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+10973,design,log,
+#design: #exp: Tutorial
+#design: #dvn: projection,date,fictional,event_to_projection_distance,before_is_left,pressed_key,good_answer,RT
+#design: block_cnt,block_id,trial_cnt,trial_id,Date,Fictional
+#design: 0,0,0,0,1985,False
+#design: 0,0,1,1,1988,True
+#design: 0,0,2,2,1991,False
+#design: 0,0,3,3,1994,True
+#design: 0,0,4,4,1997,False
+#design: 0,0,5,5,2000,True
+#design: 0,0,6,6,2003,False
+#design: 0,0,7,7,2006,False
+#design: 0,0,8,8,2009,False
+#design: 0,0,9,9,2012,False
+#design: 0,0,10,10,2015,True
+#design: 0,0,11,11,2018,False
+#design: 0,0,12,12,2019,True
+#design: 0,0,13,13,2019,False
+#design: 0,0,14,14,2020,False
+#design: 0,0,15,15,2023,True
+#design: 0,0,16,16,2026,False
+#design: 0,0,17,17,2029,True
+#design: 0,0,18,18,2032,False
+#design: 0,0,19,19,2035,False
+#design: 0,0,20,20,2038,True
+#design: 0,0,21,21,2041,False
+#design: 0,0,22,22,2044,True
+#design: 0,0,23,23,2047,False
+#design: 0,0,24,24,2050,True
+#design: 0,0,25,25,2053,False
+10974,design,logged,
+10974,Experiment,started
+10975,Stimulus,presented,26
+11981,Stimulus,presented,30
+16139,Keyboard,received,13,wait
+16140,Stimulus,presented,26
+17143,Stimulus,presented,36
+18778,Keyboard,received,13,wait
+18778,Stimulus,presented,26
+19805,Picture,loaded,b'documents/before_is_right_arrows.png'
+19815,Stimulus,presented,28
+23341,Keyboard,received,276,wait
+23342,Stimulus,presented,26
+24346,Picture,loaded,b'documents/before_is_right_arrows.png'
+24353,Stimulus,presented,28
+25754,Keyboard,received,275,wait
+25754,Stimulus,presented,26
+26729,Picture,loaded,b'documents/before_is_right_arrows.png'
+26736,Stimulus,presented,28
+27948,Keyboard,received,275,wait
+27949,Stimulus,presented,26
+29064,stderr,received,'Traceback (most recent call last):'
+29065,stderr,received,'  File "scripts\\tutorial.py", line 395, in <module>'
+29066,stderr,received,'    pause.present()'
+29068,stderr,received,"NameError: name 'pause' is not defined"
+29081,Data,saved
