@@ -579,13 +579,26 @@ for block in MTTexp.blocks :
             if trial.get_factor("Date") < (present + projection):
                 if pressed_key == past_key:
                     good_answer = True
-                else:
+                elif pressed_key == future_key:
                     good_answer = False
-            if trial.get_factor("Date") > (present + projection):
+
+            elif trial.get_factor("Date") > (present + projection):
                 if pressed_key == future_key:
                     good_answer = True
-                else:
+                elif pressed_key == past_key:
                     good_answer = False
+
+            elif trial.get_factor("Date") == (present + projection):
+                if trial.get_factor("Fictional") == True:
+                    if pressed_key == past_key:
+                        good_answer = True
+                    elif pressed_key == future_key:
+                        good_answer = False
+                elif trial.get_factor("Fictional") == False:
+                    if pressed_key == future_key:
+                        good_answer = True
+                    elif pressed_key == past_key:
+                        good_answer = False
 
             event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
             MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
