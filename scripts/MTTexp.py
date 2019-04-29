@@ -13,10 +13,13 @@ import expyriment
 MTTexp = expyriment.design.Experiment(name = "MTT Experiment")
 expyriment.control.initialize(MTTexp)
 
-
+#Define variables
 good_answer = True
-text_size = 60
+
 present = 2019
+
+text_size = 60
+white = (255, 255, 255)
 
 
 #Define blocks, trials and stimuli
@@ -61,82 +64,82 @@ trial2050 = expyriment.design.Trial()
 trial2053 = expyriment.design.Trial()
 
 #Create stimuli and preload them
-event1985 = expyriment.stimuli.TextLine(text = "trou ozone", text_size = text_size)
+event1985 = expyriment.stimuli.TextLine(text = "trou ozone", text_size = text_size, text_colour = white)
 event1985.preload()
 
-event1988 = expyriment.stimuli.TextLine(text = "JO Nagoya", text_size = text_size)
+event1988 = expyriment.stimuli.TextLine(text = "JO Nagoya", text_size = text_size, text_colour = white)
 event1988.preload()
 
-event1991 = expyriment.stimuli.TextLine(text = "dislocation URSS", text_size = text_size)
+event1991 = expyriment.stimuli.TextLine(text = "dislocation URSS", text_size = text_size, text_colour = white)
 event1991.preload()
 
-event1994 = expyriment.stimuli.TextLine(text = "métro Bordeaux", text_size = text_size)
+event1994 = expyriment.stimuli.TextLine(text = "métro Bordeaux", text_size = text_size, text_colour = white)
 event1994.preload()
 
-event1997 = expyriment.stimuli.TextLine(text = "Harry Potter", text_size = text_size)
+event1997 = expyriment.stimuli.TextLine(text = "Harry Potter", text_size = text_size, text_colour = white)
 event1997.preload()
 
-event2000 = expyriment.stimuli.TextLine(text = "Lettonie Eurovision", text_size = text_size)
+event2000 = expyriment.stimuli.TextLine(text = "Lettonie Eurovision", text_size = text_size, text_colour = white)
 event2000.preload()
 
-event2003 = expyriment.stimuli.TextLine( text = "génome humain", text_size = text_size)
+event2003 = expyriment.stimuli.TextLine( text = "génome humain", text_size = text_size, text_colour = white)
 event2003.preload()
 
-event2006 = expyriment.stimuli.TextLine(text = "tramway Paris", text_size = text_size)
+event2006 = expyriment.stimuli.TextLine(text = "tramway Paris", text_size = text_size, text_colour = white)
 event2006.preload()
 
-event2009 = expyriment.stimuli.TextLine(text = "création Bitcoin", text_size = text_size)
+event2009 = expyriment.stimuli.TextLine(text = "création Bitcoin", text_size = text_size, text_colour = white)
 event2009.preload()
 
-event2012 = expyriment.stimuli.TextLine(text = "Curiosity Mars", text_size = text_size)
+event2012 = expyriment.stimuli.TextLine(text = "Curiosity Mars", text_size = text_size, text_colour = white)
 event2012.preload()
 
-event2015 = expyriment.stimuli.TextLine(text = "musée Metallica", text_size = text_size)
+event2015 = expyriment.stimuli.TextLine(text = "musée Metallica", text_size = text_size, text_colour = white)
 event2015.preload()
 
-event2018 = expyriment.stimuli.TextLine(text = "Simone Veil", text_size = text_size)
+event2018 = expyriment.stimuli.TextLine(text = "Simone Veil", text_size = text_size, text_colour = white)
 event2018.preload()
 
-event2019Past = expyriment.stimuli.TextLine(text = "Netflix Friends", text_size = text_size)
+event2019Past = expyriment.stimuli.TextLine(text = "Netflix Friends", text_size = text_size, text_colour = white)
 event2019Past.preload()
 
-event2019Future = expyriment.stimuli.TextLine(text = "coupe football", text_size = text_size)
+event2019Future = expyriment.stimuli.TextLine(text = "coupe football", text_size = text_size, text_colour = white)
 event2019Future.preload()
 
-event2020 = expyriment.stimuli.TextLine(text = "viandes artificielles", text_size = text_size)
+event2020 = expyriment.stimuli.TextLine(text = "viandes artificielles", text_size = text_size, text_colour = white)
 event2020.preload()
 
-event2023 = expyriment.stimuli.TextLine(text = "loup Japon", text_size = text_size)
+event2023 = expyriment.stimuli.TextLine(text = "loup Japon", text_size = text_size, text_colour = white)
 event2023.preload()
 
-event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubaïland", text_size = text_size)
+event2026 = expyriment.stimuli.TextLine(text = "inauguration Dubaïland", text_size = text_size, text_colour = white)
 event2026.preload()
 
-event2029 = expyriment.stimuli.TextLine(text = "usine photosynthèse", text_size = text_size)
+event2029 = expyriment.stimuli.TextLine(text = "usine photosynthèse", text_size = text_size, text_colour = white)
 event2029.preload()
 
-event2032 = expyriment.stimuli.TextLine(text = "Grand Paris", text_size = text_size)
+event2032 = expyriment.stimuli.TextLine(text = "Grand Paris", text_size = text_size, text_colour = white)
 event2032.preload()
 
-event2035 = expyriment.stimuli.TextLine(text = "bateaux automatiques", text_size = text_size)
+event2035 = expyriment.stimuli.TextLine(text = "bateaux automatiques", text_size = text_size, text_colour = white)
 event2035.preload()
 
-event2038 = expyriment.stimuli.TextLine(text = "avions solaires", text_size = text_size)
+event2038 = expyriment.stimuli.TextLine(text = "avions solaires", text_size = text_size, text_colour = white)
 event2038.preload()
 
-event2041 = expyriment.stimuli.TextLine(text = "tunnel Bering", text_size = text_size)
+event2041 = expyriment.stimuli.TextLine(text = "tunnel Bering", text_size = text_size, text_colour = white)
 event2041.preload()
 
-event2044 = expyriment.stimuli.TextLine(text = "thérapie Sida", text_size = text_size)
+event2044 = expyriment.stimuli.TextLine(text = "thérapie Sida", text_size = text_size, text_colour = white)
 event2044.preload()
 
-event2050 = expyriment.stimuli.TextLine(text = "humain Mars", text_size = text_size)
-event2050.preload()
-
-event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards", text_size = text_size)
+event2047 = expyriment.stimuli.TextLine(text = "9.5 milliards", text_size = text_size, text_colour = white)
 event2047.preload()
 
-event2053 = expyriment.stimuli.TextLine(text = "gaz renouvelable", text_size = text_size)
+event2050 = expyriment.stimuli.TextLine(text = "humain Mars", text_size = text_size, text_colour = white)
+event2050.preload()
+
+event2053 = expyriment.stimuli.TextLine(text = "gaz renouvelable", text_size = text_size, text_colour = white)
 event2053.preload()
 
 #Add events to trials and set date as factor
@@ -472,30 +475,30 @@ before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_a
 #Instructions
 
 #Pause instructions
-pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size)
+pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size, text_colour = white)
 pause.preload()
 
 
 #Projection instructions
-stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size)
+stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size, text_colour = white)
 stim_proj9past.preload()
 
-stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size)
+stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size, text_colour = white)
 stim_proj6past.preload()
 
-stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size)
+stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size, text_colour = white)
 stim_proj3past.preload()
 
-stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size)
+stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size, text_colour = white)
 stim_projnow.preload()
 
-stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size)
+stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size, text_colour = white)
 stim_proj3future.preload()
 
-stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size)
+stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size, text_colour = white)
 stim_proj6future.preload()
 
-stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size)
+stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size, text_colour = white)
 stim_proj9future.preload()
 
 
@@ -556,7 +559,7 @@ for block in MTTexp.blocks :
         projection = 9
         stim_proj9future.present()
     else:
-        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size).present()
+        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size, text_colour = white).present()
 
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
 
