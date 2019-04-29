@@ -9,7 +9,7 @@ import sys
 pygame.init()
 
 #define variables for the screen
-width = 1300
+width = 1000
 height = 300
 
 #open a window
@@ -63,10 +63,7 @@ pygame.image.save(screen, "before_is_left_arrows.png")
 
 screen.fill(black)
 
-#draw words
-font_size = 40
-font = pygame.font.Font(None, font_size)
-
+#draw words on second image
 before = font.render("après", True, white)
 screen.blit(before, (distance_to_border + arrow_length / 2, height / 3))
 
