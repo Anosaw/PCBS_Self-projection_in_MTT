@@ -1,0 +1,37 @@
+#Expyriment 0.9.0 (Python 3.7.3), .xpd-file, coding: cp1252
+#date: Mon Apr 29 2019 14:52:56
+#--EXPERIMENT INFO
+#e mainfile: questionnaire.py
+#e sha1: None
+#e modules: 
+#e Experiment: Questionnaire
+#e no between subject factors
+#--SUBJECT INFO
+#s id: 17
+subject_id,date,fictional,good_answer,answer_date,answer_trust
+17,2012,False,True,2012,5
+17,2050,True,True,2050,5
+17,2032,False,True,2032,5
+17,2003,False,True,2003,3
+17,2019,True,True,2019,5
+17,1988,True,True,1988,5
+17,2035,False,True,2035,5
+17,2018,False,True,2018,5
+17,2009,False,True,2009,5
+17,2023,True,False,2003,5
+17,2047,False,True,2047,3
+17,2026,False,True,2026,5
+17,2041,False,True,2041,5
+17,2044,True,False,2038,3
+17,2006,False,True,2006,3
+17,2053,False,True,2053,5
+17,1994,True,True,1994,5
+17,2029,True,True,2029,5
+17,1997,False,True,1997,5
+17,2019,False,True,2019,5
+17,1991,False,True,1991,5
+17,1985,False,True,1985,5
+17,2038,True,True,2038,3
+17,2015,True,True,2015,5
+17,2020,False,True,2020,5
+17,2000,True,True,2000,5
