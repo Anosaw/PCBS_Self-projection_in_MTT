@@ -585,8 +585,8 @@ for block in MTTexp.blocks :
                     good_answer = True
                 else:
                     good_answer = False
-            event_to_projection_distance = trial.get_factor("Date") -  present + projection
-            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, pressed_key, before_is_left, good_answer, RT]) #Add data
+            event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
+            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
             if before_is_left == True:
                 before_is_left_arrows.clear_surface()
             else:
