@@ -332,6 +332,7 @@ block_3past.add_trial(trial2053)
 
 block_now.add_trial(trial1985)
 block_now.add_trial(trial1988)
+block_now.add_block(trial1991)
 block_now.add_trial(trial1994)
 block_now.add_trial(trial1997)
 block_now.add_trial(trial2000)
