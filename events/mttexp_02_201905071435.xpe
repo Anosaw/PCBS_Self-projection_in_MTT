@@ -1,0 +1,996 @@
+#Expyriment 0.9.0 (Python 3.7.3), .xpe-file, coding: cp1252
+#date: Tue May 07 2019 14:35:55
+#sha1: None
+#modules: 
+#display: size=(1024, 768), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='IS151627', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 60 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+13054,design,log,
+#design: #exp: MTT Experiment
+#design: #dvn: projection,date,fictional,event_to_projection_distance,before_is_left,pressed_key,good_answer,RT
+#design: block_cnt,block_id,block_projection,trial_cnt,trial_id,Fictional,Date
+#design: 0,5,6,0,19,False,2035
+#design: 0,5,6,1,0,False,1985
+#design: 0,5,6,2,12,True,2019
+#design: 0,5,6,3,21,False,2041
+#design: 0,5,6,4,7,False,2006
+#design: 0,5,6,5,23,False,2047
+#design: 0,5,6,6,22,True,2044
+#design: 0,5,6,7,2,False,1991
+#design: 0,5,6,8,20,True,2038
+#design: 0,5,6,9,17,True,2029
+#design: 0,5,6,10,5,True,2000
+#design: 0,5,6,11,15,True,2023
+#design: 0,5,6,12,11,False,2018
+#design: 0,5,6,13,24,True,2050
+#design: 0,5,6,14,6,False,2003
+#design: 0,5,6,15,4,False,1997
+#design: 0,5,6,16,3,True,1994
+#design: 0,5,6,17,25,False,2053
+#design: 0,5,6,18,18,False,2032
+#design: 0,5,6,19,16,False,2026
+#design: 0,5,6,20,10,True,2015
+#design: 0,5,6,21,14,False,2020
+#design: 0,5,6,22,1,True,1988
+#design: 0,5,6,23,9,False,2012
+#design: 0,5,6,24,8,False,2009
+#design: 0,5,6,25,13,False,2019
+#design: 1,1,-6,0,23,False,2047
+#design: 1,1,-6,1,5,True,2000
+#design: 1,1,-6,2,20,True,2038
+#design: 1,1,-6,3,14,False,2020
+#design: 1,1,-6,4,15,True,2023
+#design: 1,1,-6,5,12,True,2019
+#design: 1,1,-6,6,0,False,1985
+#design: 1,1,-6,7,13,False,2019
+#design: 1,1,-6,8,9,False,2012
+#design: 1,1,-6,9,17,True,2029
+#design: 1,1,-6,10,8,False,2009
+#design: 1,1,-6,11,2,False,1991
+#design: 1,1,-6,12,22,True,2044
+#design: 1,1,-6,13,10,True,2015
+#design: 1,1,-6,14,7,False,2006
+#design: 1,1,-6,15,16,False,2026
+#design: 1,1,-6,16,3,True,1994
+#design: 1,1,-6,17,21,False,2041
+#design: 1,1,-6,18,1,True,1988
+#design: 1,1,-6,19,11,False,2018
+#design: 1,1,-6,20,6,False,2003
+#design: 1,1,-6,21,24,True,2050
+#design: 1,1,-6,22,18,False,2032
+#design: 1,1,-6,23,25,False,2053
+#design: 1,1,-6,24,4,False,1997
+#design: 1,1,-6,25,19,False,2035
+#design: 2,2,-3,0,19,False,2035
+#design: 2,2,-3,1,9,False,2012
+#design: 2,2,-3,2,8,False,2009
+#design: 2,2,-3,3,21,False,2041
+#design: 2,2,-3,4,6,False,2003
+#design: 2,2,-3,5,10,True,2015
+#design: 2,2,-3,6,11,False,2018
+#design: 2,2,-3,7,22,True,2044
+#design: 2,2,-3,8,20,True,2038
+#design: 2,2,-3,9,23,False,2047
+#design: 2,2,-3,10,3,True,1994
+#design: 2,2,-3,11,7,False,2006
+#design: 2,2,-3,12,18,False,2032
+#design: 2,2,-3,13,5,True,2000
+#design: 2,2,-3,14,12,True,2019
+#design: 2,2,-3,15,16,False,2026
+#design: 2,2,-3,16,13,False,2019
+#design: 2,2,-3,17,25,False,2053
+#design: 2,2,-3,18,15,True,2023
+#design: 2,2,-3,19,2,False,1991
+#design: 2,2,-3,20,14,False,2020
+#design: 2,2,-3,21,0,False,1985
+#design: 2,2,-3,22,24,True,2050
+#design: 2,2,-3,23,17,True,2029
+#design: 2,2,-3,24,1,True,1988
+#design: 2,2,-3,25,4,False,1997
+#design: 3,4,3,0,5,True,2000
+#design: 3,4,3,1,7,False,2006
+#design: 3,4,3,2,11,False,2018
+#design: 3,4,3,3,10,True,2015
+#design: 3,4,3,4,1,True,1988
+#design: 3,4,3,5,16,False,2026
+#design: 3,4,3,6,24,True,2050
+#design: 3,4,3,7,14,False,2020
+#design: 3,4,3,8,12,True,2019
+#design: 3,4,3,9,13,False,2019
+#design: 3,4,3,10,0,False,1985
+#design: 3,4,3,11,20,True,2038
+#design: 3,4,3,12,3,True,1994
+#design: 3,4,3,13,17,True,2029
+#design: 3,4,3,14,4,False,1997
+#design: 3,4,3,15,2,False,1991
+#design: 3,4,3,16,8,False,2009
+#design: 3,4,3,17,25,False,2053
+#design: 3,4,3,18,15,True,2023
+#design: 3,4,3,19,9,False,2012
+#design: 3,4,3,20,18,False,2032
+#design: 3,4,3,21,6,False,2003
+#design: 3,4,3,22,23,False,2047
+#design: 3,4,3,23,22,True,2044
+#design: 3,4,3,24,21,False,2041
+#design: 3,4,3,25,19,False,2035
+#design: 4,6,9,0,25,False,2053
+#design: 4,6,9,1,2,False,1991
+#design: 4,6,9,2,1,True,1988
+#design: 4,6,9,3,5,True,2000
+#design: 4,6,9,4,11,False,2018
+#design: 4,6,9,5,4,False,1997
+#design: 4,6,9,6,8,False,2009
+#design: 4,6,9,7,18,False,2032
+#design: 4,6,9,8,12,True,2019
+#design: 4,6,9,9,9,False,2012
+#design: 4,6,9,10,14,False,2020
+#design: 4,6,9,11,22,True,2044
+#design: 4,6,9,12,17,True,2029
+#design: 4,6,9,13,24,True,2050
+#design: 4,6,9,14,23,False,2047
+#design: 4,6,9,15,16,False,2026
+#design: 4,6,9,16,15,True,2023
+#design: 4,6,9,17,20,True,2038
+#design: 4,6,9,18,7,False,2006
+#design: 4,6,9,19,21,False,2041
+#design: 4,6,9,20,19,False,2035
+#design: 4,6,9,21,0,False,1985
+#design: 4,6,9,22,13,False,2019
+#design: 4,6,9,23,3,True,1994
+#design: 4,6,9,24,6,False,2003
+#design: 4,6,9,25,10,True,2015
+#design: 5,0,-9,0,3,True,1994
+#design: 5,0,-9,1,2,False,1991
+#design: 5,0,-9,2,5,True,2000
+#design: 5,0,-9,3,12,True,2019
+#design: 5,0,-9,4,23,False,2047
+#design: 5,0,-9,5,19,False,2035
+#design: 5,0,-9,6,16,False,2026
+#design: 5,0,-9,7,24,True,2050
+#design: 5,0,-9,8,10,True,2015
+#design: 5,0,-9,9,6,False,2003
+#design: 5,0,-9,10,13,False,2019
+#design: 5,0,-9,11,20,True,2038
+#design: 5,0,-9,12,7,False,2006
+#design: 5,0,-9,13,1,True,1988
+#design: 5,0,-9,14,22,True,2044
+#design: 5,0,-9,15,15,True,2023
+#design: 5,0,-9,16,4,False,1997
+#design: 5,0,-9,17,14,False,2020
+#design: 5,0,-9,18,8,False,2009
+#design: 5,0,-9,19,17,True,2029
+#design: 5,0,-9,20,9,False,2012
+#design: 5,0,-9,21,11,False,2018
+#design: 5,0,-9,22,18,False,2032
+#design: 5,0,-9,23,25,False,2053
+#design: 5,0,-9,24,0,False,1985
+#design: 5,0,-9,25,21,False,2041
+#design: 6,3,0,0,25,False,2053
+#design: 6,3,0,1,20,True,2038
+#design: 6,3,0,2,2,False,1991
+#design: 6,3,0,3,13,False,2019
+#design: 6,3,0,4,23,False,2047
+#design: 6,3,0,5,6,False,2003
+#design: 6,3,0,6,12,True,2019
+#design: 6,3,0,7,11,False,2018
+#design: 6,3,0,8,7,False,2006
+#design: 6,3,0,9,1,True,1988
+#design: 6,3,0,10,4,False,1997
+#design: 6,3,0,11,21,False,2041
+#design: 6,3,0,12,22,True,2044
+#design: 6,3,0,13,16,False,2026
+#design: 6,3,0,14,9,False,2012
+#design: 6,3,0,15,0,False,1985
+#design: 6,3,0,16,8,False,2009
+#design: 6,3,0,17,24,True,2050
+#design: 6,3,0,18,14,False,2020
+#design: 6,3,0,19,5,True,2000
+#design: 6,3,0,20,17,True,2029
+#design: 6,3,0,21,3,True,1994
+#design: 6,3,0,22,19,False,2035
+#design: 6,3,0,23,18,False,2032
+#design: 6,3,0,24,15,True,2023
+#design: 6,3,0,25,10,True,2015
+13059,design,logged,
+13059,Experiment,started
+13062,Stimulus,presented,26
+14077,Picture,loaded,b'documents/before_is_right_arrows.png'
+14081,Stimulus,presented,28
+21325,Keyboard,received,13,wait
+21326,Stimulus,presented,26
+22335,Stimulus,presented,35
+32653,Keyboard,received,13,wait
+32655,Stimulus,presented,26
+33674,Picture,loaded,b'documents/before_is_right_arrows.png'
+33680,Stimulus,presented,28
+35789,Keyboard,received,276,wait
+35791,Stimulus,presented,26
+36822,Picture,loaded,b'documents/before_is_right_arrows.png'
+36830,Stimulus,presented,28
+38077,Keyboard,received,275,wait
+38079,Stimulus,presented,26
+38936,Picture,loaded,b'documents/before_is_right_arrows.png'
+38944,Stimulus,presented,28
+40844,Keyboard,received,275,wait
+40846,Stimulus,presented,26
+41755,Picture,loaded,b'documents/before_is_right_arrows.png'
+41762,Stimulus,presented,28
+42668,Keyboard,received,276,wait
+42670,Stimulus,presented,26
+43580,Picture,loaded,b'documents/before_is_right_arrows.png'
+43587,Stimulus,presented,28
+45068,Keyboard,received,275,wait
+45070,Stimulus,presented,26
+46184,Picture,loaded,b'documents/before_is_right_arrows.png'
+46192,Stimulus,presented,28
+47388,Keyboard,received,276,wait
+47390,Stimulus,presented,26
+48434,Picture,loaded,b'documents/before_is_right_arrows.png'
+48441,Stimulus,presented,28
+49436,Keyboard,received,276,wait
+49438,Stimulus,presented,26
+50448,Picture,loaded,b'documents/before_is_right_arrows.png'
+50457,Stimulus,presented,28
+51420,Keyboard,received,275,wait
+51422,Stimulus,presented,26
+52370,Picture,loaded,b'documents/before_is_right_arrows.png'
+52378,Stimulus,presented,28
+54524,Keyboard,received,276,wait
+54526,Stimulus,presented,26
+55626,Picture,loaded,b'documents/before_is_right_arrows.png'
+55634,Stimulus,presented,28
+57547,Keyboard,received,276,wait
+57549,Stimulus,presented,26
+58609,Picture,loaded,b'documents/before_is_right_arrows.png'
+58617,Stimulus,presented,28
+59755,Keyboard,received,275,wait
+59757,Stimulus,presented,26
+60773,Picture,loaded,b'documents/before_is_right_arrows.png'
+60780,Stimulus,presented,28
+62267,Keyboard,received,275,wait
+62269,Stimulus,presented,26
+63385,Picture,loaded,b'documents/before_is_right_arrows.png'
+63392,Stimulus,presented,28
+64507,Keyboard,received,275,wait
+64509,Stimulus,presented,26
+65392,Picture,loaded,b'documents/before_is_right_arrows.png'
+65400,Stimulus,presented,28
+66523,Keyboard,received,276,wait
+66525,Stimulus,presented,26
+67564,Picture,loaded,b'documents/before_is_right_arrows.png'
+67572,Stimulus,presented,28
+68571,Keyboard,received,275,wait
+68573,Stimulus,presented,26
+69687,Picture,loaded,b'documents/before_is_right_arrows.png'
+69695,Stimulus,presented,28
+70571,Keyboard,received,275,wait
+70573,Stimulus,presented,26
+71457,Picture,loaded,b'documents/before_is_right_arrows.png'
+71465,Stimulus,presented,28
+73002,Keyboard,received,275,wait
+73004,Stimulus,presented,26
+73847,Picture,loaded,b'documents/before_is_right_arrows.png'
+73855,Stimulus,presented,28
+74970,Keyboard,received,276,wait
+74972,Stimulus,presented,26
+76039,Picture,loaded,b'documents/before_is_right_arrows.png'
+76047,Stimulus,presented,28
+77899,Keyboard,received,276,wait
+77900,Stimulus,presented,26
+78805,Picture,loaded,b'documents/before_is_right_arrows.png'
+78813,Stimulus,presented,28
+80731,Keyboard,received,276,wait
+80732,Stimulus,presented,26
+81794,Picture,loaded,b'documents/before_is_right_arrows.png'
+81802,Stimulus,presented,28
+83019,Keyboard,received,275,wait
+83020,Stimulus,presented,26
+84069,Picture,loaded,b'documents/before_is_right_arrows.png'
+84077,Stimulus,presented,28
+85355,Keyboard,received,275,wait
+85356,Stimulus,presented,26
+86505,Picture,loaded,b'documents/before_is_right_arrows.png'
+86512,Stimulus,presented,28
+88187,Keyboard,received,275,wait
+88188,Stimulus,presented,26
+89210,Picture,loaded,b'documents/before_is_right_arrows.png'
+89218,Stimulus,presented,28
+90857,Keyboard,received,275,wait
+90858,Stimulus,presented,26
+91873,Picture,loaded,b'documents/before_is_right_arrows.png'
+91881,Stimulus,presented,28
+92761,Keyboard,received,275,wait
+92763,Stimulus,presented,26
+93930,Picture,loaded,b'documents/before_is_right_arrows.png'
+93938,Stimulus,presented,28
+95114,Keyboard,received,275,wait
+95115,Stimulus,presented,26
+96057,Stimulus,presented,29
+105274,Keyboard,received,13,wait
+105275,Stimulus,presented,26
+106290,Picture,loaded,b'documents/before_is_right_arrows.png'
+106294,Stimulus,presented,28
+110073,Keyboard,received,13,wait
+110074,Stimulus,presented,26
+111079,Stimulus,presented,31
+132728,Keyboard,received,13,wait
+132729,Stimulus,presented,26
+133746,Picture,loaded,b'documents/before_is_right_arrows.png'
+133751,Stimulus,presented,28
+135032,Keyboard,received,276,wait
+135033,Stimulus,presented,26
+136128,Picture,loaded,b'documents/before_is_right_arrows.png'
+136133,Stimulus,presented,28
+137080,Keyboard,received,275,wait
+137081,Stimulus,presented,26
+137946,Picture,loaded,b'documents/before_is_right_arrows.png'
+137951,Stimulus,presented,28
+140632,Keyboard,received,276,wait
+140633,Stimulus,presented,26
+141652,Picture,loaded,b'documents/before_is_right_arrows.png'
+141657,Stimulus,presented,28
+142696,Keyboard,received,276,wait
+142697,Stimulus,presented,26
+143824,Picture,loaded,b'documents/before_is_right_arrows.png'
+143829,Stimulus,presented,28
+145224,Keyboard,received,276,wait
+145225,Stimulus,presented,26
+146403,Picture,loaded,b'documents/before_is_right_arrows.png'
+146408,Stimulus,presented,28
+147431,Keyboard,received,276,wait
+147432,Stimulus,presented,26
+148405,Picture,loaded,b'documents/before_is_right_arrows.png'
+148410,Stimulus,presented,28
+149303,Keyboard,received,275,wait
+149304,Stimulus,presented,26
+150439,Picture,loaded,b'documents/before_is_right_arrows.png'
+150444,Stimulus,presented,28
+151255,Keyboard,received,276,wait
+151256,Stimulus,presented,26
+152337,Picture,loaded,b'documents/before_is_right_arrows.png'
+152342,Stimulus,presented,28
+153479,Keyboard,received,275,wait
+153480,Stimulus,presented,26
+154381,Picture,loaded,b'documents/before_is_right_arrows.png'
+154387,Stimulus,presented,28
+156711,Keyboard,received,276,wait
+156713,Stimulus,presented,26
+157908,Picture,loaded,b'documents/before_is_right_arrows.png'
+157913,Stimulus,presented,28
+159383,Keyboard,received,275,wait
+159384,Stimulus,presented,26
+160403,Picture,loaded,b'documents/before_is_right_arrows.png'
+160408,Stimulus,presented,28
+161478,Keyboard,received,275,wait
+161479,Stimulus,presented,26
+162540,Picture,loaded,b'documents/before_is_right_arrows.png'
+162545,Stimulus,presented,28
+163383,Keyboard,received,276,wait
+163384,Stimulus,presented,26
+164476,Picture,loaded,b'documents/before_is_right_arrows.png'
+164481,Stimulus,presented,28
+165478,Keyboard,received,276,wait
+165479,Stimulus,presented,26
+166386,Picture,loaded,b'documents/before_is_right_arrows.png'
+166391,Stimulus,presented,28
+167814,Keyboard,received,275,wait
+167816,Stimulus,presented,26
+168733,Picture,loaded,b'documents/before_is_right_arrows.png'
+168739,Stimulus,presented,28
+170518,Keyboard,received,276,wait
+170519,Stimulus,presented,26
+171472,Picture,loaded,b'documents/before_is_right_arrows.png'
+171477,Stimulus,presented,28
+172502,Keyboard,received,275,wait
+172503,Stimulus,presented,26
+173542,Picture,loaded,b'documents/before_is_right_arrows.png'
+173547,Stimulus,presented,28
+174486,Keyboard,received,276,wait
+174487,Stimulus,presented,26
+175355,Picture,loaded,b'documents/before_is_right_arrows.png'
+175360,Stimulus,presented,28
+176326,Keyboard,received,275,wait
+176327,Stimulus,presented,26
+177127,Picture,loaded,b'documents/before_is_right_arrows.png'
+177132,Stimulus,presented,28
+178230,Keyboard,received,276,wait
+178231,Stimulus,presented,26
+179279,Picture,loaded,b'documents/before_is_right_arrows.png'
+179284,Stimulus,presented,28
+180134,Keyboard,received,275,wait
+180136,Stimulus,presented,26
+181144,Picture,loaded,b'documents/before_is_right_arrows.png'
+181149,Stimulus,presented,28
+181957,Keyboard,received,276,wait
+181958,Stimulus,presented,26
+182920,Picture,loaded,b'documents/before_is_right_arrows.png'
+182925,Stimulus,presented,28
+183797,Keyboard,received,276,wait
+183798,Stimulus,presented,26
+184931,Picture,loaded,b'documents/before_is_right_arrows.png'
+184936,Stimulus,presented,28
+185733,Keyboard,received,276,wait
+185734,Stimulus,presented,26
+186772,Picture,loaded,b'documents/before_is_right_arrows.png'
+186777,Stimulus,presented,28
+187541,Keyboard,received,275,wait
+187542,Stimulus,presented,26
+188625,Picture,loaded,b'documents/before_is_right_arrows.png'
+188631,Stimulus,presented,28
+189477,Keyboard,received,276,wait
+189478,Stimulus,presented,26
+190332,Stimulus,presented,29
+198804,Keyboard,received,13,wait
+198805,Stimulus,presented,26
+199822,Picture,loaded,b'documents/before_is_left_arrows.png'
+199826,Stimulus,presented,27
+205780,Keyboard,received,13,wait
+205781,Stimulus,presented,26
+206787,Stimulus,presented,32
+217843,Keyboard,received,13,wait
+217845,Stimulus,presented,26
+218867,Picture,loaded,b'documents/before_is_left_arrows.png'
+218873,Stimulus,presented,27
+220099,Keyboard,received,275,wait
+220101,Stimulus,presented,26
+221161,Picture,loaded,b'documents/before_is_left_arrows.png'
+221166,Stimulus,presented,27
+222867,Keyboard,received,276,wait
+222869,Stimulus,presented,26
+223946,Picture,loaded,b'documents/before_is_left_arrows.png'
+223951,Stimulus,presented,27
+225155,Keyboard,received,276,wait
+225157,Stimulus,presented,26
+226221,Picture,loaded,b'documents/before_is_left_arrows.png'
+226226,Stimulus,presented,27
+227299,Keyboard,received,275,wait
+227301,Stimulus,presented,26
+228328,Picture,loaded,b'documents/before_is_left_arrows.png'
+228333,Stimulus,presented,27
+229219,Keyboard,received,276,wait
+229221,Stimulus,presented,26
+230356,Picture,loaded,b'documents/before_is_left_arrows.png'
+230361,Stimulus,presented,27
+232579,Keyboard,received,276,wait
+232581,Stimulus,presented,26
+233641,Picture,loaded,b'documents/before_is_left_arrows.png'
+233646,Stimulus,presented,27
+234530,Keyboard,received,275,wait
+234531,Stimulus,presented,26
+235560,Picture,loaded,b'documents/before_is_left_arrows.png'
+235565,Stimulus,presented,27
+236450,Keyboard,received,275,wait
+236452,Stimulus,presented,26
+237416,Picture,loaded,b'documents/before_is_left_arrows.png'
+237421,Stimulus,presented,27
+238546,Keyboard,received,275,wait
+238548,Stimulus,presented,26
+239438,Picture,loaded,b'documents/before_is_left_arrows.png'
+239443,Stimulus,presented,27
+240114,Keyboard,received,275,wait
+240116,Stimulus,presented,26
+241029,Picture,loaded,b'documents/before_is_left_arrows.png'
+241034,Stimulus,presented,27
+241954,Keyboard,received,276,wait
+241956,Stimulus,presented,26
+243001,Picture,loaded,b'documents/before_is_left_arrows.png'
+243006,Stimulus,presented,27
+244306,Keyboard,received,276,wait
+244308,Stimulus,presented,26
+245395,Picture,loaded,b'documents/before_is_left_arrows.png'
+245400,Stimulus,presented,27
+246082,Keyboard,received,275,wait
+246084,Stimulus,presented,26
+247121,Picture,loaded,b'documents/before_is_left_arrows.png'
+247126,Stimulus,presented,27
+248002,Keyboard,received,276,wait
+248004,Stimulus,presented,26
+249028,Picture,loaded,b'documents/before_is_left_arrows.png'
+249033,Stimulus,presented,27
+250034,Keyboard,received,275,wait
+250036,Stimulus,presented,26
+251128,Picture,loaded,b'documents/before_is_left_arrows.png'
+251134,Stimulus,presented,27
+252705,Keyboard,received,275,wait
+252707,Stimulus,presented,26
+253761,Picture,loaded,b'documents/before_is_left_arrows.png'
+253766,Stimulus,presented,27
+254769,Keyboard,received,275,wait
+254771,Stimulus,presented,26
+255902,Picture,loaded,b'documents/before_is_left_arrows.png'
+255907,Stimulus,presented,27
+256801,Keyboard,received,275,wait
+256803,Stimulus,presented,26
+257724,Picture,loaded,b'documents/before_is_left_arrows.png'
+257729,Stimulus,presented,27
+259121,Keyboard,received,275,wait
+259123,Stimulus,presented,26
+260106,Picture,loaded,b'documents/before_is_left_arrows.png'
+260111,Stimulus,presented,27
+260881,Keyboard,received,276,wait
+260883,Stimulus,presented,26
+261959,Picture,loaded,b'documents/before_is_left_arrows.png'
+261964,Stimulus,presented,27
+263441,Keyboard,received,275,wait
+263443,Stimulus,presented,26
+264552,Picture,loaded,b'documents/before_is_left_arrows.png'
+264557,Stimulus,presented,27
+265361,Keyboard,received,276,wait
+265363,Stimulus,presented,26
+266363,Picture,loaded,b'documents/before_is_left_arrows.png'
+266368,Stimulus,presented,27
+267345,Keyboard,received,275,wait
+267347,Stimulus,presented,26
+268225,Picture,loaded,b'documents/before_is_left_arrows.png'
+268231,Stimulus,presented,27
+269121,Keyboard,received,275,wait
+269123,Stimulus,presented,26
+270336,Picture,loaded,b'documents/before_is_left_arrows.png'
+270341,Stimulus,presented,27
+271040,Keyboard,received,276,wait
+271042,Stimulus,presented,26
+272060,Picture,loaded,b'documents/before_is_left_arrows.png'
+272065,Stimulus,presented,27
+272800,Keyboard,received,276,wait
+272802,Stimulus,presented,26
+273708,Stimulus,presented,29
+275104,Keyboard,received,13,wait
+275105,Stimulus,presented,26
+276120,Picture,loaded,b'documents/before_is_right_arrows.png'
+276124,Stimulus,presented,28
+281616,Keyboard,received,13,wait
+281617,Stimulus,presented,26
+282626,Stimulus,presented,34
+300079,Keyboard,received,13,wait
+300080,Stimulus,presented,26
+301105,Picture,loaded,b'documents/before_is_right_arrows.png'
+301110,Stimulus,presented,28
+302159,Keyboard,received,275,wait
+302161,Stimulus,presented,26
+303073,Picture,loaded,b'documents/before_is_right_arrows.png'
+303078,Stimulus,presented,28
+304367,Keyboard,received,275,wait
+304369,Stimulus,presented,26
+305400,Picture,loaded,b'documents/before_is_right_arrows.png'
+305405,Stimulus,presented,28
+306462,Keyboard,received,275,wait
+306464,Stimulus,presented,26
+307514,Picture,loaded,b'documents/before_is_right_arrows.png'
+307520,Stimulus,presented,28
+308366,Keyboard,received,275,wait
+308368,Stimulus,presented,26
+309376,Picture,loaded,b'documents/before_is_right_arrows.png'
+309381,Stimulus,presented,28
+310142,Keyboard,received,275,wait
+310144,Stimulus,presented,26
+311167,Picture,loaded,b'documents/before_is_right_arrows.png'
+311173,Stimulus,presented,28
+312046,Keyboard,received,276,wait
+312048,Stimulus,presented,26
+313017,Picture,loaded,b'documents/before_is_right_arrows.png'
+313022,Stimulus,presented,28
+313806,Keyboard,received,276,wait
+313808,Stimulus,presented,26
+314792,Picture,loaded,b'documents/before_is_right_arrows.png'
+314797,Stimulus,presented,28
+315822,Keyboard,received,275,wait
+315824,Stimulus,presented,26
+316887,Picture,loaded,b'documents/before_is_right_arrows.png'
+316892,Stimulus,presented,28
+317726,Keyboard,received,275,wait
+317728,Stimulus,presented,26
+318768,Picture,loaded,b'documents/before_is_right_arrows.png'
+318773,Stimulus,presented,28
+320014,Keyboard,received,275,wait
+320016,Stimulus,presented,26
+321032,Picture,loaded,b'documents/before_is_right_arrows.png'
+321037,Stimulus,presented,28
+321741,Keyboard,received,275,wait
+321743,Stimulus,presented,26
+322766,Picture,loaded,b'documents/before_is_right_arrows.png'
+322771,Stimulus,presented,28
+323565,Keyboard,received,276,wait
+323567,Stimulus,presented,26
+324430,Picture,loaded,b'documents/before_is_right_arrows.png'
+324435,Stimulus,presented,28
+325213,Keyboard,received,275,wait
+325215,Stimulus,presented,26
+326073,Picture,loaded,b'documents/before_is_right_arrows.png'
+326079,Stimulus,presented,28
+327213,Keyboard,received,276,wait
+327215,Stimulus,presented,26
+328156,Picture,loaded,b'documents/before_is_right_arrows.png'
+328161,Stimulus,presented,28
+328989,Keyboard,received,275,wait
+328991,Stimulus,presented,26
+330062,Picture,loaded,b'documents/before_is_right_arrows.png'
+330067,Stimulus,presented,28
+330941,Keyboard,received,275,wait
+330943,Stimulus,presented,26
+331950,Picture,loaded,b'documents/before_is_right_arrows.png'
+331955,Stimulus,presented,28
+332829,Keyboard,received,275,wait
+332831,Stimulus,presented,26
+333792,Picture,loaded,b'documents/before_is_right_arrows.png'
+333797,Stimulus,presented,28
+334557,Keyboard,received,276,wait
+334559,Stimulus,presented,26
+335607,Picture,loaded,b'documents/before_is_right_arrows.png'
+335612,Stimulus,presented,28
+336957,Keyboard,received,276,wait
+336959,Stimulus,presented,26
+337919,Picture,loaded,b'documents/before_is_right_arrows.png'
+337924,Stimulus,presented,28
+339229,Keyboard,received,275,wait
+339231,Stimulus,presented,26
+340092,Picture,loaded,b'documents/before_is_right_arrows.png'
+340097,Stimulus,presented,28
+341244,Keyboard,received,276,wait
+341246,Stimulus,presented,26
+342251,Picture,loaded,b'documents/before_is_right_arrows.png'
+342256,Stimulus,presented,28
+343036,Keyboard,received,275,wait
+343038,Stimulus,presented,26
+344020,Picture,loaded,b'documents/before_is_right_arrows.png'
+344025,Stimulus,presented,28
+344732,Keyboard,received,276,wait
+344734,Stimulus,presented,26
+345786,Picture,loaded,b'documents/before_is_right_arrows.png'
+345791,Stimulus,presented,28
+346636,Keyboard,received,276,wait
+346638,Stimulus,presented,26
+347660,Picture,loaded,b'documents/before_is_right_arrows.png'
+347665,Stimulus,presented,28
+348492,Keyboard,received,276,wait
+348494,Stimulus,presented,26
+349536,Picture,loaded,b'documents/before_is_right_arrows.png'
+349542,Stimulus,presented,28
+350236,Keyboard,received,276,wait
+350238,Stimulus,presented,26
+351284,Stimulus,presented,29
+352364,Keyboard,received,13,wait
+352366,Stimulus,presented,26
+353382,Picture,loaded,b'documents/before_is_right_arrows.png'
+353386,Stimulus,presented,28
+356316,Keyboard,received,13,wait
+356318,Stimulus,presented,26
+357324,Stimulus,presented,36
+383402,Keyboard,received,13,wait
+383404,Stimulus,presented,26
+384426,Picture,loaded,b'documents/before_is_right_arrows.png'
+384431,Stimulus,presented,28
+385450,Keyboard,received,276,wait
+385452,Stimulus,presented,26
+386550,Picture,loaded,b'documents/before_is_right_arrows.png'
+386555,Stimulus,presented,28
+387226,Keyboard,received,275,wait
+387228,Stimulus,presented,26
+388359,Picture,loaded,b'documents/before_is_right_arrows.png'
+388364,Stimulus,presented,28
+389146,Keyboard,received,275,wait
+389148,Stimulus,presented,26
+390178,Picture,loaded,b'documents/before_is_right_arrows.png'
+390184,Stimulus,presented,28
+391114,Keyboard,received,275,wait
+391116,Stimulus,presented,26
+392120,Picture,loaded,b'documents/before_is_right_arrows.png'
+392125,Stimulus,presented,28
+395305,Keyboard,received,275,wait
+395307,Stimulus,presented,26
+396290,Picture,loaded,b'documents/before_is_right_arrows.png'
+396295,Stimulus,presented,28
+397178,Keyboard,received,275,wait
+397179,Stimulus,presented,26
+398046,Picture,loaded,b'documents/before_is_right_arrows.png'
+398051,Stimulus,presented,28
+398745,Keyboard,received,275,wait
+398747,Stimulus,presented,26
+399688,Picture,loaded,b'documents/before_is_right_arrows.png'
+399693,Stimulus,presented,28
+400538,Keyboard,received,276,wait
+400539,Stimulus,presented,26
+401590,Picture,loaded,b'documents/before_is_right_arrows.png'
+401595,Stimulus,presented,28
+402426,Keyboard,received,275,wait
+402427,Stimulus,presented,26
+403437,Picture,loaded,b'documents/before_is_right_arrows.png'
+403442,Stimulus,presented,28
+404538,Keyboard,received,275,wait
+404539,Stimulus,presented,26
+405498,Picture,loaded,b'documents/before_is_right_arrows.png'
+405504,Stimulus,presented,28
+406442,Keyboard,received,275,wait
+406443,Stimulus,presented,26
+407294,Picture,loaded,b'documents/before_is_right_arrows.png'
+407299,Stimulus,presented,28
+408266,Keyboard,received,276,wait
+408267,Stimulus,presented,26
+409287,Picture,loaded,b'documents/before_is_right_arrows.png'
+409292,Stimulus,presented,28
+410778,Keyboard,received,276,wait
+410779,Stimulus,presented,26
+411844,Picture,loaded,b'documents/before_is_right_arrows.png'
+411849,Stimulus,presented,28
+412650,Keyboard,received,276,wait
+412651,Stimulus,presented,26
+413654,Picture,loaded,b'documents/before_is_right_arrows.png'
+413659,Stimulus,presented,28
+414777,Keyboard,received,276,wait
+414778,Stimulus,presented,26
+415683,Picture,loaded,b'documents/before_is_right_arrows.png'
+415689,Stimulus,presented,28
+416664,Keyboard,received,275,wait
+416666,Stimulus,presented,26
+417546,Picture,loaded,b'documents/before_is_right_arrows.png'
+417551,Stimulus,presented,28
+419593,Keyboard,received,275,wait
+419594,Stimulus,presented,26
+420520,Picture,loaded,b'documents/before_is_right_arrows.png'
+420525,Stimulus,presented,28
+421241,Keyboard,received,276,wait
+421242,Stimulus,presented,26
+422221,Picture,loaded,b'documents/before_is_right_arrows.png'
+422226,Stimulus,presented,28
+423209,Keyboard,received,275,wait
+423210,Stimulus,presented,26
+424159,Picture,loaded,b'documents/before_is_right_arrows.png'
+424164,Stimulus,presented,28
+424969,Keyboard,received,276,wait
+424970,Stimulus,presented,26
+426010,Picture,loaded,b'documents/before_is_right_arrows.png'
+426016,Stimulus,presented,28
+426921,Keyboard,received,276,wait
+426922,Stimulus,presented,26
+427959,Picture,loaded,b'documents/before_is_right_arrows.png'
+427964,Stimulus,presented,28
+428537,Keyboard,received,275,wait
+428538,Stimulus,presented,26
+429683,Picture,loaded,b'documents/before_is_right_arrows.png'
+429688,Stimulus,presented,28
+430648,Keyboard,received,276,wait
+430649,Stimulus,presented,26
+431609,Picture,loaded,b'documents/before_is_right_arrows.png'
+431614,Stimulus,presented,28
+432408,Keyboard,received,275,wait
+432409,Stimulus,presented,26
+433383,Picture,loaded,b'documents/before_is_right_arrows.png'
+433388,Stimulus,presented,28
+434504,Keyboard,received,275,wait
+434505,Stimulus,presented,26
+435498,Picture,loaded,b'documents/before_is_right_arrows.png'
+435503,Stimulus,presented,28
+436408,Keyboard,received,276,wait
+436409,Stimulus,presented,26
+437553,Stimulus,presented,29
+443416,Keyboard,received,13,wait
+443417,Stimulus,presented,26
+444432,Picture,loaded,b'documents/before_is_right_arrows.png'
+444436,Stimulus,presented,28
+449607,Keyboard,received,13,wait
+449608,Stimulus,presented,26
+450620,Stimulus,presented,30
+494389,Keyboard,received,13,wait
+494390,Stimulus,presented,26
+495415,Picture,loaded,b'documents/before_is_right_arrows.png'
+495420,Stimulus,presented,28
+497301,Keyboard,received,275,wait
+497302,Stimulus,presented,26
+498355,Picture,loaded,b'documents/before_is_right_arrows.png'
+498360,Stimulus,presented,28
+499156,Keyboard,received,275,wait
+499158,Stimulus,presented,26
+500238,Picture,loaded,b'documents/before_is_right_arrows.png'
+500243,Stimulus,presented,28
+502836,Keyboard,received,275,wait
+502837,Stimulus,presented,26
+503803,Picture,loaded,b'documents/before_is_right_arrows.png'
+503809,Stimulus,presented,28
+504996,Keyboard,received,276,wait
+504997,Stimulus,presented,26
+506137,Picture,loaded,b'documents/before_is_right_arrows.png'
+506142,Stimulus,presented,28
+506948,Keyboard,received,276,wait
+506949,Stimulus,presented,26
+507912,Picture,loaded,b'documents/before_is_right_arrows.png'
+507918,Stimulus,presented,28
+508564,Keyboard,received,276,wait
+508565,Stimulus,presented,26
+509589,Picture,loaded,b'documents/before_is_right_arrows.png'
+509595,Stimulus,presented,28
+510372,Keyboard,received,276,wait
+510374,Stimulus,presented,26
+511507,Picture,loaded,b'documents/before_is_right_arrows.png'
+511512,Stimulus,presented,28
+512196,Keyboard,received,276,wait
+512198,Stimulus,presented,26
+513096,Picture,loaded,b'documents/before_is_right_arrows.png'
+513101,Stimulus,presented,28
+513940,Keyboard,received,276,wait
+513942,Stimulus,presented,26
+514832,Picture,loaded,b'documents/before_is_right_arrows.png'
+514837,Stimulus,presented,28
+516292,Keyboard,received,275,wait
+516294,Stimulus,presented,26
+517125,Picture,loaded,b'documents/before_is_right_arrows.png'
+517130,Stimulus,presented,28
+518051,Keyboard,received,276,wait
+518053,Stimulus,presented,26
+519145,Picture,loaded,b'documents/before_is_right_arrows.png'
+519150,Stimulus,presented,28
+519827,Keyboard,received,276,wait
+519829,Stimulus,presented,26
+520842,Picture,loaded,b'documents/before_is_right_arrows.png'
+520847,Stimulus,presented,28
+522723,Keyboard,received,275,wait
+522725,Stimulus,presented,26
+523656,Picture,loaded,b'documents/before_is_right_arrows.png'
+523661,Stimulus,presented,28
+524435,Keyboard,received,275,wait
+524437,Stimulus,presented,26
+525535,Picture,loaded,b'documents/before_is_right_arrows.png'
+525540,Stimulus,presented,28
+526531,Keyboard,received,276,wait
+526533,Stimulus,presented,26
+527690,Picture,loaded,b'documents/before_is_right_arrows.png'
+527695,Stimulus,presented,28
+529715,Keyboard,received,276,wait
+529717,Stimulus,presented,26
+530727,Picture,loaded,b'documents/before_is_right_arrows.png'
+530732,Stimulus,presented,28
+531427,Keyboard,received,275,wait
+531428,Stimulus,presented,26
+532378,Picture,loaded,b'documents/before_is_right_arrows.png'
+532383,Stimulus,presented,28
+533171,Keyboard,received,276,wait
+533173,Stimulus,presented,26
+534368,Picture,loaded,b'documents/before_is_right_arrows.png'
+534373,Stimulus,presented,28
+535683,Keyboard,received,275,wait
+535685,Stimulus,presented,26
+536722,Picture,loaded,b'documents/before_is_right_arrows.png'
+536728,Stimulus,presented,28
+537586,Keyboard,received,276,wait
+537588,Stimulus,presented,26
+538587,Picture,loaded,b'documents/before_is_right_arrows.png'
+538592,Stimulus,presented,28
+539362,Keyboard,received,276,wait
+539364,Stimulus,presented,26
+540359,Picture,loaded,b'documents/before_is_right_arrows.png'
+540364,Stimulus,presented,28
+541234,Keyboard,received,276,wait
+541236,Stimulus,presented,26
+542231,Picture,loaded,b'documents/before_is_right_arrows.png'
+542236,Stimulus,presented,28
+543074,Keyboard,received,276,wait
+543076,Stimulus,presented,26
+544046,Picture,loaded,b'documents/before_is_right_arrows.png'
+544051,Stimulus,presented,28
+545538,Keyboard,received,276,wait
+545540,Stimulus,presented,26
+546516,Picture,loaded,b'documents/before_is_right_arrows.png'
+546521,Stimulus,presented,28
+547330,Keyboard,received,275,wait
+547332,Stimulus,presented,26
+548264,Picture,loaded,b'documents/before_is_right_arrows.png'
+548269,Stimulus,presented,28
+548914,Keyboard,received,276,wait
+548916,Stimulus,presented,26
+550020,Stimulus,presented,29
+551090,Keyboard,received,13,wait
+551091,Stimulus,presented,26
+552115,Picture,loaded,b'documents/before_is_right_arrows.png'
+552119,Stimulus,presented,28
+553697,Keyboard,received,13,wait
+553698,Stimulus,presented,26
+554703,Stimulus,presented,33
+561089,Keyboard,received,13,wait
+561090,Stimulus,presented,26
+562114,Picture,loaded,b'documents/before_is_right_arrows.png'
+562119,Stimulus,presented,28
+562769,Keyboard,received,276,wait
+562771,Stimulus,presented,26
+563783,Picture,loaded,b'documents/before_is_right_arrows.png'
+563788,Stimulus,presented,28
+564369,Keyboard,received,276,wait
+564371,Stimulus,presented,26
+565320,Picture,loaded,b'documents/before_is_right_arrows.png'
+565325,Stimulus,presented,28
+565953,Keyboard,received,275,wait
+565955,Stimulus,presented,26
+566979,Picture,loaded,b'documents/before_is_right_arrows.png'
+566984,Stimulus,presented,28
+568369,Keyboard,received,276,wait
+568371,Stimulus,presented,26
+569518,Picture,loaded,b'documents/before_is_right_arrows.png'
+569523,Stimulus,presented,28
+570144,Keyboard,received,276,wait
+570146,Stimulus,presented,26
+571009,Picture,loaded,b'documents/before_is_right_arrows.png'
+571014,Stimulus,presented,28
+571584,Keyboard,received,275,wait
+571586,Stimulus,presented,26
+572698,Picture,loaded,b'documents/before_is_right_arrows.png'
+572703,Stimulus,presented,28
+573472,Keyboard,received,275,wait
+573474,Stimulus,presented,26
+574443,Picture,loaded,b'documents/before_is_right_arrows.png'
+574448,Stimulus,presented,28
+574992,Keyboard,received,276,wait
+574994,Stimulus,presented,26
+576187,Picture,loaded,b'documents/before_is_right_arrows.png'
+576192,Stimulus,presented,28
+576768,Keyboard,received,275,wait
+576770,Stimulus,presented,26
+577720,Picture,loaded,b'documents/before_is_right_arrows.png'
+577725,Stimulus,presented,28
+578336,Keyboard,received,275,wait
+578338,Stimulus,presented,26
+579436,Picture,loaded,b'documents/before_is_right_arrows.png'
+579441,Stimulus,presented,28
+580144,Keyboard,received,275,wait
+580146,Stimulus,presented,26
+581385,Picture,loaded,b'documents/before_is_right_arrows.png'
+581390,Stimulus,presented,28
+582016,Keyboard,received,276,wait
+582018,Stimulus,presented,26
+583013,Picture,loaded,b'documents/before_is_right_arrows.png'
+583018,Stimulus,presented,28
+583696,Keyboard,received,276,wait
+583698,Stimulus,presented,26
+584673,Picture,loaded,b'documents/before_is_right_arrows.png'
+584679,Stimulus,presented,28
+586128,Keyboard,received,276,wait
+586130,Stimulus,presented,26
+587125,Picture,loaded,b'documents/before_is_right_arrows.png'
+587130,Stimulus,presented,28
+587824,Keyboard,received,276,wait
+587826,Stimulus,presented,26
+588728,Picture,loaded,b'documents/before_is_right_arrows.png'
+588733,Stimulus,presented,28
+589439,Keyboard,received,275,wait
+589441,Stimulus,presented,26
+590398,Picture,loaded,b'documents/before_is_right_arrows.png'
+590403,Stimulus,presented,28
+591135,Keyboard,received,275,wait
+591137,Stimulus,presented,26
+592225,Picture,loaded,b'documents/before_is_right_arrows.png'
+592230,Stimulus,presented,28
+592911,Keyboard,received,275,wait
+592913,Stimulus,presented,26
+593979,Picture,loaded,b'documents/before_is_right_arrows.png'
+593984,Stimulus,presented,28
+596943,Keyboard,received,276,wait
+596945,Stimulus,presented,26
+598037,Picture,loaded,b'documents/before_is_right_arrows.png'
+598042,Stimulus,presented,28
+599087,Keyboard,received,275,wait
+599089,Stimulus,presented,26
+599967,Picture,loaded,b'documents/before_is_right_arrows.png'
+599973,Stimulus,presented,28
+602127,Keyboard,received,276,wait
+602129,Stimulus,presented,26
+603006,Picture,loaded,b'documents/before_is_right_arrows.png'
+603011,Stimulus,presented,28
+603791,Keyboard,received,275,wait
+603793,Stimulus,presented,26
+604765,Picture,loaded,b'documents/before_is_right_arrows.png'
+604771,Stimulus,presented,28
+606958,Keyboard,received,276,wait
+606960,Stimulus,presented,26
+607946,Picture,loaded,b'documents/before_is_right_arrows.png'
+607951,Stimulus,presented,28
+608702,Keyboard,received,276,wait
+608704,Stimulus,presented,26
+609713,Picture,loaded,b'documents/before_is_right_arrows.png'
+609718,Stimulus,presented,28
+610894,Keyboard,received,276,wait
+610896,Stimulus,presented,26
+611870,Picture,loaded,b'documents/before_is_right_arrows.png'
+611875,Stimulus,presented,28
+612862,Keyboard,received,275,wait
+612864,Stimulus,presented,26
+613797,Stimulus,presented,29
+696345,Keyboard,received,13,wait
+696346,Experiment,ended
+696356,Data,saved
+696363,Stimulus,presented,38

@@ -1,0 +1,235 @@
+#Expyriment 0.9.0 (Python 3.7.3), .xpd-file, coding: cp1252
+#date: Tue May 07 2019 14:35:55
+#--EXPERIMENT INFO
+#e mainfile: mttexp.py
+#e sha1: None
+#e modules: 
+#e Experiment: MTT Experiment
+#e no between subject factors
+#e Block 5: 6 years future block
+#e     block factors: projection = 6
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 1: 6 years past block
+#e     block factors: projection = -6
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 2: 3 years past block
+#e     block factors: projection = -3
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 4: 3 years future block
+#e     block factors: projection = 3
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 6: 9 years future block
+#e     block factors: projection = 9
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 0: 9 years past block
+#e     block factors: projection = -9
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#e Block 3: present block
+#e     block factors: projection = 0
+#e     n trials: 26
+#e     trial factors: Date = [1985, 1988, 1991, 1994, 1997, 2000, 2003, 2006, 2009, 2012, 2015, 2018, 2019, 2020, 2023, 2026, 2029, 2032, 2035, 2038, 2041, 2044, 2047, 2050, 2053]
+#e                    Fictional = [False, True]
+#e                    
+#--SUBJECT INFO
+#s id: 2
+subject_id,projection,date,fictional,event_to_projection_distance,before_is_left,pressed_key,good_answer,RT
+2,6,2035,False,10,False,276,True,2101
+2,6,1985,False,-40,False,275,True,1237
+2,6,2019,True,-6,False,275,True,1886
+2,6,2041,False,16,False,276,True,899
+2,6,2006,False,-19,False,275,True,1475
+2,6,2047,False,22,False,276,True,1184
+2,6,2044,True,19,False,276,True,985
+2,6,1991,False,-34,False,275,True,958
+2,6,2038,True,13,False,276,True,2144
+2,6,2029,True,4,False,276,True,1909
+2,6,2000,True,-25,False,275,True,1129
+2,6,2023,True,-2,False,275,True,1476
+2,6,2018,False,-7,False,275,True,1105
+2,6,2050,True,25,False,276,True,1109
+2,6,2003,False,-22,False,275,True,993
+2,6,1997,False,-28,False,275,True,864
+2,6,1994,True,-31,False,275,True,1530
+2,6,2053,False,28,False,276,True,1110
+2,6,2032,False,7,False,276,True,1838
+2,6,2026,False,1,False,276,True,1906
+2,6,2015,True,-10,False,275,True,1206
+2,6,2020,False,-5,False,275,True,1272
+2,6,1988,True,-37,False,275,True,1669
+2,6,2012,False,-13,False,275,True,1634
+2,6,2009,False,-16,False,275,True,868
+2,6,2019,False,-6,False,275,True,1161
+2,-6,2047,False,34,False,276,True,1272
+2,-6,2000,True,-13,False,275,True,932
+2,-6,2038,True,25,False,276,True,2672
+2,-6,2020,False,7,False,276,True,1031
+2,-6,2023,True,10,False,276,True,1382
+2,-6,2019,True,6,False,276,True,1013
+2,-6,1985,False,-28,False,275,True,885
+2,-6,2019,False,6,False,276,True,802
+2,-6,2012,False,-1,False,275,True,1132
+2,-6,2029,True,16,False,276,True,2318
+2,-6,2009,False,-4,False,275,True,1461
+2,-6,1991,False,-22,False,275,True,1062
+2,-6,2044,True,31,False,276,True,826
+2,-6,2015,True,2,False,276,True,991
+2,-6,2006,False,-7,False,275,True,1410
+2,-6,2026,False,13,False,276,True,1773
+2,-6,1994,True,-19,False,275,True,1016
+2,-6,2041,False,28,False,276,True,930
+2,-6,1988,True,-25,False,275,True,958
+2,-6,2018,False,5,False,276,True,1086
+2,-6,2003,False,-10,False,275,True,837
+2,-6,2050,True,37,False,276,True,802
+2,-6,2032,False,19,False,276,True,865
+2,-6,2053,False,40,False,276,True,790
+2,-6,1997,False,-16,False,275,True,751
+2,-6,2035,False,22,False,276,True,840
+2,-3,2035,False,19,True,275,True,1218
+2,-3,2012,False,-4,True,276,True,1693
+2,-3,2009,False,-7,True,276,True,1193
+2,-3,2041,False,25,True,275,True,1066
+2,-3,2003,False,-13,True,276,True,881
+2,-3,2015,True,-1,True,276,True,2205
+2,-3,2018,False,2,True,275,True,874
+2,-3,2044,True,28,True,275,True,877
+2,-3,2038,True,22,True,275,True,1114
+2,-3,2047,False,31,True,275,True,659
+2,-3,1994,True,-22,True,276,True,911
+2,-3,2006,False,-10,True,276,True,1287
+2,-3,2032,False,16,True,275,True,675
+2,-3,2000,True,-16,True,276,True,866
+2,-3,2019,True,3,True,275,True,992
+2,-3,2026,False,10,True,275,True,1557
+2,-3,2019,False,3,True,275,True,998
+2,-3,2053,False,37,True,275,True,889
+2,-3,2023,True,7,True,275,True,1386
+2,-3,1991,False,-25,True,276,True,758
+2,-3,2020,False,4,True,275,True,1471
+2,-3,1985,False,-31,True,276,True,791
+2,-3,2050,True,34,True,275,True,964
+2,-3,2029,True,13,True,275,True,881
+2,-3,1988,True,-28,True,276,True,694
+2,-3,1997,False,-19,True,276,True,725
+2,3,2000,True,-22,False,275,True,1040
+2,3,2006,False,-16,False,275,True,1284
+2,3,2018,False,-4,False,275,True,1050
+2,3,2015,True,-7,False,275,True,836
+2,3,1988,True,-34,False,275,True,753
+2,3,2026,False,4,False,276,True,869
+2,3,2050,True,28,False,276,True,771
+2,3,2020,False,-2,False,275,True,1022
+2,3,2019,True,-3,False,275,True,821
+2,3,2019,False,-3,False,275,True,1238
+2,3,1985,False,-37,False,275,True,695
+2,3,2038,True,16,False,276,True,790
+2,3,1994,True,-28,False,275,True,767
+2,3,2029,True,7,False,276,True,1120
+2,3,1997,False,-25,False,275,True,814
+2,3,1991,False,-31,False,275,True,861
+2,3,2009,False,-13,False,275,True,866
+2,3,2053,False,31,False,276,True,748
+2,3,2023,True,1,False,276,True,1336
+2,3,2012,False,-10,False,275,True,1291
+2,3,2032,False,10,False,276,True,1141
+2,3,2003,False,-19,False,275,True,769
+2,3,2047,False,25,False,276,True,700
+2,3,2044,True,22,False,276,True,840
+2,3,2041,False,19,False,276,True,813
+2,3,2035,False,13,False,276,True,687
+2,9,2053,False,25,False,276,True,1011
+2,9,1991,False,-37,False,275,True,657
+2,9,1988,True,-40,False,275,True,778
+2,9,2000,True,-28,False,275,True,922
+2,9,2018,False,-10,False,275,True,3172
+2,9,1997,False,-31,False,275,True,868
+2,9,2009,False,-19,False,275,True,684
+2,9,2032,False,4,False,276,True,841
+2,9,2019,True,-9,False,275,True,823
+2,9,2012,False,-16,False,275,True,1088
+2,9,2020,False,-8,False,275,True,933
+2,9,2044,True,16,False,276,True,958
+2,9,2029,True,1,False,276,True,1482
+2,9,2050,True,22,False,276,True,789
+2,9,2047,False,19,False,276,True,1105
+2,9,2026,False,-2,False,275,True,969
+2,9,2023,True,-5,False,275,True,2027
+2,9,2038,True,10,False,276,True,710
+2,9,2006,False,-22,False,275,True,973
+2,9,2041,False,13,False,276,True,792
+2,9,2035,False,7,False,276,True,897
+2,9,1985,False,-43,False,275,True,560
+2,9,2019,False,-9,False,276,False,954
+2,9,1994,True,-34,False,275,True,784
+2,9,2003,False,-25,False,275,True,1104
+2,9,2015,True,-13,False,276,False,891
+2,-9,1994,True,-16,False,275,True,1873
+2,-9,1991,False,-19,False,275,True,787
+2,-9,2000,True,-10,False,275,True,2585
+2,-9,2019,True,9,False,276,True,1180
+2,-9,2047,False,37,False,276,True,803
+2,-9,2035,False,25,False,276,True,631
+2,-9,2026,False,16,False,276,True,769
+2,-9,2050,True,40,False,276,True,675
+2,-9,2015,True,5,False,276,True,831
+2,-9,2003,False,-7,False,275,True,1442
+2,-9,2019,False,9,False,276,True,907
+2,-9,2038,True,28,False,276,True,672
+2,-9,2006,False,-4,False,275,True,1862
+2,-9,1988,True,-22,False,275,True,763
+2,-9,2044,True,34,False,276,True,976
+2,-9,2023,True,13,False,276,True,2008
+2,-9,1997,False,-13,False,275,True,685
+2,-9,2020,False,10,False,276,True,782
+2,-9,2009,False,-1,False,275,True,1306
+2,-9,2029,True,19,False,276,True,844
+2,-9,2012,False,2,False,276,True,762
+2,-9,2018,False,8,False,276,True,857
+2,-9,2032,False,22,False,276,True,827
+2,-9,2053,False,43,False,276,True,1479
+2,-9,1985,False,-25,False,275,True,801
+2,-9,2041,False,31,False,276,True,633
+2,0,2053,False,34,False,276,True,642
+2,0,2038,True,19,False,276,True,571
+2,0,1991,False,-28,False,275,True,614
+2,0,2019,False,0,False,276,True,1372
+2,0,2047,False,28,False,276,True,618
+2,0,2003,False,-16,False,275,True,564
+2,0,2019,True,0,False,275,True,758
+2,0,2018,False,-1,False,276,False,537
+2,0,2006,False,-13,False,275,True,572
+2,0,1988,True,-31,False,275,True,599
+2,0,1997,False,-22,False,275,True,689
+2,0,2041,False,22,False,276,True,620
+2,0,2044,True,25,False,276,True,665
+2,0,2026,False,7,False,276,True,1439
+2,0,2012,False,-7,False,276,False,688
+2,0,1985,False,-34,False,275,True,703
+2,0,2009,False,-10,False,275,True,728
+2,0,2050,True,31,False,275,False,669
+2,0,2020,False,1,False,276,True,2949
+2,0,2000,True,-19,False,275,True,1034
+2,0,2029,True,10,False,276,True,2145
+2,0,1994,True,-25,False,275,True,774
+2,0,2035,False,16,False,276,True,2177
+2,0,2032,False,13,False,276,True,745
+2,0,2023,True,4,False,276,True,1172
+2,0,2015,True,-4,False,275,True,976

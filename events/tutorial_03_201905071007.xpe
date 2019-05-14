@@ -1,0 +1,70 @@
+#Expyriment 0.9.0 (Python 3.7.3), .xpe-file, coding: cp1252
+#date: Tue May 07 2019 10:07:33
+#sha1: None
+#modules: 
+#display: size=(1024, 768), window_mode=False, open_gl=2
+#os: uname_result(system='Windows', node='IS151627', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 60 Stepping 3, GenuineIntel')
+Time,Type,Event,Value,Detail,Detail2
+11397,design,log,
+#design: #exp: Tutorial
+#design: #dvn: projection,date,fictional,event_to_projection_distance,before_is_left,pressed_key,good_answer,RT
+#design: block_cnt,block_id,trial_cnt,trial_id,Date,Fictional
+#design: 0,0,0,0,1985,False
+#design: 0,0,1,1,1988,True
+#design: 0,0,2,2,1991,False
+#design: 0,0,3,3,1994,True
+#design: 0,0,4,4,1997,False
+#design: 0,0,5,5,2000,True
+#design: 0,0,6,6,2003,False
+#design: 0,0,7,7,2006,False
+#design: 0,0,8,8,2009,False
+#design: 0,0,9,9,2012,False
+#design: 0,0,10,10,2015,True
+#design: 0,0,11,11,2018,False
+#design: 0,0,12,12,2019,True
+#design: 0,0,13,13,2019,False
+#design: 0,0,14,14,2020,False
+#design: 0,0,15,15,2023,True
+#design: 0,0,16,16,2026,False
+#design: 0,0,17,17,2029,True
+#design: 0,0,18,18,2032,False
+#design: 0,0,19,19,2035,False
+#design: 0,0,20,20,2038,True
+#design: 0,0,21,21,2041,False
+#design: 0,0,22,22,2044,True
+#design: 0,0,23,23,2047,False
+#design: 0,0,24,24,2050,True
+#design: 0,0,25,25,2053,False
+11397,design,logged,
+11398,Experiment,started
+11399,Stimulus,presented,26
+12417,Picture,loaded,b'documents/before_is_right_arrows.png'
+12421,Stimulus,presented,28
+41876,Keyboard,received,13,wait
+41876,Stimulus,presented,26
+42885,Stimulus,presented,29
+57060,Keyboard,received,13,wait
+57062,Stimulus,presented,26
+58083,Picture,loaded,b'documents/before_is_right_arrows.png'
+58088,Stimulus,presented,28
+60755,Keyboard,received,276,wait
+60757,Stimulus,presented,26
+61697,Picture,loaded,b'documents/before_is_right_arrows.png'
+61703,Stimulus,presented,28
+64195,Keyboard,received,276,wait
+64196,Stimulus,presented,26
+65130,Picture,loaded,b'documents/before_is_right_arrows.png'
+65136,Stimulus,presented,28
+66227,Keyboard,received,275,wait
+66228,Stimulus,presented,26
+67224,Picture,loaded,b'documents/before_is_right_arrows.png'
+67229,Stimulus,presented,28
+69891,Keyboard,received,276,wait
+69893,Stimulus,presented,26
+70850,Picture,loaded,b'documents/before_is_right_arrows.png'
+70856,Stimulus,presented,28
+71908,Keyboard,received,276,wait
+71909,Stimulus,presented,26
+72820,Experiment,ended
+72822,Data,saved
+72824,Stimulus,presented,36
