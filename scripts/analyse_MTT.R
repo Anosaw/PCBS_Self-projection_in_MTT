@@ -21,8 +21,17 @@ any(is.na(mtt4))
 
 
 #General analysis
-mean_RT = mean(mtt4$RT)
-sd_RT = sd(mtt4$RT)
+mean_RT <- mean(mtt4$RT)
+sd_RT <- sd(mtt4$RT)
+
+library(plyr)
+
+score_table <- count(mtt4, vars = "good_answer")
+print(scrore_table)
+str(score_table)
+
+accuracy <- score_table[score_table$good_answer == "True", "freq"] / 
+  (score_table[score_table$good_answer == "False", "freq"] + score_table[score_table$good_answer == "True", "freq"])
 
 #Analysis per projection
 mean_9past <- mean(mtt4[mtt4$projection == -9, "RT"])
@@ -48,6 +57,7 @@ mean_real <- mean(mtt4[mtt4$fictional == "False", "RT"])
 sd_fictional <- sd(mtt4[mtt4$fictional == "True", "RT"])
 sd_real <- sd(mtt4[mtt4$fictional == "False", "RT"])
 
+
 #Analysis per event to projection distance
 
 #Analysis per key order (whether before is left or not)
@@ -56,3 +66,12 @@ mean_before_is_right <- mean(mtt4[mtt4$before_is_left == "False", "RT"])
 
 sd_before_is_left <- sd(mtt4[mtt4$before_is_left == "True", "RT"])
 sd_before_is_right <- sd(mtt4[mtt4$before_is_left == "False", "RT"])
+
+boxplot(mtt4$RT~mtt4$before_is_left,xlab="Projection",ylab="before_is_left")
+abline(h=mean(mtt4$RT),lty=2,col="red",lwd=2)
+
+anova_key_order <- aov(mtt4$RT~mtt4$before_is_left)
+anova_key_order
+summary(anova_key_order)
+
+#When taking out wrong answers from questionnaire
