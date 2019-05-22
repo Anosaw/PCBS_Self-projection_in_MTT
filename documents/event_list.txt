@@ -7,7 +7,6 @@ fictional = True if the event is fictional, False if not
 name_presented = name as it appears on the screen during the experiment (in french)
 
 Note that the time of the experiment (present) is set in 2019.
-Therefore, there are two events in 2019, one past and one future.
 
 """
 date,event,fictional,name_presented
@@ -23,8 +22,6 @@ date,event,fictional,name_presented
 2012,"Curiosity atterit sur Mars",False,"Curiosity Mars"
 2015,"inauguration du musée Metallica",True,"musée Metallica"
 2018,"Panthéonisation de Simone Veil",False,"Simone Veil"
-2019,"Netflix annonce une nouvelle saison de Friends",True,"Netflix Friends"
-2019,"coupe du monde de football féminin",False,"coupe football"
 2020,"commercialisation de viandes artificielles",False,"viandes artificielles"
 2023,"réintroduction du loup au Japon",True,"loup Japon"
 2026,"inauguration de Dubailand",False,"Inauguration Dubailand"

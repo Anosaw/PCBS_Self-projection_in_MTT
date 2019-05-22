@@ -1,7 +1,0 @@
-#Expyriment 0.9.0 (Python 3.7.3), .xpe-file, coding: cp1252
-#date: Tue May 07 2019 13:09:56
-#sha1: None
-#modules: 
-#display: size=(1024, 768), window_mode=False, open_gl=2
-#os: uname_result(system='Windows', node='IS151627', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 60 Stepping 3, GenuineIntel')
-Time,Type,Event,Value,Detail,Detail2
