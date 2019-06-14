@@ -23,7 +23,7 @@ text_size = 60
 white = (255, 255, 255)
 
 
-#Define blocks, trials and stimuli
+#_________Define blocks, trials and stimuli__________
 
 #Design blocks
 block_9past = expyriment.design.Block(name = "9 years past block")
