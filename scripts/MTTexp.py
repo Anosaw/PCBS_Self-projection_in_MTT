@@ -210,7 +210,7 @@ for block in MTTexp.blocks :
             #Add data to the datafile
             MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT])
 
-            #Clear screen
+            #Clear images
             if before_is_left == True:
                 before_is_left_arrows.clear_surface()
             else:
