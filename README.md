@@ -44,7 +44,7 @@ One run of the experiment (7 projection blocks) lasts around 15 minutes. Therefo
 
 ### Predictions
 
-We know that reaction times (and error rates) are higher in the projection condition than in the present. The question we aim to answer with this experiment is: **does the *distance* of projection have a parametric effect on reaction times (and error rates) ?**  
+We know that reaction times (and error rates) are higher in the past and future conditions than in the present. The question we aim to answer with this experiment is: **does the *distance* of projection have a parametric effect on reaction times (and error rates) ?**  
 
 If it does, then we would expect reaction times (and error rates) to be significantly higher the farther the projection is. Thus, the conditions *9 years in the past* and *9 years in the future* should show the highest reaction times (and error rates), followed by *3 years*, then *6 years*, then *present*.  
 
@@ -87,7 +87,7 @@ for element in nb:
 
 There are 24 events in total, 12 in the past and 12 in the future. Among these events, 5 of the past events and 5 of the future events are fictional. 
 
-The fictional events are not related to the main experimental question. They have been included in the list in order to see if there was an effect of the event themselves, and in particular of the degree of reality attributed to the event. Since half of the events given to the participants are future events, and thus fictional to some degree, such an analysis was necessary to disringuish effect of the temporality of the event and effects of its degree of reality.
+The fictional events are not related to the main experimental question. They have been included in the list in order to see if there was an effect of the event themselves, and in particular of the degree of reality attributed to the event. Since half of the events given to the participants are future events, and thus fictional to some degree, such an analysis was necessary to distinguish effects of the temporality of the event and effects of its degree of reality.
 
 ---
 
@@ -226,7 +226,7 @@ for trial in block_questionnaire.trials:
    
 ```
 
-The score of the participant is presented on the screen
+The score of the participant is presented on the screen.
 
 ```python
 
@@ -367,8 +367,8 @@ while not done:
 ```
 
 The images generated can be found in the documents folder:   
-     * [arrows where 'before' is on the left](https://github.com/Anosaw/PCBS_Self-  projection_in_MTT/blob/master/documents/before_is_left_arrows.png)  
-     * [arrows where 'before' is one the right](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/before_is_right_arrows.png)
+* [arrows where 'before' is on the left](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/before_is_left_arrows.png)  
+* [arrows where 'before' is one the right](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/before_is_right_arrows.png)  
 
 
 
