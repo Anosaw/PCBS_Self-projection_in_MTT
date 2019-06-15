@@ -217,7 +217,8 @@ for trial in block_questionnaire.trials:
     all_is_good = False
 
     #Add data
-    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"), good_answer, answer_date, answer_trust])
+    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"),
+     good_answer, answer_date, answer_trust])
 
     fixcross.present()
     random_ITI = expyriment.design.randomize.rand_norm(750, 1250) #Randomize ITI
