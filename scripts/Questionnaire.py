@@ -40,10 +40,12 @@ with open('documents/event_list.csv', encoding="utf-8") as events:
 block_questionnaire.shuffle_trials()
 
 #Create other needed stimuli and trials
-error_date = expyriment.stimuli.TextLine(text = "Entrer une date", text_size = text_size, text_colour = white)
+error_date = expyriment.stimuli.TextLine(text = "Entrer une date",
+ text_size = text_size, text_colour = white)
 error_date.preload()
 
-error_trust = expyriment.stimuli.TextLine(text = "Entrer un nombre entier entre 0 et 5", text_size = text_size, text_colour = white)
+error_trust = expyriment.stimuli.TextLine(text = "Entrer un nombre entier entre 0 et 5",
+ text_size = text_size, text_colour = white)
 error_trust.preload()
 
 #Fixation cross
@@ -65,7 +67,8 @@ for trial in block_questionnaire.trials:
     #Because there is a participant input, the input must be checked
     while all_is_good == False:
         question_date = expyriment.io.TextInput(message = trial.stimuli[0].text, length = 4,
-         message_text_size = text_size, message_colour = white, user_text_size = text_size, user_text_colour = white)
+         message_text_size = text_size, message_colour = white,
+         user_text_size = text_size, user_text_colour = white)
         try:
             answer_date = int(question_date.get())
             all_is_good = True
@@ -86,7 +89,8 @@ for trial in block_questionnaire.trials:
     #From 0 to 5
     while all_is_good == False:
         questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
-         message_text_size = text_size, message_colour = white, user_text_size = text_size, user_text_colour = white)
+         message_text_size = text_size, message_colour = white,
+         user_text_size = text_size, user_text_colour = white)
         try:
             answer_trust = int(questionTrust.get())
             if 0 <= answer_trust <= 5:
@@ -119,7 +123,8 @@ for trial in block_questionnaire.trials:
 #Present score at the end
 score = nb_good_answer / nb_events * 100
 score = int(score)
-expyriment.stimuli.TextLine(text = "le taux de bonne réponse est de " + str(score) + "%", text_size = text_size, text_colour = white).present()
+expyriment.stimuli.TextLine(text = "le taux de bonne réponse est de " + str(score) + "%",
+ text_size = text_size, text_colour = white).present()
 questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 

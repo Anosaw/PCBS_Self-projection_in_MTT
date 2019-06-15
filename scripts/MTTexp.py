@@ -84,38 +84,10 @@ fixcross.preload()
 before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
 before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
 
-#Instructions
-
-#Pause instructions
-pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size, text_colour = white)
-pause.preload()
-
-
-#Projection instructions
-stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size, text_colour = white)
-stim_proj9past.preload()
-
-stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size, text_colour = white)
-stim_proj6past.preload()
-
-stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size, text_colour = white)
-stim_proj3past.preload()
-
-stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size, text_colour = white)
-stim_projnow.preload()
-
-stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size, text_colour = white)
-stim_proj3future.preload()
-
-stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size, text_colour = white)
-stim_proj6future.preload()
-
-stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size, text_colour = white)
-stim_proj9future.preload()
-
 
 #Set experimental data variable names
-MTTexp.add_data_variable_names(["projection", "date", "fictional", "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
+MTTexp.add_data_variable_names(["projection", "date", "fictional",
+ "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
 
 #________Start exp__________
 
@@ -149,29 +121,8 @@ for block in MTTexp.blocks :
     MTTexp.clock.wait(1000)
 
     #Present projection according to block
-    if block.get_factor("projection") == -9 :
-        projection = -9
-        stim_proj9past.present()
-    elif block.get_factor("projection") == -6 :
-        projection = -6
-        stim_proj6past.present()
-    elif block.get_factor("projection") == -3 :
-        projection = -3
-        stim_proj3past.present()
-    elif block.get_factor("projection") == 0 :
-        projection = 0
-        stim_projnow.present()
-    elif block.get_factor("projection") == 3 :
-        projection = 3
-        stim_proj3future.present()
-    elif block.get_factor("projection") == 6 :
-        projection = 6
-        stim_proj6future.present()
-    elif block.get_factor("projection") == 9 :
-        projection = 9
-        stim_proj9future.present()
-    else:
-        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size, text_colour = white).present()
+    projection = int(block.get_factor("projection"))
+    expyriment.stimuli.TextLine(text = projection + " ans dans le futur", text_size = text_size, text_colour = white).present()
 
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
@@ -223,7 +174,7 @@ for block in MTTexp.blocks :
             MTTexp.clock.wait(random_ITI)
 
     #Present pause screen at the end of the block
-    pause.present()
+    expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size, text_colour = white).present()
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 expyriment.control.end()

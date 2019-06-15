@@ -1,6 +1,5 @@
 """
 This is the tutorial for this experiment
-It is similar to the experiment but lasts only for 5 events
 """
 
 import expyriment
@@ -49,31 +48,10 @@ fixcross.preload()
 before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
 before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
 
-#Instructions
-
-#Projection instructions
-stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size, text_colour = white)
-stim_proj9past.preload()
-
-stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size, text_colour = white)
-stim_proj6past.preload()
-
-stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size, text_colour = white)
-stim_proj3past.preload()
-
-stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size, text_colour = white)
-stim_proj3future.preload()
-
-stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size, text_colour = white)
-stim_proj6future.preload()
-
-stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size, text_colour = white)
-stim_proj9future.preload()
-
-
 
 #Set experimental data variable names
-tuto.add_data_variable_names(["projection", "date", "fictional", "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
+tuto.add_data_variable_names(["projection", "date", "fictional",
+ "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
 
 #________Start exp_________
 expyriment.control.start()
@@ -106,21 +84,8 @@ tuto.clock.wait(1000)
 #Present projection
 projection_list = [-9, -6, -3, +3, +6, +9]
 projection = expyriment.design.randomize.rand_element(projection_list)
-
-if projection == -9 :
-    stim_proj9past.present()
-elif projection == -6 :
-    stim_proj6past.present()
-elif projection == -3 :
-    stim_proj3past.present()
-elif projection == 3 :
-    stim_proj3future.present()
-elif projection == 6 :
-    stim_proj6future.present()
-elif projection == 9 :
-    stim_proj9future.present()
-else:
-    expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size, text_colour = white).present()
+expyriment.stimuli.TextLine(text = projection + " ans dans le futur",
+ text_size = text_size, text_colour = white).present()
 
 tuto.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
 
@@ -156,7 +121,8 @@ for trial in block_tuto.trials[0:5] :
     event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
 
     #Add data
-    tuto.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
+    tuto.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+     event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
 
     #Clear images
     if before_is_left == True:
