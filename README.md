@@ -9,13 +9,13 @@ The experimental design follows the one presented in [Gauthier & van Wassenhove 
 
 
 ### Table of contents  
-* # Experimental design
-* # Predictions
-* # Before the experiment
-* # Questionnaire
-* # Mental time travel experiment
-* # After the expriment
-* # Conclusion
+* [Experimental design](#experimental-design)
+* [Predictions](#predictions)
+* [Before the experiment](#before-the-experiment)
+* [Questionnaire](#questionnaire)
+* [Mental time travel experiment](#mental-time-travel-experiment)
+* [After the expriment](#after-the-experiment)
+* [Conclusion](#conclusion)
 
 ---
 
