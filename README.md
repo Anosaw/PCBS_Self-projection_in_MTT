@@ -3,19 +3,19 @@ Anna Wagelmans: Project for PCBS
 
 This project is an experiment of self-projection in mental time travel, where participants are asked to project themselves in different points in time. While projected in time, participants must make a temporal judgment task: events are presented to the participants and they must judge whether it has already passed, or is yet to pass.
 
-The experimental design follows the one presented in [Gauthier & van Wassenhove 2016][https://www.ncbi.nlm.nih.gov/pubmed/27239750], but focuses on the time modality. In this article, it was shown that reaction times were higher when the participant was projected in time  compared to when they were in the present. This project builds on this finding and aims to further explore mental time travel in humans.  
+The experimental design follows the one presented in [Gauthier & van Wassenhove 2016](https://www.ncbi.nlm.nih.gov/pubmed/27239750), but focuses on the time modality. In this article, it was shown that reaction times were higher when the participant was projected in time  compared to when they were in the present. This project builds on this finding and aims to further explore mental time travel in humans.  
 
 ---  
 
 
 ### Table of contents  
-* [Experimental design][# Experimental_design]
-* [Predictions][# Predictions]
-* [Before the experiment][# Before_the_experiment]
-* [Questionnaire][# Questionnaire]
-* [Mental time travel experiment][# Mental_time_travel_experiment]
-* [After the experiment][# After_the_expriment]
-* [Conclusion][# Conclusion]
+* [Experimental design](# Experimental_design)
+* [Predictions](# Predictions)
+* [Before the experiment](# Before_the_experiment)
+* [Questionnaire](# Questionnaire)
+* [Mental time travel experiment](# Mental_time_travel_experiment)
+* [After the experiment](# After_the_expriment)
+* [Conclusion](# Conclusion)
 
 ---
 
@@ -54,11 +54,11 @@ If no effect of the distance is found, then further research has to be done on w
 
 ### Before the experiment
 
-A few days before the experiment, a [list of events][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/documents/event_list.csv] is given to the participant with the [instruction][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/documents/instructions.md] to learn it thoroughly.
+A few days before the experiment, a [list of events](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/event_list.csv) is given to the participant with the [instruction]() to learn it thoroughly.
 
-The list of events was given in a randomized order to each participant, using the script [randomize_events.py][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/scripts/randomize_events.py]:
+The list of events was given in a randomized order to each participant, using the script [randomize_events.py](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/randomize_events.py):
 
-'''python
+```python
 
 import random
 import csv
@@ -82,7 +82,7 @@ random.shuffle(nb)
 for element in nb:
     print(l[element])
 
-'''
+```
 
 There are 24 events in total, 12 in the past and 12 in the future. Among these events, 5 of the past events and 5 of the future events are fictional. 
 
@@ -92,13 +92,13 @@ The fictional events are not related to the main experimental question. They hav
 
 ### Questionnaire
 
-The script for the questionnaire can be found in [questionnaire.py][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/scripts/questionnaire.py].
+The script for the questionnaire can be found in [questionnaire.py](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/Questionnaire.py).
 
 The experiment starts by a questionnaire, where participants are asked to retrieve the date of each event. The participant needs to have a good knowledge of the events in order to perform the rest of the experiment correctly. if the score of the participant is not satisfactory (cutoff was put at 70% of good answers), then the participant cannot continue the experiment.
 
 Here are the details of the script:  
 
-'''python
+```python
 
 import expyriment
 import csv
@@ -119,12 +119,12 @@ white = (255, 255, 255)
 
 #Design block
 block_questionnaire = expyriment.design.Block(name = "Questionnaire block")
-'''
+```
 
-The events are imported from the [event list][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/documents/event_list.csv]
+The events are imported from the [event list](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/event_list.csv).
 
 
-'''python
+```python
 
 #Design trials
 with open('documents/event_list.csv', encoding="utf-8") as events:
@@ -218,11 +218,11 @@ for trial in block_questionnaire.trials:
     random_ITI = expyriment.design.randomize.rand_norm(750, 1250) #Randomize ITI
     questionnaire.clock.wait(random_ITI) #Wait before next trial
    
-'''
+```
 
 The score of the participant is presented on the screen
 
-'''python
+```python
 
 #Present score at the end
 score = nb_good_answer / nb_events * 100
@@ -233,13 +233,13 @@ questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 expyriment.control.end()
 
-'''
+```
 
 ---
 
 ### Mental time travel experiment
 
-After a [tutorial][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/scripts/tutorial.py], the participant can perform the [Mental Time Travel experiment][https://github.com/Anosaw/PCBS_Self-projection_in_MTT/scripts/mttexp.py].
+After a [tutorial](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/Tutorial.py), the participant can perform the [Mental Time Travel experiment](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/MTTexp.py).
 
 ---
 
