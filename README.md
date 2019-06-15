@@ -137,7 +137,7 @@ with open('documents/event_list.csv', encoding="utf-8") as events:
         trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
         trial.set_factor("Date", date)
         trial.set_factor("Fictional", fictional)
-        block_questionnaire.append(trial)
+        block_questionnaire.add_trial(trial)
 
 #Shuffle trials
 block_questionnaire.shuffle_trials()
@@ -217,8 +217,7 @@ for trial in block_questionnaire.trials:
     all_is_good = False
 
     #Add data
-    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"),
-     good_answer, answer_date, answer_trust])
+    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"), good_answer, answer_date, answer_trust])
 
     fixcross.present()
     random_ITI = expyriment.design.randomize.rand_norm(750, 1250) #Randomize ITI
@@ -406,7 +405,7 @@ with open('documents/event_list.csv', encoding="utf-8") as events:
         trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
         trial.set_factor("Date", date)
         trial.set_factor("Fictional", fictional)
-        block_tuto.append(trial)
+        block_tuto.add_trial(trial)
 
 #Add block to exp
 tuto.add_block(block_tuto)
@@ -460,7 +459,7 @@ tuto.clock.wait(1000)
 #Present projection
 projection_list = [-9, -6, -3, +3, +6, +9]
 projection = expyriment.design.randomize.rand_element(projection_list)
-expyriment.stimuli.TextLine(text = projection + " ans dans le futur",
+expyriment.stimuli.TextLine(text = str(abs(projection)) + " ans dans le futur",
  text_size = text_size, text_colour = white).present()
 
 tuto.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
@@ -482,22 +481,24 @@ for trial in block_tuto.trials[0:5] :
     pressed_key, RT = tuto.keyboard.wait(keys = response_keys)
 
     #Store whether the participant gave the good answer or not
-    if trial.get_factor("Date") < (present + projection):
+    date = int(trial.get_factor("Date"))
+
+    if date < (present + projection):
         if pressed_key == past_key:
             good_answer = True
         else:
             good_answer = False
-    if trial.get_factor("Date") > (present + projection):
+    if date > (present + projection):
         if pressed_key == future_key:
             good_answer = True
         else:
             good_answer = False
 
     #Calculate distance between event and projection
-    event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
+    event_to_projection_distance = date -  (present + projection)
 
     #Add data
-    tuto.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+    tuto.data.add([projection, date, trial.get_factor("Fictional"),
      event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
 
     #Clear images
@@ -568,17 +569,17 @@ MTTexp.add_block(block_6future)
 MTTexp.add_block(block_9future)
 
 #Import events
-with open('documents/event_list.csv', encoding="utf-8") as events:
-    r = csv.reader(events)
-    next(r)  # skip header line
-    for block in MTTexp:
+for block in MTTexp.blocks:
+    with open('documents/event_list.csv', encoding="utf-8") as events:
+        r = csv.reader(events)
+        next(r)  # skip header line
         for row in r:
             date, fictional, name = row[0], row[2], row[3]
             trial = expyriment.design.Trial()
             trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
             trial.set_factor("Date", date)
             trial.set_factor("Fictional", fictional)
-            block.append(trial)
+            block.add_trial(trial)
 
 
 #Randomize trial order
@@ -637,7 +638,7 @@ for block in MTTexp.blocks :
 
     #Present projection according to block
     projection = int(block.get_factor("projection"))
-    expyriment.stimuli.TextLine(text = projection + " ans dans le futur",
+    expyriment.stimuli.TextLine(text = str(abs(projection)) + " ans dans le futur",
      text_size = text_size, text_colour = white).present()
 
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
@@ -659,23 +660,25 @@ for block in MTTexp.blocks :
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys)
 
             #Store whether the participant gave the good answer or not
-            if trial.get_factor("Date") < (present + projection):
+            date = int(trial.get_factor("Date"))
+
+            if date < (present + projection):
                 if pressed_key == past_key:
                     good_answer = True
                 elif pressed_key == future_key:
                     good_answer = False
 
-            elif trial.get_factor("Date") > (present + projection):
+            elif date > (present + projection):
                 if pressed_key == future_key:
                     good_answer = True
                 elif pressed_key == past_key:
                     good_answer = False
 
             #Calculate the distance between event and projection
-            event_to_projection_distance = trial.get_factor("Date") - (present + projection)
+            event_to_projection_distance = date - (present + projection)
 
             #Add data to the datafile
-            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+            MTTexp.data.add([projection, date, trial.get_factor("Fictional"),
              event_to_projection_distance, before_is_left, pressed_key, good_answer, RT])
 
             #Clear images
@@ -705,4 +708,4 @@ This was originally the script for my M1 internship. I modified it in order to i
 I did not have the time to run this new version of the experiment and collect data. However, the results should not be so different: we cannot confidently reject the hypothesis that the distance of projection has no effect on reaction times (and error rates). Further research should be made on the subject.  
 
 
-At the beginning of the semester, I had only very basic knowledge in coding. It was during my internship that I coded a full experiment for the first time. There are still some elements to improve, but looking back on how it looked at the beginning and all the progress I've done since, I'm quite satisfied with the end result. 
+At the beginning of the semester, I had only very basic knowledge in coding. It was during my internship that I coded a full experiment for the first time. There are still some elements to improve, but looking back on how it looked like at the beginning and all the progress I've done since, I'm quite satisfied with the end result. 
