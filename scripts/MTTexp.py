@@ -53,17 +53,17 @@ MTTexp.add_block(block_6future)
 MTTexp.add_block(block_9future)
 
 #Import events
-with open('documents/event_list.csv', encoding="utf-8") as events:
-    r = csv.reader(events)
-    next(r)  # skip header line
-    for block in MTTexp:
+for block in MTTexp.blocks:
+    with open('documents/event_list.csv', encoding="utf-8") as events:
+        r = csv.reader(events)
+        next(r)  # skip header line
         for row in r:
             date, fictional, name = row[0], row[2], row[3]
             trial = expyriment.design.Trial()
             trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
             trial.set_factor("Date", date)
             trial.set_factor("Fictional", fictional)
-            block.append(trial)
+            block.add_trial(trial)
 
 
 #Randomize trial order
@@ -122,7 +122,7 @@ for block in MTTexp.blocks :
 
     #Present projection according to block
     projection = int(block.get_factor("projection"))
-    expyriment.stimuli.TextLine(text = projection + " ans dans le futur",
+    expyriment.stimuli.TextLine(text = str(abs(projection)) + " ans dans le futur",
      text_size = text_size, text_colour = white).present()
 
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
@@ -144,23 +144,25 @@ for block in MTTexp.blocks :
             pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys)
 
             #Store whether the participant gave the good answer or not
-            if trial.get_factor("Date") < (present + projection):
+            date = int(trial.get_factor("Date"))
+
+            if date < (present + projection):
                 if pressed_key == past_key:
                     good_answer = True
                 elif pressed_key == future_key:
                     good_answer = False
 
-            elif trial.get_factor("Date") > (present + projection):
+            elif date > (present + projection):
                 if pressed_key == future_key:
                     good_answer = True
                 elif pressed_key == past_key:
                     good_answer = False
 
             #Calculate the distance between event and projection
-            event_to_projection_distance = trial.get_factor("Date") - (present + projection)
+            event_to_projection_distance = date - (present + projection)
 
             #Add data to the datafile
-            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+            MTTexp.data.add([projection, date, trial.get_factor("Fictional"),
              event_to_projection_distance, before_is_left, pressed_key, good_answer, RT])
 
             #Clear images

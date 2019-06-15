@@ -30,7 +30,7 @@ with open('documents/event_list.csv', encoding="utf-8") as events:
         trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
         trial.set_factor("Date", date)
         trial.set_factor("Fictional", fictional)
-        block_tuto.append(trial)
+        block_tuto.add_trial(trial)
 
 #Add block to exp
 tuto.add_block(block_tuto)
@@ -84,7 +84,7 @@ tuto.clock.wait(1000)
 #Present projection
 projection_list = [-9, -6, -3, +3, +6, +9]
 projection = expyriment.design.randomize.rand_element(projection_list)
-expyriment.stimuli.TextLine(text = projection + " ans dans le futur",
+expyriment.stimuli.TextLine(text = str(abs(projection)) + " ans dans le futur",
  text_size = text_size, text_colour = white).present()
 
 tuto.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
@@ -106,22 +106,24 @@ for trial in block_tuto.trials[0:5] :
     pressed_key, RT = tuto.keyboard.wait(keys = response_keys)
 
     #Store whether the participant gave the good answer or not
-    if trial.get_factor("Date") < (present + projection):
+    date = int(trial.get_factor("Date"))
+
+    if date < (present + projection):
         if pressed_key == past_key:
             good_answer = True
         else:
             good_answer = False
-    if trial.get_factor("Date") > (present + projection):
+    if date > (present + projection):
         if pressed_key == future_key:
             good_answer = True
         else:
             good_answer = False
 
     #Calculate distance between event and projection
-    event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
+    event_to_projection_distance = date -  (present + projection)
 
     #Add data
-    tuto.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+    tuto.data.add([projection, date, trial.get_factor("Fictional"),
      event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
 
     #Clear images

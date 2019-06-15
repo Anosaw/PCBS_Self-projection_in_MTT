@@ -34,7 +34,7 @@ with open('documents/event_list.csv', encoding="utf-8") as events:
         trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
         trial.set_factor("Date", date)
         trial.set_factor("Fictional", fictional)
-        block_questionnaire.append(trial)
+        block_questionnaire.add_trial(trial)
 
 #Shuffle trials
 block_questionnaire.shuffle_trials()
