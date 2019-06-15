@@ -10,8 +10,8 @@ The experimental design follows the one presented in [Gauthier & van Wassenhove 
 
 ### Table of contents  
 * [Experimental design](#experimental-design)
- * [Projection points](#projection-points)
- * [Temporal judgment task](#temporal-judgment-task)
+     * [Projection points](#projection-points)
+     * [Temporal judgment task](#temporal-judgment-task)
 * [Predictions](#predictions)
 * [Before the experiment](#before-the-experiment)
 * [Questionnaire](#questionnaire)
@@ -367,9 +367,8 @@ while not done:
 ```
 
 The images generated can be found in the documents folder:   
-
-[arrows where 'before' is on the left](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/before_is_left_arrows.png)  
-[arrows where 'before' is one the right](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/before_is_right_arrows.png)
+     * [arrows where 'before' is on the left](https://github.com/Anosaw/PCBS_Self-  projection_in_MTT/blob/master/documents/before_is_left_arrows.png)  
+     * [arrows where 'before' is one the right](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/before_is_right_arrows.png)
 
 
 
