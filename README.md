@@ -10,18 +10,19 @@ The experimental design follows the one presented in [Gauthier & van Wassenhove 
 
 ### Table of contents  
 * [Experimental design](#experimental-design)
+ * [Projection points](#projection-points)
+ * [Temporal judgment task](#temporal-judgment-task)
 * [Predictions](#predictions)
 * [Before the experiment](#before-the-experiment)
 * [Questionnaire](#questionnaire)
 * [Mental time travel experiment](#mental-time-travel-experiment)
-* [After the experiment](#after-the-experiment)
 * [Conclusion](#conclusion)
 
 ---
 
 ### Experimental design  
 
-##### Projection points  
+#### Projection points  
 The participant must first project themselves to the point in time shown on the screen.
 
 The seven possible projections are:
@@ -31,7 +32,7 @@ The seven possible projections are:
 * Present
 
 
-##### Temporal judgment task  
+#### Temporal judgment task  
 The events then appear on screen and the participant must indicate, using the keyboard arrows, whether the event has already passed or has yet to pass (in relation to the time of projection).  
 
 All the events are shown to the participant in a random order before starting the next block.
@@ -54,7 +55,7 @@ If no effect of the distance is found, then further research has to be done on w
 
 ### Before the experiment
 
-A few days before the experiment, a [list of events](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/event_list.csv) is given to the participant with the [instruction]() to learn it thoroughly.
+A few days before the experiment, a [list of events](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/documents/event_list.csv) is given to the participant with the instruction to learn it thoroughly.
 
 The list of events was given in a randomized order to each participant, using the script [randomize_events.py](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/randomize_events.py):
 
@@ -698,13 +699,10 @@ expyriment.control.end()
 
 ```
 
----
-
-### After the experiment
-
-
-
----
-
 ### Conclusion
-This was originally the script for my M1 internship. I modified it in order to implement what I did not have the time to during my internship. I made the code cleaner and easier to read.
+
+This was originally the script for my M1 internship. I modified it in order to implement what I did not have the time to during my internship. I made the code cleaner and easier to read.  
+I did not have the time to run this new version of the experiment and collect data. However, the results should not be so different: we cannot confidently reject the hypothesis that the distance of projection has no effect on reaction times (and error rates). Further research should be made on the subject.  
+
+
+At the beginning of the semester, I had only very basic knowledge in coding. It was during my internship that I coded a full experiment for the first time. There are still some elements to improve, but looking back on how it looked at the beginning and all the progress I've done since, I'm quite satisfied with the end result. 
