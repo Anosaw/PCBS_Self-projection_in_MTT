@@ -44,22 +44,31 @@ screen.blit(after, (distance_to_border + inter_arrow_distance + 3*arrow_length /
 
 #draw arrows
 #left arrow
-pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_length, arrow_height)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_head, arrow_height + arrow_span / 2)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_head, arrow_height - arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height),
+ (distance_to_border + arrow_length, arrow_height)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height),
+ (distance_to_border + arrow_head, arrow_height + arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height),
+ (distance_to_border + arrow_head, arrow_height - arrow_span / 2)], 5)
 
 #right arrow
-pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + arrow_length + inter_arrow_distance, arrow_height)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height + arrow_span / 2)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height - arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False,
+ [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height),
+ (distance_to_border + arrow_length + inter_arrow_distance, arrow_height)], 5)
+pygame.draw.lines(screen, white, False,
+ [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height),
+ (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height + arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False,
+ [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height),
+ (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height - arrow_span / 2)], 5)
 
 #display changes
 pygame.display.update()
 
 #save image
-pygame.image.save(screen, "before_is_left_arrows.png")
+pygame.image.save(screen, "documents/before_is_left_arrows.png")
 
-#draw second image
+#______draw second image______
 
 screen.fill(black)
 
@@ -74,20 +83,29 @@ screen.blit(after, (distance_to_border + inter_arrow_distance + 3*arrow_length /
 
 #draw arrows
 #left arrow
-pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_length, arrow_height)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_head, arrow_height + arrow_span / 2)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height), (distance_to_border + arrow_head, arrow_height - arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height),
+ (distance_to_border + arrow_length, arrow_height)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height),
+ (distance_to_border + arrow_head, arrow_height + arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False, [(distance_to_border, arrow_height),
+ (distance_to_border + arrow_head, arrow_height - arrow_span / 2)], 5)
 
 #right arrow
-pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + arrow_length + inter_arrow_distance, arrow_height)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height + arrow_span / 2)], 5)
-pygame.draw.lines(screen, white, False, [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height), (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height - arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False,
+ [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height),
+ (distance_to_border + arrow_length + inter_arrow_distance, arrow_height)], 5)
+pygame.draw.lines(screen, white, False,
+ [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height),
+ (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height + arrow_span / 2)], 5)
+pygame.draw.lines(screen, white, False,
+ [(distance_to_border + 2*arrow_length + inter_arrow_distance, arrow_height),
+ (distance_to_border + 2*arrow_length + inter_arrow_distance - arrow_head, arrow_height - arrow_span / 2)], 5)
 
 #display changes
 pygame.display.update()
 
 #save image
-pygame.image.save(screen, "before_is_right_arrows.png")
+pygame.image.save(screen, "documents/before_is_right_arrows.png")
 
 
 # wait till the window is closed

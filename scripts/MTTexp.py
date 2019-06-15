@@ -122,7 +122,8 @@ for block in MTTexp.blocks :
 
     #Present projection according to block
     projection = int(block.get_factor("projection"))
-    expyriment.stimuli.TextLine(text = projection + " ans dans le futur", text_size = text_size, text_colour = white).present()
+    expyriment.stimuli.TextLine(text = projection + " ans dans le futur",
+     text_size = text_size, text_colour = white).present()
 
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
@@ -159,7 +160,8 @@ for block in MTTexp.blocks :
             event_to_projection_distance = trial.get_factor("Date") - (present + projection)
 
             #Add data to the datafile
-            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT])
+            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+             event_to_projection_distance, before_is_left, pressed_key, good_answer, RT])
 
             #Clear images
             if before_is_left == True:
@@ -174,7 +176,8 @@ for block in MTTexp.blocks :
             MTTexp.clock.wait(random_ITI)
 
     #Present pause screen at the end of the block
-    expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size, text_colour = white).present()
+    expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)",
+     text_size = text_size, text_colour = white).present()
     MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 expyriment.control.end()
