@@ -9,13 +9,13 @@ The experimental design follows the one presented in [Gauthier & van Wassenhove 
 
 
 ### Table of contents  
-* [Experimental design](# Experimental_design)
-* [Predictions](# Predictions)
-* [Before the experiment](# Before_the_experiment)
-* [Questionnaire](# Questionnaire)
-* [Mental time travel experiment](# Mental_time_travel_experiment)
-* [After the experiment](# After_the_expriment)
-* [Conclusion](# Conclusion)
+* # Experimental design
+* # Predictions
+* # Before the experiment
+* # Questionnaire
+* # Mental time travel experiment
+* # After the expriment
+* # Conclusion
 
 ---
 
@@ -142,10 +142,12 @@ with open('documents/event_list.csv', encoding="utf-8") as events:
 block_questionnaire.shuffle_trials()
 
 #Create other needed stimuli and trials
-error_date = expyriment.stimuli.TextLine(text = "Entrer une date", text_size = text_size, text_colour = white)
+error_date = expyriment.stimuli.TextLine(text = "Entrer une date",
+ text_size = text_size, text_colour = white)
 error_date.preload()
 
-error_trust = expyriment.stimuli.TextLine(text = "Entrer un nombre entier entre 0 et 5", text_size = text_size, text_colour = white)
+error_trust = expyriment.stimuli.TextLine(text = "Entrer un nombre entier entre 0 et 5",
+ text_size = text_size, text_colour = white)
 error_trust.preload()
 
 #Fixation cross
@@ -167,7 +169,8 @@ for trial in block_questionnaire.trials:
     #Because there is a participant input, the input must be checked
     while all_is_good == False:
         question_date = expyriment.io.TextInput(message = trial.stimuli[0].text, length = 4,
-         message_text_size = text_size, message_colour = white, user_text_size = text_size, user_text_colour = white)
+         message_text_size = text_size, message_colour = white,
+         user_text_size = text_size, user_text_colour = white)
         try:
             answer_date = int(question_date.get())
             all_is_good = True
@@ -188,7 +191,8 @@ for trial in block_questionnaire.trials:
     #From 0 to 5
     while all_is_good == False:
         questionTrust = expyriment.io.TextInput(message = "confiance?", length = 1,
-         message_text_size = text_size, message_colour = white, user_text_size = text_size, user_text_colour = white)
+         message_text_size = text_size, message_colour = white,
+          user_text_size = text_size, user_text_colour = white)
         try:
             answer_trust = int(questionTrust.get())
             if 0 <= answer_trust <= 5:
@@ -212,7 +216,8 @@ for trial in block_questionnaire.trials:
     all_is_good = False
 
     #Add data
-    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"), good_answer, answer_date, answer_trust])
+    questionnaire.data.add([trial.get_factor("Date"), trial.get_factor("Fictional"),
+     good_answer, answer_date, answer_trust])
 
     fixcross.present()
     random_ITI = expyriment.design.randomize.rand_norm(750, 1250) #Randomize ITI
@@ -227,7 +232,8 @@ The score of the participant is presented on the screen
 #Present score at the end
 score = nb_good_answer / nb_events * 100
 score = int(score)
-expyriment.stimuli.TextLine(text = "le taux de bonne réponse est de " + str(score) + "%", text_size = text_size, text_colour = white).present()
+expyriment.stimuli.TextLine(text = "le taux de bonne réponse est de " + str(score) + "%",
+ text_size = text_size, text_colour = white).present()
 questionnaire.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
 
 
@@ -241,9 +247,423 @@ expyriment.control.end()
 
 After a [tutorial](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/Tutorial.py), the participant can perform the [Mental Time Travel experiment](https://github.com/Anosaw/PCBS_Self-projection_in_MTT/blob/master/scripts/MTTexp.py).
 
+Here is the script for the tutorial, which is quite similar to the mental time travel experiment:
+
+```python
+
+import expyriment
+import csv
+
+#Create and initialize exp
+tuto = expyriment.design.Experiment(name = "Tutorial")
+expyriment.control.initialize(tuto)
+
+good_answer = True
+text_size = 60
+present = 2019
+
+white = (255, 255, 255)
+
+#______Define blocks, trials and stimuli______
+
+#Design block
+block_tuto = expyriment.design.Block(name = "tuto block")
+
+#Import events
+with open('documents/event_list.csv', encoding="utf-8") as events:
+    r = csv.reader(events)
+    next(r)  # skip header line
+    for row in r:
+        date, fictional, name = row[0], row[2], row[3]
+        trial = expyriment.design.Trial()
+        trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
+        trial.set_factor("Date", date)
+        trial.set_factor("Fictional", fictional)
+        block_tuto.append(trial)
+
+#Add block to exp
+tuto.add_block(block_tuto)
+
+#Shuffle trials
+block_tuto.shuffle_trials()
+
+#_______Create other needed stimuli and trials_______
+
+#Fixation cross
+fixcross = expyriment.stimuli.FixCross(size = (50, 50), line_width = 4, colour = white)
+fixcross.preload()
+
+#Create the picture with the arrows
+before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
+before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
+
+#Instructions
+
+#Projection instructions
+stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé",
+ text_size = text_size, text_colour = white)
+stim_proj9past.preload()
+
+stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé",
+ text_size = text_size, text_colour = white)
+stim_proj6past.preload()
+
+stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé",
+ text_size = text_size, text_colour = white)
+stim_proj3past.preload()
+
+stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur",
+ text_size = text_size, text_colour = white)
+stim_proj3future.preload()
+
+stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur",
+ text_size = text_size, text_colour = white)
+stim_proj6future.preload()
+
+stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur",
+ text_size = text_size, text_colour = white)
+stim_proj9future.preload()
+
+
+
+#Set experimental data variable names
+tuto.add_data_variable_names(["projection", "date", "fictional",
+ "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
+
+#________Start exp_________
+expyriment.control.start()
+
+#Randomize keys
+before_is_left = expyriment.design.randomize.coin_flip()
+if before_is_left == True:
+    past_key = expyriment.misc.constants.K_LEFT
+    future_key = expyriment.misc.constants.K_RIGHT
+else:
+    past_key = expyriment.misc.constants.K_RIGHT
+    future_key = expyriment.misc.constants.K_LEFT
+
+response_keys = [past_key, future_key]
+
+fixcross.present() #Present fixation cross
+tuto.clock.wait(1000)
+
+#Present key instructions
+if before_is_left == True:
+    before_is_left_arrows.present()
+else:
+    before_is_right_arrows.present()
+
+tuto.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
+
+fixcross.present()
+tuto.clock.wait(1000)
+
+#Present projection
+projection_list = [-9, -6, -3, +3, +6, +9]
+projection = expyriment.design.randomize.rand_element(projection_list)
+
+if projection == -9 :
+    stim_proj9past.present()
+elif projection == -6 :
+    stim_proj6past.present()
+elif projection == -3 :
+    stim_proj3past.present()
+elif projection == 3 :
+    stim_proj3future.present()
+elif projection == 6 :
+    stim_proj6future.present()
+elif projection == 9 :
+    stim_proj9future.present()
+else:
+    expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized",
+     text_size = text_size, text_colour = white).present()
+
+tuto.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
+
+fixcross.present()
+tuto.clock.wait(1000)
+
+for trial in block_tuto.trials[0:5] :
+
+    #Plot stimuli on image with arrows and present it
+    if before_is_left == True :
+        trial.stimuli[0].plot(before_is_left_arrows)
+        before_is_left_arrows.present()
+    else:
+        trial.stimuli[0].plot(before_is_right_arrows)
+        before_is_right_arrows.present()
+
+    #Measure reaction time
+    pressed_key, RT = tuto.keyboard.wait(keys = response_keys)
+
+    #Store whether the participant gave the good answer or not
+    if trial.get_factor("Date") < (present + projection):
+        if pressed_key == past_key:
+            good_answer = True
+        else:
+            good_answer = False
+    if trial.get_factor("Date") > (present + projection):
+        if pressed_key == future_key:
+            good_answer = True
+        else:
+            good_answer = False
+
+    #Calculate distance between event and projection
+    event_to_projection_distance = trial.get_factor("Date") -  (present + projection)
+
+    #Add data
+    tuto.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"),
+     event_to_projection_distance, before_is_left, pressed_key, good_answer, RT]) #Add data
+
+    #Clear images
+    if before_is_left == True:
+        before_is_left_arrows.clear_surface()
+    else:
+        before_is_right_arrows.clear_surface()
+    fixcross.present()
+
+
+
+    #randomize ITI
+    random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
+    tuto.clock.wait(random_ITI)
+
+
+expyriment.control.end()
+
+```
+
+Here is the detail of the Mental Time Travel experiment:
+
+```python
+import expyriment
+import csv
+
+#Create and initialize exp
+MTTexp = expyriment.design.Experiment(name = "MTT Experiment")
+expyriment.control.initialize(MTTexp)
+
+#Define variables
+good_answer = True
+
+present = 2019
+
+text_size = 60
+white = (255, 255, 255)
+
+
+#_________Define blocks, trials and stimuli__________
+
+#Design blocks
+block_9past = expyriment.design.Block(name = "9 years past block")
+block_6past = expyriment.design.Block(name = "6 years past block")
+block_3past = expyriment.design.Block(name = "3 years past block")
+block_now = expyriment.design.Block(name = "present block")
+block_3future = expyriment.design.Block(name = "3 years future block")
+block_6future = expyriment.design.Block(name = "6 years future block")
+block_9future = expyriment.design.Block(name = "9 years future block")
+
+#Add projection point as factor
+block_9past.set_factor("projection", -9)
+block_6past.set_factor("projection", -6)
+block_3past.set_factor("projection", -3)
+block_now.set_factor("projection", 0)
+block_3future.set_factor("projection", 3)
+block_6future.set_factor("projection", 6)
+block_9future.set_factor("projection", 9)
+
+#Add block to exp
+MTTexp.add_block(block_9past)
+MTTexp.add_block(block_6past)
+MTTexp.add_block(block_3past)
+MTTexp.add_block(block_now)
+MTTexp.add_block(block_3future)
+MTTexp.add_block(block_6future)
+MTTexp.add_block(block_9future)
+
+#Import events
+with open('documents/event_list.csv', encoding="utf-8") as events:
+    r = csv.reader(events)
+    next(r)  # skip header line
+    for block in MTTexp:
+        for row in r:
+            date, fictional, name = row[0], row[2], row[3]
+            trial = expyriment.design.Trial()
+            trial.add_stimulus(expyriment.stimuli.TextLine(text = name, text_size = text_size, text_colour = white))
+            trial.set_factor("Date", date)
+            trial.set_factor("Fictional", fictional)
+            block.append(trial)
+
+
+#Randomize trial order
+for block in MTTexp.blocks:
+    block.shuffle_trials()
+
+#Randomize block order
+MTTexp.shuffle_blocks()
+
+
+#________Create other needed stimuli and trials______
+
+#Fixation cross
+fixcross = expyriment.stimuli.FixCross(size = (50, 50), line_width = 4)
+fixcross.preload()
+
+#Create the picture with the arrows
+before_is_left_arrows = expyriment.stimuli.Picture("documents/before_is_left_arrows.png")
+before_is_right_arrows = expyriment.stimuli.Picture("documents/before_is_right_arrows.png")
+
+#Instructions
+
+#Pause instructions
+pause = expyriment.stimuli.TextLine(text = "pause (entrée pour continuer)", text_size = text_size, text_colour = white)
+pause.preload()
+
+
+#Projection instructions
+stim_proj9past = expyriment.stimuli.TextLine(text = "9 ans dans le passé", text_size = text_size, text_colour = white)
+stim_proj9past.preload()
+
+stim_proj6past = expyriment.stimuli.TextLine(text = "6 ans dans le passé", text_size = text_size, text_colour = white)
+stim_proj6past.preload()
+
+stim_proj3past = expyriment.stimuli.TextLine(text = "3 ans dans le passé", text_size = text_size, text_colour = white)
+stim_proj3past.preload()
+
+stim_projnow = expyriment.stimuli.TextLine(text = "présent", text_size = text_size, text_colour = white)
+stim_projnow.preload()
+
+stim_proj3future = expyriment.stimuli.TextLine(text = "3 ans dans le futur", text_size = text_size, text_colour = white)
+stim_proj3future.preload()
+
+stim_proj6future = expyriment.stimuli.TextLine(text = "6 ans dans le futur", text_size = text_size, text_colour = white)
+stim_proj6future.preload()
+
+stim_proj9future = expyriment.stimuli.TextLine(text = "9 ans dans le futur", text_size = text_size, text_colour = white)
+stim_proj9future.preload()
+
+
+#Set experimental data variable names
+MTTexp.add_data_variable_names(["projection", "date", "fictional", "event_to_projection_distance", "before_is_left", "pressed_key", "good_answer", "RT"])
+
+#________Start exp__________
+
+expyriment.control.start()
+
+for block in MTTexp.blocks :
+
+    #Randomize keys
+    before_is_left = expyriment.design.randomize.coin_flip()
+    if before_is_left == True:
+        past_key = expyriment.misc.constants.K_LEFT
+        future_key = expyriment.misc.constants.K_RIGHT
+    else:
+        past_key = expyriment.misc.constants.K_RIGHT
+        future_key = expyriment.misc.constants.K_LEFT
+
+    response_keys = [past_key, future_key]
+
+    fixcross.present() #Present fixation cross
+    MTTexp.clock.wait(1000)
+
+    #Present key instructions
+    if before_is_left == True:
+        before_is_left_arrows.present()
+    else:
+        before_is_right_arrows.present()
+
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN) #Wait until participant presses enter
+
+    fixcross.present() #Present fixation cross
+    MTTexp.clock.wait(1000)
+
+    #Present projection according to block
+    if block.get_factor("projection") == -9 :
+        projection = -9
+        stim_proj9past.present()
+    elif block.get_factor("projection") == -6 :
+        projection = -6
+        stim_proj6past.present()
+    elif block.get_factor("projection") == -3 :
+        projection = -3
+        stim_proj3past.present()
+    elif block.get_factor("projection") == 0 :
+        projection = 0
+        stim_projnow.present()
+    elif block.get_factor("projection") == 3 :
+        projection = 3
+        stim_proj3future.present()
+    elif block.get_factor("projection") == 6 :
+        projection = 6
+        stim_proj6future.present()
+    elif block.get_factor("projection") == 9 :
+        projection = 9
+        stim_proj9future.present()
+    else:
+        expyriment.stimuli.TextLine(text = "ERROR = Projection not recognized", text_size = text_size, text_colour = white).present()
+
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
+
+    fixcross.present()
+    MTTexp.clock.wait(1000)
+
+    for trial in block.trials :
+
+            #Plot the stimulus on the image of the arrows and present both
+            if before_is_left == True :
+                trial.stimuli[0].plot(before_is_left_arrows)
+                before_is_left_arrows.present()
+            else:
+                trial.stimuli[0].plot(before_is_right_arrows)
+                before_is_right_arrows.present()
+
+            #Measure reaction time
+            pressed_key, RT = MTTexp.keyboard.wait(keys = response_keys)
+
+            #Store whether the participant gave the good answer or not
+            if trial.get_factor("Date") < (present + projection):
+                if pressed_key == past_key:
+                    good_answer = True
+                elif pressed_key == future_key:
+                    good_answer = False
+
+            elif trial.get_factor("Date") > (present + projection):
+                if pressed_key == future_key:
+                    good_answer = True
+                elif pressed_key == past_key:
+                    good_answer = False
+
+            #Calculate the distance between event and projection
+            event_to_projection_distance = trial.get_factor("Date") - (present + projection)
+
+            #Add data to the datafile
+            MTTexp.data.add([projection, trial.get_factor("Date"), trial.get_factor("Fictional"), event_to_projection_distance, before_is_left, pressed_key, good_answer, RT])
+
+            #Clear images
+            if before_is_left == True:
+                before_is_left_arrows.clear_surface()
+            else:
+                before_is_right_arrows.clear_surface()
+
+            fixcross.present()
+
+            #randomize ITI
+            random_ITI = expyriment.design.randomize.rand_norm(750, 1250)
+            MTTexp.clock.wait(random_ITI)
+
+    #Present pause screen at the end of the block
+    pause.present()
+    MTTexp.keyboard.wait(keys = expyriment.misc.constants.K_RETURN)
+
+expyriment.control.end()
+
+
+```
+
 ---
 
 ### After the expriment
+
 
 
 ---
